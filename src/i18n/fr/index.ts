@@ -69,7 +69,7 @@ const fr = {
 			DESCRIPTION: 'Choisis ta guilde Fairy Tail !',
 			EMBED: {
 				TITLE: 'Choisis ta Guilde',
-				DESCRIPTION: 'Sélectionne une guilde dans les menus ci-dessous pour la rejoindre. Tu ne peux appartenir qu\'à une seule guilde à la fois.',
+				DESCRIPTION: "Sélectionne une guilde dans les menus ci-dessous pour la rejoindre. Tu ne peux appartenir qu'à une seule guilde à la fois.",
 				LEGAL_LABEL: 'Guildes Légales',
 				DARK_LABEL: 'Guildes Noires & Indépendantes',
 			},
@@ -82,7 +82,7 @@ const fr = {
 				TITLE: 'Guilde changée !',
 				DESCRIPTION: 'Tu as quitté **{oldGuilde:string}** et rejoint **{newGuilde:string}** !',
 			},
-			ERROR: 'Une erreur est survenue lors de l\'attribution de la guilde.',
+			ERROR: "Une erreur est survenue lors de l'attribution de la guilde.",
 		},
 		GUILDE_INFO: {
 			DESCRIPTION: 'Voir le nombre de membres de chaque guilde.',
@@ -104,12 +104,12 @@ const fr = {
 				},
 			},
 			SUCCESS: '**{member:string}** a été retiré(e) de **{guilde:string}**.',
-			NOT_IN_GUILD: '**{member:string}** n\'est dans aucune guilde.',
+			NOT_IN_GUILD: "**{member:string}** n'est dans aucune guilde.",
 		},
 		GUILDE_RESET_ALL: {
 			DESCRIPTION: 'Réinitialiser toutes les guildes du serveur.',
 			SUCCESS: 'Toutes les guildes ont été réinitialisées ({count:number} supprimée{{s}}).',
-			NO_MEMBERSHIPS: 'Il n\'y a aucune adhésion de guilde à réinitialiser.',
+			NO_MEMBERSHIPS: "Il n'y a aucune adhésion de guilde à réinitialiser.",
 		},
 		SETUP: {
 			DESCRIPTION: 'Configurer tous les salons et catégories du serveur.',

@@ -10,11 +10,28 @@ import fr from './fr'
 import ru from './ru'
 import uk from './uk'
 
+import en_StarBoard from './en/StarBoard'
+import fr_StarBoard from './fr/StarBoard'
+import ru_StarBoard from './ru/StarBoard'
+import uk_StarBoard from './uk/StarBoard'
+
 const localeTranslations = {
-	en,
-	fr,
-	ru,
-	uk,
+	en: {
+		...en,
+		StarBoard: en_StarBoard
+	},
+	fr: {
+		...fr,
+		StarBoard: fr_StarBoard
+	},
+	ru: {
+		...ru,
+		StarBoard: ru_StarBoard
+	},
+	uk: {
+		...uk,
+		StarBoard: uk_StarBoard
+	},
 }
 
 export const loadLocale = (locale: Locales): void => {

@@ -2,7 +2,7 @@
 /* eslint-disable */
 import type { BaseTranslation as BaseTranslationType, LocalizedString, RequiredParams } from 'typesafe-i18n'
 
-export type BaseTranslation = BaseTranslationType
+export type BaseTranslation = BaseTranslationType & DisallowNamespaces
 export type BaseLocale = 'fr'
 
 export type Locales =
@@ -11,9 +11,12 @@ export type Locales =
 	| 'ru'
 	| 'uk'
 
-export type Translation = RootTranslation
+export type Translation = RootTranslation & DisallowNamespaces
 
-export type Translations = RootTranslation
+export type Translations = RootTranslation &
+{
+	StarBoard: NamespaceStarBoardTranslation
+}
 
 type RootTranslation = {
 	GUARDS: {
@@ -335,6 +338,82 @@ type RootTranslation = {
 	}
 }
 
+export type NamespaceStarBoardTranslation = {
+	STARBOARD: {
+		STAR_SLC_CHAN: {
+			/**
+			 * V​e​u​i​l​l​e​z​ ​d​'​a​b​o​r​d​ ​s​é​l​e​c​t​i​o​n​n​e​r​ ​u​n​ ​s​a​l​o​n​ ​!
+			 */
+			MESSAGE: string
+		}
+		STAR_CHAN_SET: {
+			/**
+			 * L​e​ ​s​a​l​o​n​ ​s​t​a​r​b​o​a​r​d​ ​a​ ​é​t​é​ ​c​o​n​f​i​g​u​r​é​ ​!
+			 */
+			MESSAGE: string
+		}
+		STAR_CFG_UPDATED: {
+			/**
+			 * L​a​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​u​ ​s​t​a​r​b​o​a​r​d​ ​a​ ​é​t​é​ ​m​i​s​e​ ​à​ ​j​o​u​r​ ​!
+			 */
+			MESSAGE: string
+		}
+		STAR_ERR_EMOJI: {
+			/**
+			 * V​e​u​i​l​l​e​z​ ​r​e​n​s​e​i​g​n​e​r​ ​u​n​ ​e​m​o​j​i​ ​v​a​l​i​d​e​ ​(​n​'​u​t​i​l​i​s​e​z​ ​p​a​s​ ​l​e​s​ ​e​m​o​j​i​s​ ​c​o​m​b​i​n​é​s​)​ ​!
+			 */
+			MESSAGE: string
+		}
+		STAR_ERR_PARAM: {
+			/**
+			 * V​e​u​i​l​l​e​z​ ​c​h​o​i​s​i​r​ ​a​u​ ​m​i​n​i​m​u​m​ ​u​n​ ​p​a​r​a​m​è​t​r​e​ ​!
+			 */
+			MESSAGE: string
+		}
+		STAR_ERR_GUILD: {
+			/**
+			 * C​e​t​t​e​ ​c​o​m​m​a​n​d​e​ ​d​o​i​t​ ​ê​t​r​e​ ​u​t​i​l​i​s​é​e​ ​d​a​n​s​ ​u​n​ ​s​e​r​v​e​u​r​ ​!
+			 */
+			MESSAGE: string
+		}
+		STAR_MIN_EMOJI: {
+			/**
+			 * D​é​f​i​n​i​r​ ​l​e​ ​n​o​m​b​r​e​ ​m​i​n​i​m​u​m​ ​d​'​é​t​o​i​l​e​s​ ​p​o​u​r​ ​ê​t​r​e​ ​a​f​f​i​c​h​é
+			 */
+			DESCRIPTION: string
+		}
+		STAR_SET_EMOJI: {
+			/**
+			 * D​é​f​i​n​i​r​ ​l​'​e​m​o​j​i​ ​à​ ​u​t​i​l​i​s​e​r​ ​p​o​u​r​ ​l​e​ ​s​t​a​r​b​o​a​r​d
+			 */
+			DESCRIPTION: string
+		}
+		STAR_SET_CHAN: {
+			/**
+			 * D​é​f​i​n​i​r​ ​l​e​ ​s​a​l​o​n​ ​à​ ​u​t​i​l​i​s​e​r​ ​p​o​u​r​ ​l​e​ ​s​t​a​r​b​o​a​r​d
+			 */
+			DESCRIPTION: string
+		}
+		STAR_DESC: {
+			/**
+			 * P​a​r​a​m​é​t​r​e​r​ ​l​e​ ​s​t​a​r​b​o​a​r​d
+			 */
+			DESCRIPTION: string
+		}
+	}
+}
+
+export type Namespaces =
+	| 'StarBoard'
+
+type DisallowNamespaces = {
+	/**
+	 * reserved for 'StarBoard'-namespace\
+	 * you need to use the `./StarBoard/index.ts` file instead
+	 */
+	StarBoard?: "[typesafe-i18n] reserved for 'StarBoard'-namespace. You need to use the `./StarBoard/index.ts` file instead."
+}
+
 export type TranslationFunctions = {
 	GUARDS: {
 		/**
@@ -629,6 +708,70 @@ export type TranslationFunctions = {
 				 * **{categories}** catégories et **{channels}** salons créés ({skipped} ignorés).
 				 */
 				DONE_DESCRIPTION: (arg: { categories: number, channels: number, skipped: number }) => LocalizedString
+			}
+		}
+	}
+	StarBoard: {
+		STARBOARD: {
+			STAR_SLC_CHAN: {
+				/**
+				 * Veuillez d'abord sélectionner un salon !
+				 */
+				MESSAGE: () => LocalizedString
+			}
+			STAR_CHAN_SET: {
+				/**
+				 * Le salon starboard a été configuré !
+				 */
+				MESSAGE: () => LocalizedString
+			}
+			STAR_CFG_UPDATED: {
+				/**
+				 * La configuration du starboard a été mise à jour !
+				 */
+				MESSAGE: () => LocalizedString
+			}
+			STAR_ERR_EMOJI: {
+				/**
+				 * Veuillez renseigner un emoji valide (n'utilisez pas les emojis combinés) !
+				 */
+				MESSAGE: () => LocalizedString
+			}
+			STAR_ERR_PARAM: {
+				/**
+				 * Veuillez choisir au minimum un paramètre !
+				 */
+				MESSAGE: () => LocalizedString
+			}
+			STAR_ERR_GUILD: {
+				/**
+				 * Cette commande doit être utilisée dans un serveur !
+				 */
+				MESSAGE: () => LocalizedString
+			}
+			STAR_MIN_EMOJI: {
+				/**
+				 * Définir le nombre minimum d'étoiles pour être affiché
+				 */
+				DESCRIPTION: () => LocalizedString
+			}
+			STAR_SET_EMOJI: {
+				/**
+				 * Définir l'emoji à utiliser pour le starboard
+				 */
+				DESCRIPTION: () => LocalizedString
+			}
+			STAR_SET_CHAN: {
+				/**
+				 * Définir le salon à utiliser pour le starboard
+				 */
+				DESCRIPTION: () => LocalizedString
+			}
+			STAR_DESC: {
+				/**
+				 * Paramétrer le starboard
+				 */
+				DESCRIPTION: () => LocalizedString
 			}
 		}
 	}
