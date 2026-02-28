@@ -7,13 +7,9 @@ import { loadedFormatters, loadedLocales, locales } from './i18n-util'
 
 import en from './en'
 import fr from './fr'
-import ru from './ru'
-import uk from './uk'
 
 import en_StarBoard from './en/StarBoard'
 import fr_StarBoard from './fr/StarBoard'
-import ru_StarBoard from './ru/StarBoard'
-import uk_StarBoard from './uk/StarBoard'
 
 const localeTranslations = {
 	en: {
@@ -23,14 +19,6 @@ const localeTranslations = {
 	fr: {
 		...fr,
 		StarBoard: fr_StarBoard
-	},
-	ru: {
-		...ru,
-		StarBoard: ru_StarBoard
-	},
-	uk: {
-		...uk,
-		StarBoard: uk_StarBoard
 	},
 }
 

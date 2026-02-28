@@ -84,6 +84,7 @@ module.exports = antfu(
 			'build',
 			'logs',
 			'database',
+			'scripts',
 		],
 	},
 	{

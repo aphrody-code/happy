@@ -14,6 +14,7 @@ import { getSourceCodeLocation, getTscordVersion } from '@/utils/functions'
 // (import() dynamique passe par le loader ESM natif de Node.js 22+ en mode strip-only)
 function loadModule(modulePath: string): any {
 	const cleanPath = modulePath.replace('file://', '')
+
 	return require(cleanPath)
 }
 

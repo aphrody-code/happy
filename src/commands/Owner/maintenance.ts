@@ -2,7 +2,7 @@ import { ApplicationCommandOptionType, CommandInteraction } from 'discord.js'
 import { Client } from 'discordx'
 
 import { Discord, Guard, Slash, SlashOption } from '@/decorators'
-import { Disabled } from '@/guards'
+import { Disabled, UserPermissions } from '@/guards'
 import { setMaintenance, simpleSuccessEmbed } from '@/utils/functions'
 
 @Discord()
@@ -12,6 +12,7 @@ export default class MaintenanceCommand {
 		name: 'maintenance',
 	})
 	@Guard(
+		UserPermissions(['Administrator']),
 		Disabled
 	)
 	async maintenance(

@@ -4,7 +4,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, CommandInteraction, EmbedBuilder, EmbedField } from 'discord.js'
 import { Client } from 'discordx'
 
-import { generalConfig } from '@/configs'
+import { generalConfig, happyQuotes } from '@/configs'
 import { Discord, Injectable, Slash } from '@/decorators'
 import { Guard } from '@/guards'
 import { Stats } from '@/services'
@@ -15,9 +15,9 @@ import packageJson from '../../../package.json'
 dayjs.extend(relativeTime)
 
 const links = [
-	{ label: 'Invite me!', url: generalConfig.links.invite },
-	{ label: 'Support server', url: generalConfig.links.supportServer },
-	{ label: 'Github', url: generalConfig.links.gitRemoteRepo },
+	{ label: 'Inviter le bot', url: generalConfig.links.invite },
+	{ label: 'Serveur support', url: generalConfig.links.supportServer },
+	{ label: 'GitHub', url: generalConfig.links.gitRemoteRepo },
 ]
 
 @Discord()
@@ -44,8 +44,8 @@ export default class InfoCommand {
 			})
 			.setTitle(client.user!.tag)
 			.setThumbnail(client.user!.displayAvatarURL())
-			.setColor(getColor('primary'))
-			.setDescription(packageJson.description)
+			.setColor(getColor('happy'))
+			.setDescription('Aye ! Je suis Happy, le chat ailé de Fairy Tail ! Je vole avec Natsu et je mange du poisson !')
 
 		const fields: EmbedField[] = []
 
@@ -55,7 +55,7 @@ export default class InfoCommand {
 		const owner = await client.users.fetch(generalConfig.ownerId).catch(() => null)
 		if (owner) {
 			fields.push({
-				name: 'Owner',
+				name: 'Maître de Guilde',
 				value: `\`${owner.tag}\``,
 				inline: true,
 			})
@@ -110,6 +110,9 @@ export default class InfoCommand {
 
 		// add the fields to the embed
 		embed.addFields(fields)
+
+		const randomQuote = happyQuotes[Math.floor(Math.random() * happyQuotes.length)]
+		embed.setFooter({ text: `💬 "${randomQuote.text}"` })
 
 		/**
 		 * Define links buttons

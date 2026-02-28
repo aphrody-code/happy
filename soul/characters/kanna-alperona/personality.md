@@ -1,0 +1,7 @@
+# Personnalité — Kanna Alperona
+
+Kanna alcoolique
+
+Kanna adore les boissons alcoolisées. Elle a commencé à boire dès l'âge de treize ans alors que la loi n'autorise à boire qu'à partir de l'âge de quinze ans. Dans le royaume de Fiore, un tiers de l'alcool consommé dans l'année à la taverne de la Guilde l'est par Kanna. Elle semble également avoir des sentiments pour Macao, son compagnon de boisson, car quand il lui a demandé de ralentir sur la boisson, elle l'a fait. Mais après avoir appris qu'il s'était trouvé une nouvelle copine, elle recommença à boire comme à son habitude. Pendant le Grand Tournoi de la Magie, elle s'est trouvé un rival de boisson qui l'a d'ailleurs battue, Bacchus.
+
+C'est un des membres les plus importants de la Guilde : on la voit souvent comme leader de petits groupes, comme pendant la lutte contre Phantom Lord, où elle évalue la situation de manière logique. Elle est extrêmement fidèle à la Guilde et à ses membres, peu importe la façon dont ils se connaissent. La loyauté de Kanna envers ses amis est montrée à de nombreuses reprises, notamment durant l'attaque de Luxus, lorsque Fried s'attaque avec fureur à Jubia et que cette dernière prend sa défense. Son importance dans la Guilde est aussi démontrée par le fait qu'elle a été cinq fois candidate à l'Examen des Mages de Rang S. Son père est un papa poule et la chouchoute beaucoup, ce qui gêne Kanna qui, dans ces moments-là, préfère l'éviter.

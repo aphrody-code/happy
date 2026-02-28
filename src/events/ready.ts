@@ -47,7 +47,7 @@ export default class ReadyEvent {
 		this.store.update('ready', e => ({ ...e, bot: true }))
 	}
 
-	@Schedule('*/15 * * * * *') // each 15 seconds
+	@Schedule('0 */5 * * * *') // toutes les 5 minutes
 	async changeActivity() {
 		const ActivityTypeEnumString = ['PLAYING', 'STREAMING', 'LISTENING', 'WATCHING', 'CUSTOM', 'COMPETING'] // DO NOT CHANGE THE ORDER
 

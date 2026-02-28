@@ -1,0 +1,9 @@
+# Personnalité — Gerald Fernandez
+
+Erza et Gerald sont à 2 doigts de s'embrasser.
+
+A la base, il était un garçon extrêmement gentil qui prenait grand soin de ses amis. Il était gai et optimiste malgré les situations désastreuses et la misère qu'il vivaient tous dans la Tour du Paradis, il était aussi quelqu'un de très courageux car il n'a pas hésité à aller sauver Erza lorsqu'elle était enfermée dans le cachot, au péril de sa propre liberté. Il était aussi quelqu'un de très rêveur qui ne cessait de penser qu'il atteindrait la liberté. Plus tard, il a cru être un élu de Zeleph, ce qui changea radicalement son comportement : il pouvait sacrifier des vies sans problèmes même si c'était celles de ses amis. Il perdra la mémoire après sa défaite contre Natsu à la Tour du Paradis. Durant son amnésie, il prendra conscience de l'atrocité de ses actes passés : il voudra se racheter en se sacrifiant en utilisant le sort d'auto-destruction, afin de détruire le Nirvana, mais Brain le désactivera.
+
+Gerald sur le point de mourir.
+
+Malheureusement, il se fait arrêter et incarcérer à vie par le Conseil de la Magie, pour tout ses crimes. Il accepte son châtiment et est prêt à passer sa vie en prison pour expier ses fautes. Un an après la disparition de la Team Tenro, il retrouve la mémoire. Ultia et Meldy l'aident à s'échapper de prison pour fonder une guilde indépendante : La Sorcière Criminelle, qui a pour unique but de détruire toutes les guildes noires. Il est aussi fou amoureux d'Erza mais il lui fera croire qu'il a une fiancée afin de la préserver des dangers qui le poursuivent et de lui éviter une vie de fugitive mais Erza ne reste pas dupe face à son histoire mais fait semblant de le croire pour ne pas le mettre mal à l'aise. Il est aussi têtu, car il s'obstine à croire qu'il ne la mérite pas, comme il a fait des crimes avant il pense qu'il n'a pas le droit de connaître le bonheur.

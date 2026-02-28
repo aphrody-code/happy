@@ -52,7 +52,7 @@ export default class StatsCommand {
 		name: 'stats',
 	})
 	async statsHandler(
-		@SlashOption({ name: 'days', type: ApplicationCommandOptionType.Number, required: true }) days: number,
+		@SlashOption({ name: 'days', type: ApplicationCommandOptionType.Number, required: true, minValue: 1, maxValue: 365 }) days: number,
 			interaction: CommandInteraction,
 			client: Client,
 			{ localize }: InteractionData
@@ -115,7 +115,9 @@ export default class StatsCommand {
 			},
 		}
 
-		return `https://quickchart.io/chart?c=${JSON.stringify(obj)}&format=png`.split(' ').join('%20')
+		const chartJson = JSON.stringify(obj)
+
+		return `https://quickchart.io/chart?c=${encodeURIComponent(chartJson)}&format=png`
 	}
 
 	getEmbed(author: User, link: string): EmbedBuilder {

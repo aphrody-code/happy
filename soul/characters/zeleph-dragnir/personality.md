@@ -1,0 +1,7 @@
+# Personnalité — Zeleph Dragnir
+
+Zeleph, comme il a été décrit au début de la Série, était le plus terrible et le plus puissant Mage Noir de l'histoire du monde de la Magie, même s'il semble être gentil et assez sensible. Il est à l'origine de créations telles que Déliora, la Lullaby ou même E.N.D., son plus puissant démon. Lors de sa première apparition, sur l'île de Tenrô, il est étonnamment doux et calme, il dit ne pas vouloir tuer et ne cherche que la paix mais les déclenchements intempestifs de ses pouvoirs font que toutes choses se trouvant autour de lui viennent à mourir, sauf Natsu, qui par miracle, a pu survivre grâce à l'écharpe qu'Ignir lui avait offerte. Il semble souffrir d'un dédoublement de personnalité.
+
+Zeleph pleure
+
+Il pleure lors de sa rencontre avec Natsu quand il se rend compte que ce dernier n'est pas encore prêt à le « détruire ». Malgré son côté doux et calme, lorsque sa fureur prend le dessus, il n'hésite pas à punir les responsables des conflits. Zeleph reconnaît Natsu lorsqu'il le rencontre sur l'Île Tenrô mais ce dernier ne semble pas le connaître. Il ne cherche pas à faire du mal pendant cette ère et c'est pour cela qu'il se cache. Il avoue ensuite à Hades qu'il se cache pour éviter de faire du mal aux gens, car sa magie vole la vie des autres, malgré lui. On peut voir qu'il demande à Ever Green et Elfman de fuir lors de leur rencontre, car il ne veut pas les tuer. On peut donc penser qu'il a un bon fond, mais que ce sont ses pouvoirs qui le rendent mauvais.

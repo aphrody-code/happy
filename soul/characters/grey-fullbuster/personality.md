@@ -1,0 +1,19 @@
+# Personnalité — Grey Fullbuster
+
+La relation entre Grey et Natsu
+
+Grey Fullbuster se dispute souvent avec Natsu Dragnir depuis qu'il est arrivé à Fairy Tail, ils sont d'ailleurs rivaux, et cela n'est un secret pour personne au sein de la guilde. Mais ils ont en réalité un profond respect l'un envers l'autre. Sans le savoir, Grey tient énormément à lui. Sa rivalité avec Natsu va plus loin qu'une simple opposition entre le feu et la glace, il y a aussi de la jalousie entre les deux mages. Cependant, bien que rivaux, Grey n'accepterait pas et ne supporterait pas que Natsu disparaisse de sa vie, s'il est triste ou encore blessé, il s'inquiète réellement.
+
+Durant l'Arc Oracion Seis, Gemi et Mini, les deux esprits du Gémeaux, révèlent à travers l'apparence de Grey que ce dernier a quelques vues sur Lucy, bien que l'on comprenne vite que cela n'a rien de sérieux. On peut aussi remarquer ce comportement envers Erza . Autant dire que Jubia avait de la chance de ne pas être là à ce moment, elle aurait été anéantie, avec son esprit de dramatisation et sa jalousie envers Lucy. De toutes façons, son caractère taciturne et sa manière de cacher ses sentiments ne laissent pas l'impression qu'il soit apte à réellement aimer une demoiselle, au grand désespoir de Jubia. Même si celui-ci semble éprouver quelques sentiments pour elle lors des Grands Jeux Magiques dans sa bataille avec elle contre Leon et Cherrya et dans les scans plus récents, par exemple en emménageant avec elle après la dissolution de Fairy Tail.
+
+Grey, toujours aussi couvert
+
+On peut noter que le jeune homme a une grosse tendance à se déshabiller sans s'en rendre compte (étant mage de glace, il ne ressent pas le froid), ceci est dû à l'entraînement d'Oul qui consistait à se déshabiller sous la neige durant l'entraînement. On peut également supposer qu'il révèle son plein potentiel lorsqu'il ôte ses vêtements, car lorsqu'il se bat sérieusement, il enlève volontairement le haut, comme pour être plus à l'aise, tout comme Leon Bastia, l'autre disciple de Oul.
+
+Comme tout mage de Fairy Tail, il est prêt à mourir pour ses camarades comme il l'a prouvé en se sacrifiant pour que Jubia ne meure pas dans le chapitre 334 (bien que ayant été sauvé par Ultia dans le chapitre suivant). Il semble également avoir un côté taciturne qui attire les autres, à son grand désespoir, son caractère étant censé justement tenir éloignés ses camarades. Les jeunes filles ( et certains garçons ) semblent avoir un faible pour lui, comme on a pu le remarquer dans l'Arc de l'Île de Galuna.
+
+Erza punissant Grey et Natsu
+
+On peut aussi noter que Grey tout comme Lucy et Gajil par exemple, sont des personnages à l'esprit critique un peu plus développé que les autres membres de la guilde, pouvant être qualifié de lucidité. Il est néanmoins un peu moins fiable que les autres membres (plus imprévisible) comme on peut le voir dans l'arc de Daphné. C'est un des membres les plus intelligents de Fairy Tail. On ne cerne pas toujours bien ses idées. Lorsqu'il se lance dans une énième bagarre avec Natsu et les autres membres de la guilde, seuls Makarof et Erza peuvent l'arrêter (ainsi que Gildarts vu la puissance dont il dispose, cela étant dit, jamais on ne l'a vu stopper Grey).
+
+Durant l'arc d'Edolas, le Grey d'Edolas est tout le contraire du Grey que nous connaissons. Il est frileux, porte des tonnes de vêtements et il est fou amoureux de la Jubia d'Edolas qui le repousse à son grand désarroi. Grey n'est parfois pas très réceptif avec les sentiments des femmes, comme on peut le voir avec Jubia. Cependant, depuis le chapitre 416, l'on peut noter un rapprochement évident entre les deux personnages. Avec le temps, il s'est ouvert plus facilement à elle. La présence de cette dernière ne le gêne plus autant qu'avant et il arrive des fois où ils ont des conversations sérieuses ensemble. Leur relation a pris un tournant romantique officiel depuis le chapitre 453.

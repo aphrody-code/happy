@@ -1,13 +1,14 @@
-import { Client } from 'discordx'
-import { SlashGroup, SlashOption } from '@/decorators'
 import { Category } from '@discordx/utilities'
-import { ApplicationCommandOptionType, CommandInteraction, Channel } from 'discord.js'
-import { StarBoard, StarBoardMessage } from '../entities'
-import { Discord, Slash } from '@/decorators'
-import { Guard, UserPermissions } from '@/guards'
-import { injectable } from 'tsyringe'
-import { Database } from '@/services'
 import { wrap } from '@mikro-orm/core'
+import { ApplicationCommandOptionType, Channel, CommandInteraction } from 'discord.js'
+import { Client } from 'discordx'
+import { injectable } from 'tsyringe'
+
+import { Discord, Slash, SlashGroup, SlashOption } from '@/decorators'
+import { Guard, UserPermissions } from '@/guards'
+import { Database } from '@/services'
+
+import { StarBoard, StarBoardMessage } from '../entities'
 
 @Discord()
 @injectable()
@@ -26,7 +27,7 @@ export default class StarsCommand {
 		localizationSource: 'StarBoard.STARBOARD.STAR_DESC' as any,
 	})
 	@Guard(
-		UserPermissions(['Administrator']),
+		UserPermissions(['Administrator'])
 	)
 	async set(
 		@SlashOption({
@@ -55,7 +56,7 @@ export default class StarsCommand {
 
 		interaction: CommandInteraction,
 		client: Client,
-		{ localize }: InteractionData,
+		{ localize }: InteractionData
 	) {
 		// Vérifications
 		if (!interaction.guildId) return interaction.followUp({ content: (localize as any).StarBoard.STARBOARD.STAR_ERR_GUILD.MESSAGE(), ephemeral: true })
@@ -87,7 +88,7 @@ export default class StarsCommand {
 			if (minStar) starboard.minStar = minStar
 
 			await this.db.em.persistAndFlush(starboard)
-			this.db.em.clearCache('star_guild_' + interaction.guildId)
+			this.db.em.clearCache(`star_guild_${interaction.guildId}`)
 			await interaction.followUp({
 				content: (localize as any).StarBoard.STARBOARD.STAR_CHAN_SET.MESSAGE(),
 				ephemeral: true,
@@ -108,11 +109,12 @@ export default class StarsCommand {
 			if (channel) chanStars.channelId = channel.id
 
 			await this.db.em.flush()
-			this.db.em.clearCache('star_guild_' + interaction.guildId)
+			this.db.em.clearCache(`star_guild_${interaction.guildId}`)
 			await interaction.followUp({
 				content: (localize as any).StarBoard.STARBOARD.STAR_CFG_UPDATED.MESSAGE(),
 				ephemeral: true,
 			})
 		}
 	}
+
 }

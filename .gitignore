@@ -1,5 +1,6 @@
 # npm
 node_modules/
+package-lock.json
 
 # secrets
 .env
@@ -19,4 +20,8 @@ logs/
 *.log
 
 # other
+.storage/
 tests/.storage/
+cookies.txt
+test-*.png
+GEMINI.md

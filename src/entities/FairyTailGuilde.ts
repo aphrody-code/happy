@@ -1,4 +1,4 @@
-import { Entity, EntityRepositoryType, PrimaryKey, Property } from '@mikro-orm/core'
+import { Entity, EntityRepositoryType, Index, PrimaryKey, Property, Unique } from '@mikro-orm/core'
 import { EntityRepository } from '@mikro-orm/sqlite'
 
 import { CustomBaseEntity } from './BaseEntity'
@@ -8,6 +8,7 @@ import { CustomBaseEntity } from './BaseEntity'
 // ===========================================
 
 @Entity({ repository: () => FairyTailGuildeRepository })
+@Unique({ properties: ['discordGuildId', 'userId'] })
 export class FairyTailGuilde extends CustomBaseEntity {
 
 	[EntityRepositoryType]?: FairyTailGuildeRepository
@@ -16,9 +17,11 @@ export class FairyTailGuilde extends CustomBaseEntity {
 	id!: number
 
 	@Property()
+	@Index()
 	discordGuildId!: string
 
 	@Property()
+	@Index()
 	userId!: string
 
 	@Property()

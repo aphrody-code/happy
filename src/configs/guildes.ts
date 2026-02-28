@@ -1,4 +1,4 @@
-export interface FairyTailGuildeConfig {
+export type FairyTailGuildeConfig = {
 	id: string
 	name: string
 	emoji: string
@@ -28,7 +28,7 @@ export const fairyTailGuildes: FairyTailGuildeConfig[] = [
 	{ id: 'hound-holy', name: 'Hound Holy', emoji: '🐺', color: '#3498DB', description: 'La guilde du chien sacré', type: 'legale' },
 	{ id: 'magia-dragon', name: 'Magia Dragon', emoji: '🐉', color: '#E74C3C', description: 'La guilde fondée par les Dragon Slayers', type: 'legale' },
 	{ id: 'loup-du-sud', name: 'Mercenaires du Loup du Sud', emoji: '🐺', color: '#607D8B', description: 'Les mercenaires du sud de Fiore', type: 'legale' },
-	{ id: 'orochis-fin', name: "Orochi's Fin", emoji: '🐲', color: '#1ABC9C', description: 'La guilde du serpent Orochi', type: 'legale' },
+	{ id: 'orochis-fin', name: 'Orochi\'s Fin', emoji: '🐲', color: '#1ABC9C', description: 'La guilde du serpent Orochi', type: 'legale' },
 	{ id: 'phoenix-grave', name: 'Phoenix Grave', emoji: '🔥', color: '#FF4500', description: 'La guilde du phénix', type: 'legale' },
 	{ id: 'red-princess', name: 'Red Princess', emoji: '👸', color: '#DC143C', description: 'La guilde de la princesse rouge', type: 'legale' },
 	{ id: 'scarmiglione', name: 'Scarmiglione', emoji: '🎭', color: '#4A235A', description: 'Une guilde au caractère théâtral', type: 'legale' },

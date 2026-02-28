@@ -21,6 +21,9 @@ export const env = cleanEnv(process.env, {
 	API_ADMIN_TOKEN: str({ default: undefined }),
 
 	IMGUR_CLIENT_ID: str({ default: undefined }),
+
+	TWILIO_ACCOUNT_SID: str({ default: undefined }),
+	TWILIO_AUTH_TOKEN: str({ default: undefined }),
 })
 
 export function checkEnvironmentVariables() {

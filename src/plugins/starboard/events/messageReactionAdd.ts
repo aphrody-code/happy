@@ -1,9 +1,10 @@
+import { ArgsOf, Client } from 'discordx'
 import { injectable } from 'tsyringe'
-import { Client, ArgsOf } from 'discordx'
 
 import { Discord, On } from '@/decorators'
 import { Database, EventManager } from '@/services'
 import { resolveDependency } from '@/utils/functions'
+
 import { StarBoard, StarBoardMessage } from '../entities'
 
 @Discord()
@@ -18,7 +19,7 @@ export default class messageReactionAddEvent {
 	@On('messageReactionAdd')
 	async messageReactionAddHandler(
 		[reaction, user]: ArgsOf<'messageReactionAdd'>,
-		client: Client,
+		client: Client
 	) {
 		// Récupérer les messages partiels (anciens messages)
 		if (reaction.message.partial) await reaction.message.fetch()
@@ -27,7 +28,7 @@ export default class messageReactionAddEvent {
 		const starboardRepo = db.get(StarBoard)
 		const starMessageRepo = db.get(StarBoardMessage)
 		// Vérifier si le serveur a un starboard configuré
-		const chanStars = await starboardRepo.findOne({ guildId: reaction.message.guildId }, { cache: ['star_guild_' + reaction.message.guildId, 60_1000] })
+		const chanStars = await starboardRepo.findOne({ guildId: reaction.message.guildId }, { cache: [`star_guild_${reaction.message.guildId}`, 60_1000] })
 		if (!chanStars) return
 		// Ignorer si le message starred est dans le salon starboard
 		if (chanStars && chanStars.channelId === reaction.message.channelId) return
@@ -36,7 +37,7 @@ export default class messageReactionAddEvent {
 		// Vérifier le minimum de réactions
 		if (reaction.message.reactions.cache.get(chanStars.emoji)!.count < chanStars.minStar) return
 		// Vérifier si le message est déjà dans le starboard
-		const starMessage = await starMessageRepo.findOne({ srcMessage: reaction.message.id }, { cache: ['star_message_' + reaction.message.id, 60_1000] })
+		const starMessage = await starMessageRepo.findOne({ srcMessage: reaction.message.id }, { cache: [`star_message_${reaction.message.id}`, 60_1000] })
 		// Si le message n'est pas dans le starboard, en créer un nouveau
 		if (!starMessage) {
 			this.eventManager.emit('newStar', starMessage, reaction, chanStars)
@@ -46,4 +47,5 @@ export default class messageReactionAddEvent {
 			this.eventManager.emit('updateStar', starMessage, reaction, chanStars)
 		}
 	}
+
 }

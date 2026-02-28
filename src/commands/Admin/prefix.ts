@@ -38,7 +38,7 @@ export default class PrefixCommand {
 
 		if (guildData) {
 			guildData.prefix = prefix || null
-			this.db.em.persistAndFlush(guildData)
+			await this.db.em.persistAndFlush(guildData)
 
 			simpleSuccessEmbed(
 				interaction,

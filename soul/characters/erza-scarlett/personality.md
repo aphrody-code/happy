@@ -1,0 +1,17 @@
+# Personnalité — Erza Scarlett
+
+La violence d'Erza.
+
+C'est la femme la plus forte et respectée de toute la Guilde. Lorsqu'on la voit, elle est effrayante et fait même fuir certaines personnes. Elle n'hésite pas à sortir son épée et à menacer les autres avec, pour obtenir ce qu'elle veut. Mais en réalité, sous son armure se cache une personne très sensible et féminine qui ne demande qu'à être protégée et aimée. C'est elle-même qui a appris à lire à Natsu après son arrivée à Fairy Tail car Ignir n'avait pas pleinement terminé son apprentissage. Elle adore les gâteaux à la fraise et se met très en colère lorsque Natsu et Grey le détruisent sans faire exprès quand ils se chamaillent. Elle semble donner beaucoup d'importance à des choses qui n'en valent pas la peine. Lorsqu'elle part en voyage, elle emporte toujours énormément de valises. Elle révélera plus tard que ces valises contiennent de la nourriture. Lors de la bataille contre les Oracion Seis, Ichiya prétend être son fiancé ce qui ne lui plait pas du tout, elle fait alors tout pour le dégoûter, et prend l'habitude de le frapper et parfois même de l'insulter. Elle a toujours envie d'être un peu plus forte que les autres car elle craint que Natsu ou Grey ne la dépasse en terme de puissance, comme on peut le voir dans l'Épisode 229.
+
+Erza peut parfois paraître froide.
+
+Erza Scarlett se décrit comme quelqu'un qui pleurait toujours, car elle n'était pas en mesure de protéger ceux qu'elle aime. En outre Erza Scarlett a déclaré qu'elle se sent mal à l'aise et pas en sécurité lorsqu'elle ne porte pas son armure, et que c'est juste pour se donner l'impression de pouvoir se protéger toute seule. D'ailleurs pour elle, abandonner est inadmissible. Erza est également amoureuse de Gerald Fernandez, un ami d'enfance qui l'a trahie, possédé par l'esprit de Zeleph incarné par Ultia, mais elle est incapable de le haïr.
+
+Erza et Gerald sur le point de s'embrasser.
+
+Malgré sa personnalité réservée et conservatrice, Erza ne montre que très peu de modestie ou d'inhibition. Beaucoup de ses armures sont étriquées, révélatrices et féminines, et sans armure, elle préfère des vêtements séduisants et révélateurs. Cependant malgré ce manque de modestie, Erza considère Natsu comme étant aussi puissant qu'elle si ce n'est plus. Mais elle sous-estime grandement ses capacités, comme le fait remarquer José, ainsi que d'autres, qui pensent qu'elle mérite le titre de Mage Sacré.
+
+Comme plusieurs autres membres de la guilde, Erza considère Fairy Tail comme sa propre famille, et Makarof comme son père. Elle est d'avis qu'elle ne pourrait pas continuer à vivre sans la guilde. Elle se soucie également de ses amis, comme lorsqu'elle dit qu'elle préférait mourir que de livrer une amie.
+
+Enfin, Erza semble n'avoir aucun problème à voir les hommes nus (ou du moins ses compagnons de guilde de sexe masculin). Elle ne ressentait aucune gêne en montrant qu'elle souhaitait prendre une douche avec Natsu Dragnir et Grey Fullbuster puisqu'ils en prenaient ensemble lorsqu'ils étaient plus jeunes. Ou encore dans la source chaude, quand elle a appris que les garçons voulaient la voir elle et les autres filles, elle a voulu les inviter à prendre un bain avec elles, ce qui choqua Wendy et Lucy. Ce côté de sa personnalité montre que son ex-dépendance à son armure était purement psychologique, et non pas physique et elle semble ne pas avoir beaucoup de pudeur.

@@ -1,0 +1,5 @@
+# Personnalité — Erick
+
+Le côté sadique de Cobra.
+
+Comme les autres membres de sa guilde, il est assez confiant et aime voir ses adversaires souffrir. Il semble avoir sa propre opinion au sujet des Chasseurs De Dragons, croyant que la deuxième génération (à laquelle il appartient) est supérieure à la première, et que l'existence de cette dernière est quelque peu discutable, puisque les Chasseurs de Dragon d'origine ont appris leurs arts magiques des dragons alors que cette magie leur était à l'origine réservée et qui ont été généralement considérées comme inexistantes dû à la disparition des dragons. Il est également très facile à vivre : il a été capable de rire d'une plaisanterie de Natsu en plein combat. Cobra a une profonde affection envers Cubelios, son serpent et plus grand ami, et est prêt à consacrer sa prière à entendre sa voix, ce qui est quelque chose d'impossible, même pour son ouïe étonnante. Quand Cubelios (Kinana) aura disparu, il rejettera la faute sur Natsu et le reste de la guilde.

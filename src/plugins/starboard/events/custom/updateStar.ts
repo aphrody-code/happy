@@ -1,10 +1,11 @@
-import { Client } from 'discordx'
-import { injectable } from 'tsyringe'
 import { Loaded } from '@mikro-orm/core'
 import { MessageReaction, PartialMessageReaction, TextChannel } from 'discord.js'
+import { Client } from 'discordx'
+import { injectable } from 'tsyringe'
 
-import { Database } from '@/services'
 import { Discord, OnCustom } from '@/decorators'
+import { Database } from '@/services'
+
 import { StarBoard, StarBoardMessage } from '../../entities'
 
 @Discord()
@@ -22,7 +23,7 @@ export default class updateStarEvent {
 	async updateStarHandler(
 		starMessage: Loaded<StarBoardMessage, never>,
 		reaction: MessageReaction | PartialMessageReaction,
-		chanStars: Loaded<StarBoard, never>,
+		chanStars: Loaded<StarBoard, never>
 	) {
 		const starMessageRepo = this.db.get(StarBoardMessage)
 
@@ -34,7 +35,7 @@ export default class updateStarEvent {
 			const newChannel = await guild.channels.fetch(chanStars.channelId) as TextChannel
 
 			const newMessage = await newChannel.send({
-				content: reaction.emoji.toString() + ' ' + reaction.message.reactions.cache.get(chanStars.emoji)!.count + ' | ' + reaction.message.channel.toString(),
+				content: `${reaction.emoji.toString()} ${reaction.message.reactions.cache.get(chanStars.emoji)!.count} | ${reaction.message.channel.toString()}`,
 				embeds: [message.embeds[0]],
 			})
 
@@ -43,7 +44,7 @@ export default class updateStarEvent {
 			starMessage.starboardChannel = undefined
 		} else {
 			await message.edit({
-				content: reaction.emoji.toString() + ' ' + reaction.message.reactions.cache.get(chanStars.emoji)!.count + ' | ' + reaction.message.channel.toString(),
+				content: `${reaction.emoji.toString()} ${reaction.message.reactions.cache.get(chanStars.emoji)!.count} | ${reaction.message.channel.toString()}`,
 				embeds: [message.embeds[0]],
 			})
 
@@ -51,6 +52,7 @@ export default class updateStarEvent {
 		}
 
 		await this.db.em.persistAndFlush(starMessage)
-		this.db.em.clearCache('star_message_' + reaction.message.id)
+		this.db.em.clearCache(`star_message_${reaction.message.id}`)
 	}
+
 }

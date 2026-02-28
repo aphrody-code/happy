@@ -138,6 +138,37 @@
       "name": "fairy_tail_guilde",
       "indexes": [
         {
+          "columnNames": [
+            "discord_guild_id"
+          ],
+          "composite": false,
+          "keyName": "fairy_tail_guilde_discord_guild_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "user_id"
+          ],
+          "composite": false,
+          "keyName": "fairy_tail_guilde_user_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "fairy_tail_guilde_discord_guild_id_user_id_unique",
+          "columnNames": [
+            "discord_guild_id",
+            "user_id"
+          ],
+          "composite": true,
+          "constraint": true,
+          "primary": false,
+          "unique": true
+        },
+        {
           "keyName": "primary",
           "columnNames": [
             "id"
@@ -358,6 +389,170 @@
       "columns": {
         "id": {
           "name": "id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "discord_guild_id": {
+          "name": "discord_guild_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "action": {
+          "name": "action",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "enumItems": [
+            "ban",
+            "unban",
+            "kick",
+            "timeout",
+            "untimeout",
+            "warn",
+            "clear",
+            "slowmode",
+            "lock",
+            "unlock",
+            "role_add",
+            "role_remove"
+          ],
+          "mappedType": "enum"
+        },
+        "moderator_id": {
+          "name": "moderator_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "target_id": {
+          "name": "target_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "reason": {
+          "name": "reason",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "text"
+        },
+        "duration": {
+          "name": "duration",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "additional_data": {
+          "name": "additional_data",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "json"
+        }
+      },
+      "name": "moderation_log",
+      "indexes": [
+        {
+          "columnNames": [
+            "discord_guild_id"
+          ],
+          "composite": false,
+          "keyName": "moderation_log_discord_guild_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "moderator_id"
+          ],
+          "composite": false,
+          "keyName": "moderation_log_moderator_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "target_id"
+          ],
+          "composite": false,
+          "keyName": "moderation_log_target_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
           "type": "text",
           "unsigned": false,
           "autoincrement": false,
@@ -427,6 +622,753 @@
           "length": null,
           "mappedType": "integer"
         },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "discord_guild_id": {
+          "name": "discord_guild_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "level": {
+          "name": "level",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "1",
+          "mappedType": "integer"
+        },
+        "xp": {
+          "name": "xp",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "0",
+          "mappedType": "integer"
+        },
+        "jewels": {
+          "name": "jewels",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "100",
+          "mappedType": "integer"
+        },
+        "hp": {
+          "name": "hp",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "100",
+          "mappedType": "integer"
+        },
+        "max_hp": {
+          "name": "max_hp",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "100",
+          "mappedType": "integer"
+        },
+        "mp": {
+          "name": "mp",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "50",
+          "mappedType": "integer"
+        },
+        "max_mp": {
+          "name": "max_mp",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "50",
+          "mappedType": "integer"
+        },
+        "current_location": {
+          "name": "current_location",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "'magnolia'",
+          "mappedType": "text"
+        },
+        "context": {
+          "name": "context",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "'exploration'",
+          "mappedType": "text"
+        }
+      },
+      "name": "rpgplayer",
+      "indexes": [
+        {
+          "columnNames": [
+            "user_id"
+          ],
+          "composite": false,
+          "keyName": "rpgplayer_user_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "discord_guild_id"
+          ],
+          "composite": false,
+          "keyName": "rpgplayer_discord_guild_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "flag": {
+          "name": "flag",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "value": {
+          "name": "value",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "json"
+        },
+        "player_id": {
+          "name": "player_id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        }
+      },
+      "name": "rpgnarrative_state",
+      "indexes": [
+        {
+          "columnNames": [
+            "player_id"
+          ],
+          "composite": false,
+          "keyName": "rpgnarrative_state_player_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "rpgnarrative_state_player_id_flag_unique",
+          "columnNames": [
+            "player_id",
+            "flag"
+          ],
+          "composite": true,
+          "constraint": true,
+          "primary": false,
+          "unique": true
+        },
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "rpgnarrative_state_player_id_foreign": {
+          "constraintName": "rpgnarrative_state_player_id_foreign",
+          "columnNames": [
+            "player_id"
+          ],
+          "localTableName": "rpgnarrative_state",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "rpgplayer",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "item_id": {
+          "name": "item_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "1",
+          "mappedType": "integer"
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "json"
+        },
+        "player_id": {
+          "name": "player_id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        }
+      },
+      "name": "rpgitem",
+      "indexes": [
+        {
+          "columnNames": [
+            "player_id"
+          ],
+          "composite": false,
+          "keyName": "rpgitem_player_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "rpgitem_player_id_foreign": {
+          "constraintName": "rpgitem_player_id_foreign",
+          "columnNames": [
+            "player_id"
+          ],
+          "localTableName": "rpgitem",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "rpgplayer",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "quest_id": {
+          "name": "quest_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "'active'",
+          "mappedType": "text"
+        },
+        "current_step": {
+          "name": "current_step",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "0",
+          "mappedType": "integer"
+        },
+        "data": {
+          "name": "data",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "json"
+        },
+        "player_id": {
+          "name": "player_id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        }
+      },
+      "name": "rpgquest",
+      "indexes": [
+        {
+          "columnNames": [
+            "player_id"
+          ],
+          "composite": false,
+          "keyName": "rpgquest_player_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "rpgquest_player_id_foreign": {
+          "constraintName": "rpgquest_player_id_foreign",
+          "columnNames": [
+            "player_id"
+          ],
+          "localTableName": "rpgquest",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "rpgplayer",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "guild_id": {
+          "name": "guild_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "channel_id": {
+          "name": "channel_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "emoji": {
+          "name": "emoji",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "'⭐'",
+          "mappedType": "text"
+        },
+        "min_star": {
+          "name": "min_star",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "3",
+          "mappedType": "integer"
+        }
+      },
+      "name": "star_board",
+      "indexes": [
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "guild_id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "src_message": {
+          "name": "src_message",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "starboard_message": {
+          "name": "starboard_message",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "starboard_channel": {
+          "name": "starboard_channel",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "text"
+        },
+        "star_count": {
+          "name": "star_count",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "starboard_guild_id": {
+          "name": "starboard_guild_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        }
+      },
+      "name": "star_board_message",
+      "indexes": [
+        {
+          "columnNames": [
+            "starboard_guild_id"
+          ],
+          "composite": false,
+          "keyName": "star_board_message_starboard_guild_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "src_message"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "star_board_message_starboard_guild_id_foreign": {
+          "constraintName": "star_board_message_starboard_guild_id_foreign",
+          "columnNames": [
+            "starboard_guild_id"
+          ],
+          "localTableName": "star_board_message",
+          "referencedColumnNames": [
+            "guild_id"
+          ],
+          "referencedTableName": "star_board",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
         "type": {
           "name": "type",
           "type": "text",
@@ -471,6 +1413,37 @@
       },
       "name": "stat",
       "indexes": [
+        {
+          "columnNames": [
+            "type"
+          ],
+          "composite": false,
+          "keyName": "stat_type_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "created_at"
+          ],
+          "composite": false,
+          "keyName": "stat_created_at_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "stat_type_created_at_index",
+          "columnNames": [
+            "type",
+            "created_at"
+          ],
+          "composite": true,
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
         {
           "keyName": "primary",
           "columnNames": [
@@ -531,6 +1504,127 @@
       },
       "name": "user",
       "indexes": [
+        {
+          "keyName": "primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "discord_guild_id": {
+          "name": "discord_guild_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "moderator_id": {
+          "name": "moderator_id",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "reason": {
+          "name": "reason",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "text"
+        },
+        "active": {
+          "name": "active",
+          "type": "integer",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "true",
+          "mappedType": "integer"
+        }
+      },
+      "name": "warning",
+      "indexes": [
+        {
+          "columnNames": [
+            "discord_guild_id"
+          ],
+          "composite": false,
+          "keyName": "warning_discord_guild_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "user_id"
+          ],
+          "composite": false,
+          "keyName": "warning_user_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
         {
           "keyName": "primary",
           "columnNames": [

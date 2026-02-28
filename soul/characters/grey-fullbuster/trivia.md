@@ -1,0 +1,37 @@
+# Détails supplémentaires — Grey Fullbuster
+
+- D'après sa fiche biographique, ce qu'il préfère sont les choses intéressantes et ce qu'il déteste est Natsu.
+- Le boxer de Grey est beaucoup plus long dans l'anime et est généralement toujours noir, contrairement au manga.
+- Grey termine toujours en sous-vêtements, cela est dû à l'entrainement d'Oul qu'il a subi étant enfant pour résister au froid. Il en a pris l'habitude depuis. Il lui arrive même parfois de finir complètement nu dans certains épisodes (plus souvent dans les OAV).
+- Il est souvent en conflit avec Natsu, qui est son rival. Mais malgré tout, ils sont très proches, et n'hésitent pas à s'entraider !
+- Il a les yeux noirs dans l'anime mais la vraie couleur de ses yeux est le bleu foncé.
+- Il est plus musclé dans le manga que dans l'anime.
+- Il fume dans les premiers chapitres du manga mais cela n'a jamais été montré dans l'anime.
+- Il a souvent les mêmes réflexions que Lucy.
+- Sa marque de guilde est de couleur bleu marine et elle se trouve sur son torse.
+- Grey aime Jubia depuis très longtemps. Mais il la rejetait à cause de son passé. Toutes les personnes qu'il aimait sont mortes.
+- Il est révélé qu'il a embrassé Jubia lors de son combat contre Invel (Arc Arbaless). Jubia est follement amoureuse de lui, et il ne semble apparemment plus si importuné par cette dernière puisqu'ils partent quelques fois en mission ou se balader ensemble. Dans le spin-off, Fairy Tail 100 Years Quest, Grey a officialisé que Jubia était "son pouvoir de vivre", et ne repousse plus du tout cette dernière. Leur relation prend une tournure romantique à partir du chapitre 453.
+- Grey est la première personne à éliminer selon le classement de Meldy sur l'Île de Tenrô.
+- Généralement plusieurs filles tombent amoureuses de lui dans les villes où il passe, ce qui semble le gêner quelques fois sachant que justement son caractère taciturne est sensé intimider.
+- Il se bat très bien à moto, comme lors du combat contre Racer ou contre Sugar Boy, à Edolas.
+- Le pendentif qu'il a autour du cou ressemble fortement au rave d'Haru, personnage principal de Rave Master.
+- Il a acheté son pendentif dans un château-fort imprenable.
+- Son pendentif était à l'origine un rave et Hiro Mashima hésita à faire de ce personnage le dixième rave master mais rejeta finalement cette idée.
+- Il est considéré comme l'un des mages les plus puissants de sa guilde, et Erza trouve que sa magie, tout en étant dangereuse, est très esthétique.
+- D'après Gémini, Grey aime bien le physique de Lucy.
+- Dans l'anime, un membre de la Guilde Eisen Wald avait prédit que Grey devrait se méfier des femmes et de l'eau. On comprend vite qu'il s'agit de Jubia.
+- Deux cicatrices de Grey proviennent de blessures infligées par Leon. Celle sur son front est due au Dragon de Glace de Leon, lors du premier combat sur l'île de Galuna, et la seconde est due au fait que Leon ait transpercé Grey sur le côté droit de l'abdomen avec son épée de glace lors de leur second combat. Sa troisième cicatrice se trouve près de la seconde, Grey se l'est faite lui-même pour se suicider lors du combat contre Jubia Lokser, pour ne pas tuer celle-ci.
+- Il a fait pleurer Mira deux fois, en disant que ses dessins sont mal faits (sans savoir que c'est elle qui les a faits). Grey et le dessin
+- Son alter ego est l'opposé complet de Grey. Celui-ci s'habille beaucoup trop, car il a tout le temps froid, et est follement amoureux de Jubia
+- Son Père est Silver.
+- Sa mère s'appelle Mika.
+- Grey est arrivé 6ème du premier classement de popularité des personnages de Fairy Tail réalisé par Magazine Spécial.
+- Mashima nous révèle dans les pages Bonus du Tome 46 que Grey devait être un "chasseur de dragons de glace". Toutefois son idée a été rejetée et, par la suite, il a eu l'idée du chasseur de démons vers le début de l'histoire du Grand Tournoi de la Magie.
+- Il semble avoir des sentiments pour Jubia depuis le début de l'arc Arbaless.
+- Il combine très bien ses techniques avec Natsu Dragnir, Leon Bastia et Jubia Lokser.
+- Il est le rival de Natsu et de Leon Bastia.
+- Natsu et lui sont des personnages créés à partir de la propre personnalité de l'auteur.
+- Il ne semble pas aimer danser.
+- Grey est très reconnaissant envers Jubia qu'elle soit toujours à ses côtés et il lui dit qu'il lui donnera sa réponse après la bataille de Fairy Tail contre l'empire Arbaless.
+- Au chapitre 499, Grey est plus furieux que jamais après avoir assisté à la mort d'une autre personne très importante pour lui : Jubia.
+- Ses cheveux ressemblent à ceux d'un Super Saiyan (cheveux remontés en pointes) du manga Dragon Ball d'Akira Toriyama.

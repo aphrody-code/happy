@@ -1,0 +1,5 @@
+# Personnalité — Meldy
+
+Meldy, une adulte dans un corps d'enfant.
+
+Meldy est une personne mature et d'une personnalité généralement calme. Pour ses ennemis, son discours semble presque robotique, alors qu'elle fait une pause entre les mots et se réfère à sa mission «d'exterminer» et «d'anéantir» Fairy Tail. Sa haine va jusqu’à donner des numéros à chacun d'eux pour les tuer dans un ordre chronologique. Elle prend ses missions très au sérieux. Elle a une grande affection pour Ultia qu'elle considère comme sa mère. Au combat, elle semble également être assez arrogante, se référant à ceux qu'elle considère faibles comme des ordures. Sa vraie personnalité s'affiche lorsque le vaisseau de Grimoire Heart s'approche de l'île, elle était très calme à l'idée de commencer sa mission. Elle ne répond pas aussi lorsqu'Ultia lui cria "de ne pas l'appeler Ul". Ultia dit ça avec un regard furieux. Meldy baissa les yeux, triste car elle reste toujours une enfant. Après le saut de sept ans, elle est plus modeste et développe un sens de l'humour, taquinant Grey et Lucy. Elle a tendance à appeler Ultia "Oul", le nom de sa mère, ce qui a le don de l'énerver.

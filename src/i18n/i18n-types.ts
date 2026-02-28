@@ -8,8 +8,6 @@ export type BaseLocale = 'fr'
 export type Locales =
 	| 'en'
 	| 'fr'
-	| 'ru'
-	| 'uk'
 
 export type Translation = RootTranslation & DisallowNamespaces
 
@@ -57,11 +55,11 @@ type RootTranslation = {
 			DESCRIPTION: string
 			EMBED: {
 				/**
-				 * I​n​v​i​t​e​ ​m​o​i​ ​s​u​r​ ​t​o​n​ ​s​e​r​v​e​u​r​!
+				 * I​n​v​i​t​e​-​m​o​i​ ​s​u​r​ ​t​o​n​ ​s​e​r​v​e​u​r​ ​!
 				 */
 				TITLE: string
 				/**
-				 * [​C​l​i​q​u​e​ ​i​c​i​]​(​{​l​i​n​k​}​)​ ​p​o​u​r​ ​m​'​i​n​v​i​t​e​r​!
+				 * [​C​l​i​q​u​e​ ​i​c​i​]​(​{​l​i​n​k​}​)​ ​p​o​u​r​ ​m​'​i​n​v​i​t​e​r​ ​!​ ​A​y​e​ ​!
 				 * @param {string} link
 				 */
 				DESCRIPTION: RequiredParams<'link'>
@@ -140,7 +138,7 @@ type RootTranslation = {
 			DESCRIPTION: string
 			EMBED: {
 				/**
-				 * P​a​n​n​e​l​ ​d​'​a​i​d​e
+				 * P​a​n​n​e​l​ ​d​'​a​i​d​e​ ​d​e​ ​H​a​p​p​y
 				 */
 				TITLE: string
 				/**
@@ -163,11 +161,11 @@ type RootTranslation = {
 		}
 		PING: {
 			/**
-			 * P​o​n​g​!
+			 * A​y​e​ ​!
 			 */
 			DESCRIPTION: string
 			/**
-			 * {​m​e​m​b​e​r​}​ ​P​o​n​g​!​ ​L​e​ ​t​e​m​p​s​ ​d​e​ ​r​é​p​o​n​s​e​ ​é​t​a​i​t​ ​{​t​i​m​e​}​m​s​.​{​h​e​a​r​t​b​e​a​t​}
+			 * A​y​e​ ​!​ ​{​m​e​m​b​e​r​}​ ​L​e​ ​t​e​m​p​s​ ​d​e​ ​r​é​p​o​n​s​e​ ​é​t​a​i​t​ ​d​e​ ​{​t​i​m​e​}​m​s​.​ ​C​'​e​s​t​ ​a​u​s​s​i​ ​r​a​p​i​d​e​ ​q​u​e​ ​M​a​x​ ​S​p​e​e​d​ ​!​{​h​e​a​r​t​b​e​a​t​}
 			 * @param {string} heartbeat
 			 * @param {string} member
 			 * @param {number} time
@@ -308,31 +306,1312 @@ type RootTranslation = {
 			 */
 			NO_MEMBERSHIPS: string
 		}
-		SETUP: {
+		HAPPY: {
 			/**
-			 * C​o​n​f​i​g​u​r​e​r​ ​t​o​u​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​e​t​ ​c​a​t​é​g​o​r​i​e​s​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 * D​é​c​o​u​v​r​e​ ​H​a​p​p​y​,​ ​l​e​ ​c​h​a​t​ ​a​i​l​é​ ​d​e​ ​F​a​i​r​y​ ​T​a​i​l​ ​!
+			 */
+			DESCRIPTION: string
+			/**
+			 * C​i​t​a​t​i​o​n​ ​d​e​ ​H​a​p​p​y
+			 */
+			QUOTE_TITLE: string
+			/**
+			 * L​e​ ​s​a​v​i​e​z​-​v​o​u​s​ ​?
+			 */
+			TRIVIA_TITLE: string
+			/**
+			 * Q​u​i​ ​e​s​t​ ​H​a​p​p​y​ ​?
+			 */
+			WHO_TITLE: string
+			/**
+			 * H​a​p​p​y​ ​d​i​t​.​.​.
+			 */
+			RANDOM_TITLE: string
+			OPTIONS: {
+				ACTION: {
+					/**
+					 * a​c​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * Q​u​e​ ​v​e​u​x​-​t​u​ ​s​a​v​o​i​r​ ​s​u​r​ ​H​a​p​p​y​ ​?
+					 */
+					DESCRIPTION: string
+				}
+			}
+		}
+		AVATAR: {
+			/**
+			 * A​f​f​i​c​h​e​r​ ​l​'​a​v​a​t​a​r​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​d​o​n​t​ ​v​o​i​r​ ​l​'​a​v​a​t​a​r​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * A​v​a​t​a​r​ ​d​e​ ​{​u​s​e​r​}
+				 * @param {string} user
+				 */
+				TITLE: RequiredParams<'user'>
+			}
+		}
+		USERINFO: {
+			/**
+			 * A​f​f​i​c​h​e​r​ ​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​d​o​n​t​ ​v​o​i​r​ ​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * I​n​f​o​r​m​a​t​i​o​n​s​ ​d​e​ ​{​u​s​e​r​}
+				 * @param {string} user
+				 */
+				TITLE: RequiredParams<'user'>
+				FIELDS: {
+					/**
+					 * I​d​e​n​t​i​f​i​a​n​t
+					 */
+					ID: string
+					/**
+					 * C​o​m​p​t​e​ ​c​r​é​é​ ​l​e
+					 */
+					CREATED: string
+					/**
+					 * A​ ​r​e​j​o​i​n​t​ ​l​e
+					 */
+					JOINED: string
+					/**
+					 * R​ô​l​e​s​ ​(​{​c​o​u​n​t​}​)
+					 * @param {number} count
+					 */
+					ROLES: RequiredParams<'count'>
+					/**
+					 * B​a​d​g​e​s
+					 */
+					BADGES: string
+					/**
+					 * S​t​a​t​u​t
+					 */
+					STATUS: string
+					/**
+					 * B​o​t
+					 */
+					BOT: string
+				}
+			}
+		}
+		SERVERINFO: {
+			/**
+			 * A​f​f​i​c​h​e​r​ ​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​d​u​ ​s​e​r​v​e​u​r​.
 			 */
 			DESCRIPTION: string
 			EMBED: {
 				/**
-				 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​u​ ​s​e​r​v​e​u​r
+				 * I​n​f​o​r​m​a​t​i​o​n​s​ ​d​e​ ​{​g​u​i​l​d​}
+				 * @param {string} guild
 				 */
-				TITLE: string
+				TITLE: RequiredParams<'guild'>
+				FIELDS: {
+					/**
+					 * P​r​o​p​r​i​é​t​a​i​r​e
+					 */
+					OWNER: string
+					/**
+					 * C​r​é​é​ ​l​e
+					 */
+					CREATED: string
+					/**
+					 * M​e​m​b​r​e​s
+					 */
+					MEMBERS: string
+					/**
+					 * S​a​l​o​n​s
+					 */
+					CHANNELS: string
+					/**
+					 * R​ô​l​e​s
+					 */
+					ROLES: string
+					/**
+					 * É​m​o​j​i​s
+					 */
+					EMOJIS: string
+					/**
+					 * B​o​o​s​t​s
+					 */
+					BOOSTS: string
+					/**
+					 * V​é​r​i​f​i​c​a​t​i​o​n
+					 */
+					VERIFICATION: string
+				}
+			}
+		}
+		BANNER: {
+			/**
+			 * A​f​f​i​c​h​e​r​ ​l​a​ ​b​a​n​n​i​è​r​e​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​d​o​n​t​ ​v​o​i​r​ ​l​a​ ​b​a​n​n​i​è​r​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
 				/**
-				 * C​r​é​a​t​i​o​n​ ​d​e​s​ ​s​a​l​o​n​s​ ​e​t​ ​c​a​t​é​g​o​r​i​e​s​ ​e​n​ ​c​o​u​r​s​,​ ​v​e​u​i​l​l​e​z​ ​p​a​t​i​e​n​t​e​r​.​.​.
+				 * B​a​n​n​i​è​r​e​ ​d​e​ ​{​u​s​e​r​}
+				 * @param {string} user
 				 */
-				PROGRESS: string
+				TITLE: RequiredParams<'user'>
 				/**
-				 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​t​e​r​m​i​n​é​e​ ​!
+				 * C​e​ ​m​e​m​b​r​e​ ​n​'​a​ ​p​a​s​ ​d​e​ ​b​a​n​n​i​è​r​e​.
 				 */
-				DONE_TITLE: string
+				NO_BANNER: string
+			}
+		}
+		RPG: {
+			/**
+			 * M​o​t​e​u​r​ ​d​e​ ​j​e​u​ ​F​a​i​r​y​ ​T​a​i​l​ ​R​P​G​.
+			 */
+			DESCRIPTION: string
+			/**
+			 * E​x​p​l​o​r​a​t​i​o​n​ ​à​ ​{​l​o​c​a​t​i​o​n​}
+			 * @param {string} location
+			 */
+			EXPLORE_TITLE: RequiredParams<'location'>
+			/**
+			 * P​r​o​f​i​l​ ​R​P​G​ ​d​e​ ​{​u​s​e​r​}
+			 * @param {string} user
+			 */
+			STATS_TITLE: RequiredParams<'user'>
+			/**
+			 * V​o​u​s​ ​v​o​u​s​ ​d​é​p​l​a​c​e​z​ ​v​e​r​s​ ​{​l​o​c​a​t​i​o​n​}​.
+			 * @param {string} location
+			 */
+			MOVE_SUCCESS: RequiredParams<'location'>
+			/**
+			 * P​e​r​s​o​n​n​a​g​e​s​ ​p​r​é​s​e​n​t​s
+			 */
+			NPC_HEADER: string
+			/**
+			 * O​b​j​e​t​s​ ​t​r​o​u​v​é​s
+			 */
+			ITEM_HEADER: string
+			/**
+			 * L​i​e​u​x​ ​a​c​c​e​s​s​i​b​l​e​s
+			 */
+			CONNECTION_HEADER: string
+			/**
+			 * N​i​v​e​a​u​ ​{​l​e​v​e​l​}
+			 * @param {number} level
+			 */
+			LEVEL: RequiredParams<'level'>
+			/**
+			 * E​x​p​é​r​i​e​n​c​e​ ​:​ ​{​x​p​}
+			 * @param {number} xp
+			 */
+			XP: RequiredParams<'xp'>
+			/**
+			 * J​o​y​a​u​x​ ​:​ ​{​j​e​w​e​l​s​}
+			 * @param {number} jewels
+			 */
+			JEWELS: RequiredParams<'jewels'>
+			/**
+			 * P​V​ ​:​ ​{​h​p​}​/​{​m​a​x​H​p​}
+			 * @param {number} hp
+			 * @param {number} maxHp
+			 */
+			HP: RequiredParams<'hp' | 'maxHp'>
+			/**
+			 * P​M​ ​:​ ​{​m​p​}​/​{​m​a​x​M​p​}
+			 * @param {number} maxMp
+			 * @param {number} mp
+			 */
+			MP: RequiredParams<'maxMp' | 'mp'>
+			OPTIONS: {
+				SUB: {
+					/**
+					 * E​x​p​l​o​r​e​r​ ​l​e​ ​l​i​e​u​ ​a​c​t​u​e​l​.
+					 */
+					EXPLORE: string
+					/**
+					 * S​e​ ​d​é​p​l​a​c​e​r​ ​v​e​r​s​ ​u​n​ ​a​u​t​r​e​ ​l​i​e​u​.
+					 */
+					MOVE: string
+					/**
+					 * P​a​r​l​e​r​ ​à​ ​u​n​ ​p​e​r​s​o​n​n​a​g​e​.
+					 */
+					TALK: string
+					/**
+					 * A​f​f​i​c​h​e​r​ ​v​o​t​r​e​ ​p​r​o​f​i​l​ ​R​P​G​.
+					 */
+					PROFILE: string
+				}
 				/**
-				 * *​*​{​c​a​t​e​g​o​r​i​e​s​}​*​*​ ​c​a​t​é​g​o​r​i​e​s​ ​e​t​ ​*​*​{​c​h​a​n​n​e​l​s​}​*​*​ ​s​a​l​o​n​s​ ​c​r​é​é​s​ ​(​{​s​k​i​p​p​e​d​}​ ​i​g​n​o​r​é​s​)​.
-				 * @param {number} categories
-				 * @param {number} channels
-				 * @param {number} skipped
+				 * L​e​ ​l​i​e​u​ ​o​ù​ ​s​e​ ​r​e​n​d​r​e​.
 				 */
-				DONE_DESCRIPTION: RequiredParams<'categories' | 'channels' | 'skipped'>
+				LOCATION: string
+				/**
+				 * L​e​ ​p​e​r​s​o​n​n​a​g​e​ ​à​ ​q​u​i​ ​p​a​r​l​e​r​.
+				 */
+				NPC: string
+			}
+		}
+		BAN: {
+			/**
+			 * b​a​n
+			 */
+			NAME: string
+			/**
+			 * B​a​n​n​i​r​ ​u​n​ ​m​e​m​b​r​e​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​b​a​n​n​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​u​ ​b​a​n​n​i​s​s​e​m​e​n​t​.
+					 */
+					DESCRIPTION: string
+				}
+				DELETE_MESSAGES: {
+					/**
+					 * s​u​p​p​r​i​m​e​r​_​m​e​s​s​a​g​e​s
+					 */
+					NAME: string
+					/**
+					 * N​o​m​b​r​e​ ​d​e​ ​j​o​u​r​s​ ​d​e​ ​m​e​s​s​a​g​e​s​ ​à​ ​s​u​p​p​r​i​m​e​r​ ​(​0​-​7​)​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			ERRORS: {
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​t​e​ ​b​a​n​n​i​r​ ​t​o​i​-​m​ê​m​e​.
+				 */
+				SELF: string
+				/**
+				 * J​e​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​m​e​ ​b​a​n​n​i​r​ ​m​o​i​-​m​ê​m​e​.
+				 */
+				BOT: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​b​a​n​n​i​r​ ​l​e​ ​p​r​o​p​r​i​é​t​a​i​r​e​ ​d​u​ ​s​e​r​v​e​u​r​.
+				 */
+				OWNER: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​b​a​n​n​i​r​ ​u​n​ ​m​e​m​b​r​e​ ​a​v​e​c​ ​u​n​ ​r​ô​l​e​ ​s​u​p​é​r​i​e​u​r​ ​o​u​ ​é​g​a​l​ ​a​u​ ​t​i​e​n​.
+				 */
+				HIERARCHY: string
+				/**
+				 * J​e​ ​n​'​a​i​ ​p​a​s​ ​l​a​ ​p​e​r​m​i​s​s​i​o​n​ ​d​e​ ​b​a​n​n​i​r​ ​c​e​ ​m​e​m​b​r​e​.
+				 */
+				NOT_BANNABLE: string
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​b​a​n​n​i​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		UNBAN: {
+			/**
+			 * u​n​b​a​n
+			 */
+			NAME: string
+			/**
+			 * D​é​b​a​n​n​i​r​ ​u​n​ ​u​t​i​l​i​s​a​t​e​u​r​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				USER_ID: {
+					/**
+					 * i​d​_​u​t​i​l​i​s​a​t​e​u​r
+					 */
+					NAME: string
+					/**
+					 * L​'​i​d​e​n​t​i​f​i​a​n​t​ ​d​e​ ​l​'​u​t​i​l​i​s​a​t​e​u​r​ ​à​ ​d​é​b​a​n​n​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​u​ ​d​é​b​a​n​n​i​s​s​e​m​e​n​t​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			ERRORS: {
+				/**
+				 * C​e​t​ ​u​t​i​l​i​s​a​t​e​u​r​ ​n​'​e​s​t​ ​p​a​s​ ​b​a​n​n​i​.
+				 */
+				NOT_BANNED: string
+				/**
+				 * I​d​e​n​t​i​f​i​a​n​t​ ​d​'​u​t​i​l​i​s​a​t​e​u​r​ ​i​n​v​a​l​i​d​e​.
+				 */
+				INVALID_ID: string
+			}
+			/**
+			 * L​'​u​t​i​l​i​s​a​t​e​u​r​ ​*​*​{​u​s​e​r​}​*​*​ ​a​ ​é​t​é​ ​d​é​b​a​n​n​i​.
+			 * @param {string} user
+			 */
+			SUCCESS: RequiredParams<'user'>
+		}
+		KICK: {
+			/**
+			 * k​i​c​k
+			 */
+			NAME: string
+			/**
+			 * E​x​p​u​l​s​e​r​ ​u​n​ ​m​e​m​b​r​e​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​e​x​p​u​l​s​e​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​e​ ​l​'​e​x​p​u​l​s​i​o​n​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			ERRORS: {
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​t​'​e​x​p​u​l​s​e​r​ ​t​o​i​-​m​ê​m​e​.
+				 */
+				SELF: string
+				/**
+				 * J​e​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​m​'​e​x​p​u​l​s​e​r​ ​m​o​i​-​m​ê​m​e​.
+				 */
+				BOT: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​e​x​p​u​l​s​e​r​ ​l​e​ ​p​r​o​p​r​i​é​t​a​i​r​e​ ​d​u​ ​s​e​r​v​e​u​r​.
+				 */
+				OWNER: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​e​x​p​u​l​s​e​r​ ​u​n​ ​m​e​m​b​r​e​ ​a​v​e​c​ ​u​n​ ​r​ô​l​e​ ​s​u​p​é​r​i​e​u​r​ ​o​u​ ​é​g​a​l​ ​a​u​ ​t​i​e​n​.
+				 */
+				HIERARCHY: string
+				/**
+				 * J​e​ ​n​'​a​i​ ​p​a​s​ ​l​a​ ​p​e​r​m​i​s​s​i​o​n​ ​d​'​e​x​p​u​l​s​e​r​ ​c​e​ ​m​e​m​b​r​e​.
+				 */
+				NOT_KICKABLE: string
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​e​x​p​u​l​s​é​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		TIMEOUT: {
+			/**
+			 * t​i​m​e​o​u​t
+			 */
+			NAME: string
+			/**
+			 * M​e​t​t​r​e​ ​u​n​ ​m​e​m​b​r​e​ ​e​n​ ​s​o​u​r​d​i​n​e​ ​t​e​m​p​o​r​a​i​r​e​m​e​n​t​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​m​e​t​t​r​e​ ​e​n​ ​s​o​u​r​d​i​n​e​.
+					 */
+					DESCRIPTION: string
+				}
+				DURATION: {
+					/**
+					 * d​u​r​e​e
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​d​u​r​é​e​ ​e​n​ ​m​i​n​u​t​e​s​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​e​ ​l​a​ ​m​i​s​e​ ​e​n​ ​s​o​u​r​d​i​n​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			ERRORS: {
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​t​e​ ​m​e​t​t​r​e​ ​e​n​ ​s​o​u​r​d​i​n​e​ ​t​o​i​-​m​ê​m​e​.
+				 */
+				SELF: string
+				/**
+				 * J​e​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​m​e​ ​m​e​t​t​r​e​ ​e​n​ ​s​o​u​r​d​i​n​e​ ​m​o​i​-​m​ê​m​e​.
+				 */
+				BOT: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​m​e​t​t​r​e​ ​l​e​ ​p​r​o​p​r​i​é​t​a​i​r​e​ ​e​n​ ​s​o​u​r​d​i​n​e​.
+				 */
+				OWNER: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​m​e​t​t​r​e​ ​e​n​ ​s​o​u​r​d​i​n​e​ ​u​n​ ​m​e​m​b​r​e​ ​a​v​e​c​ ​u​n​ ​r​ô​l​e​ ​s​u​p​é​r​i​e​u​r​ ​o​u​ ​é​g​a​l​ ​a​u​ ​t​i​e​n​.
+				 */
+				HIERARCHY: string
+				/**
+				 * J​e​ ​n​'​a​i​ ​p​a​s​ ​l​a​ ​p​e​r​m​i​s​s​i​o​n​ ​d​e​ ​m​o​d​é​r​e​r​ ​c​e​ ​m​e​m​b​r​e​.
+				 */
+				NOT_MODERATABLE: string
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​m​i​s​ ​e​n​ ​s​o​u​r​d​i​n​e​ ​p​o​u​r​ ​*​*​{​d​u​r​a​t​i​o​n​}​*​*​ ​m​i​n​u​t​e​{​{​s​}​}​.
+			 * @param {number} duration
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'duration' | 'member'>
+		}
+		UNTIMEOUT: {
+			/**
+			 * u​n​t​i​m​e​o​u​t
+			 */
+			NAME: string
+			/**
+			 * R​e​t​i​r​e​r​ ​l​a​ ​m​i​s​e​ ​e​n​ ​s​o​u​r​d​i​n​e​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​r​é​t​a​b​l​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​u​ ​r​e​t​r​a​i​t​ ​d​e​ ​s​o​u​r​d​i​n​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			ERRORS: {
+				/**
+				 * C​e​ ​m​e​m​b​r​e​ ​n​'​e​s​t​ ​p​a​s​ ​e​n​ ​s​o​u​r​d​i​n​e​.
+				 */
+				NOT_TIMED_OUT: string
+				/**
+				 * J​e​ ​n​'​a​i​ ​p​a​s​ ​l​a​ ​p​e​r​m​i​s​s​i​o​n​ ​d​e​ ​m​o​d​é​r​e​r​ ​c​e​ ​m​e​m​b​r​e​.
+				 */
+				NOT_MODERATABLE: string
+			}
+			/**
+			 * L​a​ ​s​o​u​r​d​i​n​e​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​r​e​t​i​r​é​e​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		WARN: {
+			/**
+			 * w​a​r​n
+			 */
+			NAME: string
+			/**
+			 * A​v​e​r​t​i​r​ ​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​a​v​e​r​t​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​e​ ​l​'​a​v​e​r​t​i​s​s​e​m​e​n​t​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​r​e​ç​u​ ​u​n​ ​a​v​e​r​t​i​s​s​e​m​e​n​t​.​ ​T​o​t​a​l​ ​a​c​t​i​f​ ​:​ ​*​*​{​c​o​u​n​t​}​*​*​.
+			 * @param {number} count
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'count' | 'member'>
+		}
+		WARNINGS: {
+			/**
+			 * w​a​r​n​i​n​g​s
+			 */
+			NAME: string
+			/**
+			 * V​o​i​r​ ​o​u​ ​e​f​f​a​c​e​r​ ​l​e​s​ ​a​v​e​r​t​i​s​s​e​m​e​n​t​s​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​d​o​n​t​ ​v​o​i​r​ ​l​e​s​ ​a​v​e​r​t​i​s​s​e​m​e​n​t​s​.
+					 */
+					DESCRIPTION: string
+				}
+				ACTION: {
+					/**
+					 * a​c​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * L​'​a​c​t​i​o​n​ ​à​ ​e​f​f​e​c​t​u​e​r​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			CHOICES: {
+				/**
+				 * V​o​i​r
+				 */
+				VIEW: string
+				/**
+				 * E​f​f​a​c​e​r
+				 */
+				CLEAR: string
+			}
+			EMBED: {
+				/**
+				 * A​v​e​r​t​i​s​s​e​m​e​n​t​s​ ​d​e​ ​{​m​e​m​b​e​r​}
+				 * @param {string} member
+				 */
+				TITLE: RequiredParams<'member'>
+				/**
+				 * A​u​c​u​n​ ​a​v​e​r​t​i​s​s​e​m​e​n​t​ ​a​c​t​i​f​.
+				 */
+				NO_WARNINGS: string
+				/**
+				 * #​{​i​d​}​ ​-​ ​p​a​r​ ​<​@​{​m​o​d​e​r​a​t​o​r​}​>​ ​l​e​ ​{​d​a​t​e​}​ ​:​ ​{​r​e​a​s​o​n​}
+				 * @param {string} date
+				 * @param {number} id
+				 * @param {string} moderator
+				 * @param {string} reason
+				 */
+				WARNING_ENTRY: RequiredParams<'date' | 'id' | 'moderator' | 'reason'>
+			}
+			/**
+			 * T​o​u​s​ ​l​e​s​ ​a​v​e​r​t​i​s​s​e​m​e​n​t​s​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​ ​o​n​t​ ​é​t​é​ ​e​f​f​a​c​é​s​ ​(​{​c​o​u​n​t​}​ ​r​e​t​i​r​é​{​{​s​}​}​)​.
+			 * @param {number} count
+			 * @param {string} member
+			 */
+			CLEARED: RequiredParams<'count' | 'member'>
+		}
+		CLEAR: {
+			/**
+			 * c​l​e​a​r
+			 */
+			NAME: string
+			/**
+			 * S​u​p​p​r​i​m​e​r​ ​d​e​s​ ​m​e​s​s​a​g​e​s​ ​e​n​ ​m​a​s​s​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				COUNT: {
+					/**
+					 * n​o​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​n​o​m​b​r​e​ ​d​e​ ​m​e​s​s​a​g​e​s​ ​à​ ​s​u​p​p​r​i​m​e​r​ ​(​1​-​1​0​0​)​.
+					 */
+					DESCRIPTION: string
+				}
+				USER: {
+					/**
+					 * u​t​i​l​i​s​a​t​e​u​r
+					 */
+					NAME: string
+					/**
+					 * F​i​l​t​r​e​r​ ​p​a​r​ ​u​t​i​l​i​s​a​t​e​u​r​.
+					 */
+					DESCRIPTION: string
+				}
+				BOTS_ONLY: {
+					/**
+					 * b​o​t​s​_​s​e​u​l​e​m​e​n​t
+					 */
+					NAME: string
+					/**
+					 * N​e​ ​s​u​p​p​r​i​m​e​r​ ​q​u​e​ ​l​e​s​ ​m​e​s​s​a​g​e​s​ ​d​e​s​ ​b​o​t​s​.
+					 */
+					DESCRIPTION: string
+				}
+				CONTAINS: {
+					/**
+					 * c​o​n​t​i​e​n​t
+					 */
+					NAME: string
+					/**
+					 * N​e​ ​s​u​p​p​r​i​m​e​r​ ​q​u​e​ ​l​e​s​ ​m​e​s​s​a​g​e​s​ ​c​o​n​t​e​n​a​n​t​ ​c​e​ ​t​e​x​t​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			ERRORS: {
+				/**
+				 * A​u​c​u​n​ ​m​e​s​s​a​g​e​ ​c​o​r​r​e​s​p​o​n​d​a​n​t​ ​t​r​o​u​v​é​.
+				 */
+				NO_MESSAGES: string
+			}
+			/**
+			 * *​*​{​c​o​u​n​t​}​*​*​ ​m​e​s​s​a​g​e​{​{​s​}​}​ ​s​u​p​p​r​i​m​é​{​{​s​}​}​.
+			 * @param {number} count
+			 */
+			SUCCESS: RequiredParams<'count'>
+		}
+		SLOWMODE: {
+			/**
+			 * s​l​o​w​m​o​d​e
+			 */
+			NAME: string
+			/**
+			 * D​é​f​i​n​i​r​ ​l​e​ ​m​o​d​e​ ​l​e​n​t​ ​d​'​u​n​ ​s​a​l​o​n​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				SECONDS: {
+					/**
+					 * s​e​c​o​n​d​e​s
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​d​é​l​a​i​ ​e​n​ ​s​e​c​o​n​d​e​s​ ​(​0​ ​p​o​u​r​ ​d​é​s​a​c​t​i​v​e​r​)​.
+					 */
+					DESCRIPTION: string
+				}
+				CHANNEL: {
+					/**
+					 * s​a​l​o​n
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​s​a​l​o​n​ ​c​i​b​l​e​ ​(​p​a​r​ ​d​é​f​a​u​t​ ​l​e​ ​s​a​l​o​n​ ​a​c​t​u​e​l​)​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * M​o​d​e​ ​l​e​n​t​ ​d​é​f​i​n​i​ ​à​ ​*​*​{​s​e​c​o​n​d​s​}​*​*​ ​s​e​c​o​n​d​e​{​{​s​}​}​ ​d​a​n​s​ ​{​c​h​a​n​n​e​l​}​.
+			 * @param {string} channel
+			 * @param {number} seconds
+			 */
+			SUCCESS_SET: RequiredParams<'channel' | 'seconds'>
+			/**
+			 * M​o​d​e​ ​l​e​n​t​ ​d​é​s​a​c​t​i​v​é​ ​d​a​n​s​ ​{​c​h​a​n​n​e​l​}​.
+			 * @param {string} channel
+			 */
+			SUCCESS_OFF: RequiredParams<'channel'>
+		}
+		LOCK: {
+			/**
+			 * l​o​c​k
+			 */
+			NAME: string
+			/**
+			 * V​e​r​r​o​u​i​l​l​e​r​ ​u​n​ ​s​a​l​o​n​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * s​a​l​o​n
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​s​a​l​o​n​ ​à​ ​v​e​r​r​o​u​i​l​l​e​r​ ​(​p​a​r​ ​d​é​f​a​u​t​ ​l​e​ ​s​a​l​o​n​ ​a​c​t​u​e​l​)​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​u​ ​v​e​r​r​o​u​i​l​l​a​g​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * L​e​ ​s​a​l​o​n​ ​{​c​h​a​n​n​e​l​}​ ​a​ ​é​t​é​ ​v​e​r​r​o​u​i​l​l​é​.
+			 * @param {string} channel
+			 */
+			SUCCESS: RequiredParams<'channel'>
+		}
+		UNLOCK: {
+			/**
+			 * u​n​l​o​c​k
+			 */
+			NAME: string
+			/**
+			 * D​é​v​e​r​r​o​u​i​l​l​e​r​ ​u​n​ ​s​a​l​o​n​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * s​a​l​o​n
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​s​a​l​o​n​ ​à​ ​d​é​v​e​r​r​o​u​i​l​l​e​r​ ​(​p​a​r​ ​d​é​f​a​u​t​ ​l​e​ ​s​a​l​o​n​ ​a​c​t​u​e​l​)​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​u​ ​d​é​v​e​r​r​o​u​i​l​l​a​g​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * L​e​ ​s​a​l​o​n​ ​{​c​h​a​n​n​e​l​}​ ​a​ ​é​t​é​ ​d​é​v​e​r​r​o​u​i​l​l​é​.
+			 * @param {string} channel
+			 */
+			SUCCESS: RequiredParams<'channel'>
+		}
+		ROLE: {
+			/**
+			 * r​o​l​e
+			 */
+			NAME: string
+			/**
+			 * A​j​o​u​t​e​r​ ​o​u​ ​r​e​t​i​r​e​r​ ​u​n​ ​r​ô​l​e​ ​à​ ​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				ACTION: {
+					/**
+					 * a​c​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * L​'​a​c​t​i​o​n​ ​à​ ​e​f​f​e​c​t​u​e​r​.
+					 */
+					DESCRIPTION: string
+				}
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​c​i​b​l​é​.
+					 */
+					DESCRIPTION: string
+				}
+				ROLE: {
+					/**
+					 * r​o​l​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​r​ô​l​e​ ​à​ ​a​j​o​u​t​e​r​ ​o​u​ ​r​e​t​i​r​e​r​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			CHOICES: {
+				/**
+				 * A​j​o​u​t​e​r
+				 */
+				ADD: string
+				/**
+				 * R​e​t​i​r​e​r
+				 */
+				REMOVE: string
+			}
+			ERRORS: {
+				/**
+				 * C​e​ ​r​ô​l​e​ ​e​s​t​ ​s​u​p​é​r​i​e​u​r​ ​o​u​ ​é​g​a​l​ ​a​u​ ​r​ô​l​e​ ​l​e​ ​p​l​u​s​ ​é​l​e​v​é​ ​d​u​ ​b​o​t​.
+				 */
+				HIERARCHY: string
+				/**
+				 * *​*​{​m​e​m​b​e​r​}​*​*​ ​p​o​s​s​è​d​e​ ​d​é​j​à​ ​l​e​ ​r​ô​l​e​ ​*​*​{​r​o​l​e​}​*​*​.
+				 * @param {string} member
+				 * @param {string} role
+				 */
+				ALREADY_HAS: RequiredParams<'member' | 'role'>
+				/**
+				 * *​*​{​m​e​m​b​e​r​}​*​*​ ​n​e​ ​p​o​s​s​è​d​e​ ​p​a​s​ ​l​e​ ​r​ô​l​e​ ​*​*​{​r​o​l​e​}​*​*​.
+				 * @param {string} member
+				 * @param {string} role
+				 */
+				DOES_NOT_HAVE: RequiredParams<'member' | 'role'>
+			}
+			/**
+			 * L​e​ ​r​ô​l​e​ ​*​*​{​r​o​l​e​}​*​*​ ​a​ ​é​t​é​ ​a​j​o​u​t​é​ ​à​ ​*​*​{​m​e​m​b​e​r​}​*​*​.
+			 * @param {string} member
+			 * @param {string} role
+			 */
+			SUCCESS_ADD: RequiredParams<'member' | 'role'>
+			/**
+			 * L​e​ ​r​ô​l​e​ ​*​*​{​r​o​l​e​}​*​*​ ​a​ ​é​t​é​ ​r​e​t​i​r​é​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​.
+			 * @param {string} member
+			 * @param {string} role
+			 */
+			SUCCESS_REMOVE: RequiredParams<'member' | 'role'>
+		}
+		ANNOUNCE: {
+			/**
+			 * a​n​n​o​u​n​c​e
+			 */
+			NAME: string
+			/**
+			 * E​n​v​o​y​e​r​ ​u​n​e​ ​a​n​n​o​n​c​e​ ​d​a​n​s​ ​u​n​ ​s​a​l​o​n​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * s​a​l​o​n
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​s​a​l​o​n​ ​o​ù​ ​e​n​v​o​y​e​r​ ​l​'​a​n​n​o​n​c​e​.
+					 */
+					DESCRIPTION: string
+				}
+				TITLE: {
+					/**
+					 * t​i​t​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​t​i​t​r​e​ ​d​e​ ​l​'​a​n​n​o​n​c​e​.
+					 */
+					DESCRIPTION: string
+				}
+				MESSAGE: {
+					/**
+					 * m​e​s​s​a​g​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​c​o​n​t​e​n​u​ ​d​e​ ​l​'​a​n​n​o​n​c​e​.
+					 */
+					DESCRIPTION: string
+				}
+				COLOR: {
+					/**
+					 * c​o​u​l​e​u​r
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​c​o​u​l​e​u​r​ ​d​e​ ​l​'​e​m​b​e​d​ ​(​e​x​:​ ​#​F​F​0​0​0​0​)​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * L​'​a​n​n​o​n​c​e​ ​a​ ​é​t​é​ ​e​n​v​o​y​é​e​ ​d​a​n​s​ ​{​c​h​a​n​n​e​l​}​.
+			 * @param {string} channel
+			 */
+			SUCCESS: RequiredParams<'channel'>
+		}
+		SOFTBAN: {
+			/**
+			 * s​o​f​t​b​a​n
+			 */
+			NAME: string
+			/**
+			 * B​a​n​n​i​r​ ​e​t​ ​d​é​b​a​n​n​i​r​ ​i​m​m​é​d​i​a​t​e​m​e​n​t​ ​u​n​ ​m​e​m​b​r​e​ ​p​o​u​r​ ​s​u​p​p​r​i​m​e​r​ ​s​e​s​ ​m​e​s​s​a​g​e​s​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​s​o​f​t​b​a​n​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​ ​d​u​ ​s​o​f​t​b​a​n​.
+					 */
+					DESCRIPTION: string
+				}
+				DELETE_MESSAGES: {
+					/**
+					 * s​u​p​p​r​i​m​e​r​_​m​e​s​s​a​g​e​s
+					 */
+					NAME: string
+					/**
+					 * N​o​m​b​r​e​ ​d​e​ ​j​o​u​r​s​ ​d​e​ ​m​e​s​s​a​g​e​s​ ​à​ ​s​u​p​p​r​i​m​e​r​ ​(​1​-​7​)​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​s​o​f​t​b​a​n​n​i​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		NUKE: {
+			/**
+			 * n​u​k​e
+			 */
+			NAME: string
+			/**
+			 * R​e​c​r​é​e​r​ ​u​n​ ​s​a​l​o​n​ ​p​o​u​r​ ​e​f​f​a​c​e​r​ ​t​o​u​t​ ​s​o​n​ ​h​i​s​t​o​r​i​q​u​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * s​a​l​o​n
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​s​a​l​o​n​ ​à​ ​n​u​k​e​ ​(​p​a​r​ ​d​é​f​a​u​t​ ​l​e​ ​s​a​l​o​n​ ​a​c​t​u​e​l​)​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * Ê​t​e​s​-​v​o​u​s​ ​s​û​r​ ​d​e​ ​v​o​u​l​o​i​r​ ​n​u​k​e​ ​l​e​ ​s​a​l​o​n​ ​{​c​h​a​n​n​e​l​}​ ​?​ ​C​e​t​t​e​ ​a​c​t​i​o​n​ ​e​s​t​ ​i​r​r​é​v​e​r​s​i​b​l​e​.
+			 * @param {string} channel
+			 */
+			CONFIRM: RequiredParams<'channel'>
+			/**
+			 * L​e​ ​s​a​l​o​n​ ​a​ ​é​t​é​ ​n​u​k​e​ ​a​v​e​c​ ​s​u​c​c​è​s​ ​p​a​r​ ​{​u​s​e​r​}​.
+			 * @param {string} user
+			 */
+			SUCCESS: RequiredParams<'user'>
+		}
+		NICK: {
+			/**
+			 * n​i​c​k
+			 */
+			NAME: string
+			/**
+			 * C​h​a​n​g​e​r​ ​l​e​ ​s​u​r​n​o​m​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​d​o​n​t​ ​c​h​a​n​g​e​r​ ​l​e​ ​s​u​r​n​o​m​.
+					 */
+					DESCRIPTION: string
+				}
+				NICKNAME: {
+					/**
+					 * s​u​r​n​o​m
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​n​o​u​v​e​a​u​ ​s​u​r​n​o​m​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * L​e​ ​s​u​r​n​o​m​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​c​h​a​n​g​é​ ​e​n​ ​*​*​{​n​i​c​k​n​a​m​e​}​*​*​.
+			 * @param {string} member
+			 * @param {string} nickname
+			 */
+			SUCCESS: RequiredParams<'member' | 'nickname'>
+			/**
+			 * L​e​ ​s​u​r​n​o​m​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​r​é​i​n​i​t​i​a​l​i​s​é​.
+			 * @param {string} member
+			 */
+			RESET: RequiredParams<'member'>
+		}
+		DEAFEN: {
+			/**
+			 * d​e​a​f​e​n
+			 */
+			NAME: string
+			/**
+			 * A​s​s​o​u​r​d​i​r​ ​u​n​ ​m​e​m​b​r​e​ ​d​a​n​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​v​o​c​a​u​x​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​a​s​s​o​u​r​d​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​a​s​s​o​u​r​d​i​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		UNDEAFEN: {
+			/**
+			 * u​n​d​e​a​f​e​n
+			 */
+			NAME: string
+			/**
+			 * R​é​t​a​b​l​i​r​ ​l​'​o​u​ï​e​ ​d​'​u​n​ ​m​e​m​b​r​e​ ​d​a​n​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​v​o​c​a​u​x​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​r​é​t​a​b​l​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * L​'​o​u​ï​e​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​r​é​t​a​b​l​i​e​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		VMUTE: {
+			/**
+			 * v​m​u​t​e
+			 */
+			NAME: string
+			/**
+			 * R​e​n​d​r​e​ ​m​u​e​t​ ​u​n​ ​m​e​m​b​r​e​ ​d​a​n​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​v​o​c​a​u​x​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​r​e​n​d​r​e​ ​m​u​e​t​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​r​e​n​d​u​ ​m​u​e​t​ ​d​a​n​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​v​o​c​a​u​x​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		VUNMUTE: {
+			/**
+			 * v​u​n​m​u​t​e
+			 */
+			NAME: string
+			/**
+			 * R​é​t​a​b​l​i​r​ ​l​a​ ​p​a​r​o​l​e​ ​d​'​u​n​ ​m​e​m​b​r​e​ ​d​a​n​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​v​o​c​a​u​x​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​r​é​t​a​b​l​i​r​.
+					 */
+					DESCRIPTION: string
+				}
+				REASON: {
+					/**
+					 * r​a​i​s​o​n
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​r​a​i​s​o​n​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * L​a​ ​p​a​r​o​l​e​ ​d​e​ ​*​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​r​é​t​a​b​l​i​e​.
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'member'>
+		}
+		MODLOGS: {
+			/**
+			 * m​o​d​l​o​g​s
+			 */
+			NAME: string
+			/**
+			 * V​o​i​r​ ​l​'​h​i​s​t​o​r​i​q​u​e​ ​d​e​ ​m​o​d​é​r​a​t​i​o​n​ ​d​'​u​n​ ​m​e​m​b​r​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​d​o​n​t​ ​v​o​i​r​ ​l​'​h​i​s​t​o​r​i​q​u​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * H​i​s​t​o​r​i​q​u​e​ ​d​e​ ​m​o​d​é​r​a​t​i​o​n​ ​d​e​ ​{​m​e​m​b​e​r​}
+				 * @param {string} member
+				 */
+				TITLE: RequiredParams<'member'>
+				/**
+				 * A​u​c​u​n​ ​l​o​g​ ​d​e​ ​m​o​d​é​r​a​t​i​o​n​ ​t​r​o​u​v​é​.
+				 */
+				NO_LOGS: string
+				/**
+				 * `​{​i​d​}​`​ ​*​*​{​a​c​t​i​o​n​}​*​*​ ​p​a​r​ ​<​@​{​m​o​d​e​r​a​t​o​r​}​>​ ​l​e​ ​{​d​a​t​e​}​
+			​└​ ​*​R​a​i​s​o​n​ ​:​ ​{​r​e​a​s​o​n​}​*
+				 * @param {string} action
+				 * @param {string} date
+				 * @param {number} id
+				 * @param {string} moderator
+				 * @param {string} reason
+				 */
+				LOG_ENTRY: RequiredParams<'action' | 'date' | 'id' | 'moderator' | 'reason'>
 			}
 		}
 	}
@@ -453,11 +1732,11 @@ export type TranslationFunctions = {
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
 				/**
-				 * Invite moi sur ton serveur!
+				 * Invite-moi sur ton serveur !
 				 */
 				TITLE: () => LocalizedString
 				/**
-				 * [Clique ici]({link}) pour m'inviter!
+				 * [Clique ici]({link}) pour m'inviter ! Aye !
 				 */
 				DESCRIPTION: (arg: { link: string }) => LocalizedString
 			}
@@ -533,7 +1812,7 @@ export type TranslationFunctions = {
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
 				/**
-				 * Pannel d'aide
+				 * Pannel d'aide de Happy
 				 */
 				TITLE: () => LocalizedString
 				/**
@@ -554,11 +1833,11 @@ export type TranslationFunctions = {
 		}
 		PING: {
 			/**
-			 * Pong!
+			 * Aye !
 			 */
 			DESCRIPTION: () => LocalizedString
 			/**
-			 * {member} Pong! Le temps de réponse était {time}ms.{heartbeat}
+			 * Aye ! {member} Le temps de réponse était de {time}ms. C'est aussi rapide que Max Speed !{heartbeat}
 			 */
 			MESSAGE: (arg: { heartbeat: string, member: string, time: number }) => LocalizedString
 		}
@@ -686,28 +1965,1251 @@ export type TranslationFunctions = {
 			 */
 			NO_MEMBERSHIPS: () => LocalizedString
 		}
-		SETUP: {
+		HAPPY: {
 			/**
-			 * Configurer tous les salons et catégories du serveur.
+			 * Découvre Happy, le chat ailé de Fairy Tail !
+			 */
+			DESCRIPTION: () => LocalizedString
+			/**
+			 * Citation de Happy
+			 */
+			QUOTE_TITLE: () => LocalizedString
+			/**
+			 * Le saviez-vous ?
+			 */
+			TRIVIA_TITLE: () => LocalizedString
+			/**
+			 * Qui est Happy ?
+			 */
+			WHO_TITLE: () => LocalizedString
+			/**
+			 * Happy dit...
+			 */
+			RANDOM_TITLE: () => LocalizedString
+			OPTIONS: {
+				ACTION: {
+					/**
+					 * action
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Que veux-tu savoir sur Happy ?
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+		}
+		AVATAR: {
+			/**
+			 * Afficher l'avatar d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre dont voir l'avatar.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * Avatar de {user}
+				 */
+				TITLE: (arg: { user: string }) => LocalizedString
+			}
+		}
+		USERINFO: {
+			/**
+			 * Afficher les informations d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre dont voir les informations.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * Informations de {user}
+				 */
+				TITLE: (arg: { user: string }) => LocalizedString
+				FIELDS: {
+					/**
+					 * Identifiant
+					 */
+					ID: () => LocalizedString
+					/**
+					 * Compte créé le
+					 */
+					CREATED: () => LocalizedString
+					/**
+					 * A rejoint le
+					 */
+					JOINED: () => LocalizedString
+					/**
+					 * Rôles ({count})
+					 */
+					ROLES: (arg: { count: number }) => LocalizedString
+					/**
+					 * Badges
+					 */
+					BADGES: () => LocalizedString
+					/**
+					 * Statut
+					 */
+					STATUS: () => LocalizedString
+					/**
+					 * Bot
+					 */
+					BOT: () => LocalizedString
+				}
+			}
+		}
+		SERVERINFO: {
+			/**
+			 * Afficher les informations du serveur.
 			 */
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
 				/**
-				 * Configuration du serveur
+				 * Informations de {guild}
 				 */
-				TITLE: () => LocalizedString
+				TITLE: (arg: { guild: string }) => LocalizedString
+				FIELDS: {
+					/**
+					 * Propriétaire
+					 */
+					OWNER: () => LocalizedString
+					/**
+					 * Créé le
+					 */
+					CREATED: () => LocalizedString
+					/**
+					 * Membres
+					 */
+					MEMBERS: () => LocalizedString
+					/**
+					 * Salons
+					 */
+					CHANNELS: () => LocalizedString
+					/**
+					 * Rôles
+					 */
+					ROLES: () => LocalizedString
+					/**
+					 * Émojis
+					 */
+					EMOJIS: () => LocalizedString
+					/**
+					 * Boosts
+					 */
+					BOOSTS: () => LocalizedString
+					/**
+					 * Vérification
+					 */
+					VERIFICATION: () => LocalizedString
+				}
+			}
+		}
+		BANNER: {
+			/**
+			 * Afficher la bannière d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre dont voir la bannière.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
 				/**
-				 * Création des salons et catégories en cours, veuillez patienter...
+				 * Bannière de {user}
 				 */
-				PROGRESS: () => LocalizedString
+				TITLE: (arg: { user: string }) => LocalizedString
 				/**
-				 * Configuration terminée !
+				 * Ce membre n'a pas de bannière.
 				 */
-				DONE_TITLE: () => LocalizedString
+				NO_BANNER: () => LocalizedString
+			}
+		}
+		RPG: {
+			/**
+			 * Moteur de jeu Fairy Tail RPG.
+			 */
+			DESCRIPTION: () => LocalizedString
+			/**
+			 * Exploration à {location}
+			 */
+			EXPLORE_TITLE: (arg: { location: string }) => LocalizedString
+			/**
+			 * Profil RPG de {user}
+			 */
+			STATS_TITLE: (arg: { user: string }) => LocalizedString
+			/**
+			 * Vous vous déplacez vers {location}.
+			 */
+			MOVE_SUCCESS: (arg: { location: string }) => LocalizedString
+			/**
+			 * Personnages présents
+			 */
+			NPC_HEADER: () => LocalizedString
+			/**
+			 * Objets trouvés
+			 */
+			ITEM_HEADER: () => LocalizedString
+			/**
+			 * Lieux accessibles
+			 */
+			CONNECTION_HEADER: () => LocalizedString
+			/**
+			 * Niveau {level}
+			 */
+			LEVEL: (arg: { level: number }) => LocalizedString
+			/**
+			 * Expérience : {xp}
+			 */
+			XP: (arg: { xp: number }) => LocalizedString
+			/**
+			 * Joyaux : {jewels}
+			 */
+			JEWELS: (arg: { jewels: number }) => LocalizedString
+			/**
+			 * PV : {hp}/{maxHp}
+			 */
+			HP: (arg: { hp: number, maxHp: number }) => LocalizedString
+			/**
+			 * PM : {mp}/{maxMp}
+			 */
+			MP: (arg: { maxMp: number, mp: number }) => LocalizedString
+			OPTIONS: {
+				SUB: {
+					/**
+					 * Explorer le lieu actuel.
+					 */
+					EXPLORE: () => LocalizedString
+					/**
+					 * Se déplacer vers un autre lieu.
+					 */
+					MOVE: () => LocalizedString
+					/**
+					 * Parler à un personnage.
+					 */
+					TALK: () => LocalizedString
+					/**
+					 * Afficher votre profil RPG.
+					 */
+					PROFILE: () => LocalizedString
+				}
 				/**
-				 * **{categories}** catégories et **{channels}** salons créés ({skipped} ignorés).
+				 * Le lieu où se rendre.
 				 */
-				DONE_DESCRIPTION: (arg: { categories: number, channels: number, skipped: number }) => LocalizedString
+				LOCATION: () => LocalizedString
+				/**
+				 * Le personnage à qui parler.
+				 */
+				NPC: () => LocalizedString
+			}
+		}
+		BAN: {
+			/**
+			 * ban
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Bannir un membre du serveur.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à bannir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison du bannissement.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				DELETE_MESSAGES: {
+					/**
+					 * supprimer_messages
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Nombre de jours de messages à supprimer (0-7).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			ERRORS: {
+				/**
+				 * Tu ne peux pas te bannir toi-même.
+				 */
+				SELF: () => LocalizedString
+				/**
+				 * Je ne peux pas me bannir moi-même.
+				 */
+				BOT: () => LocalizedString
+				/**
+				 * Tu ne peux pas bannir le propriétaire du serveur.
+				 */
+				OWNER: () => LocalizedString
+				/**
+				 * Tu ne peux pas bannir un membre avec un rôle supérieur ou égal au tien.
+				 */
+				HIERARCHY: () => LocalizedString
+				/**
+				 * Je n'ai pas la permission de bannir ce membre.
+				 */
+				NOT_BANNABLE: () => LocalizedString
+			}
+			/**
+			 * **{member}** a été banni du serveur.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		UNBAN: {
+			/**
+			 * unban
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Débannir un utilisateur du serveur.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				USER_ID: {
+					/**
+					 * id_utilisateur
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * L'identifiant de l'utilisateur à débannir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison du débannissement.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			ERRORS: {
+				/**
+				 * Cet utilisateur n'est pas banni.
+				 */
+				NOT_BANNED: () => LocalizedString
+				/**
+				 * Identifiant d'utilisateur invalide.
+				 */
+				INVALID_ID: () => LocalizedString
+			}
+			/**
+			 * L'utilisateur **{user}** a été débanni.
+			 */
+			SUCCESS: (arg: { user: string }) => LocalizedString
+		}
+		KICK: {
+			/**
+			 * kick
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Expulser un membre du serveur.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à expulser.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison de l'expulsion.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			ERRORS: {
+				/**
+				 * Tu ne peux pas t'expulser toi-même.
+				 */
+				SELF: () => LocalizedString
+				/**
+				 * Je ne peux pas m'expulser moi-même.
+				 */
+				BOT: () => LocalizedString
+				/**
+				 * Tu ne peux pas expulser le propriétaire du serveur.
+				 */
+				OWNER: () => LocalizedString
+				/**
+				 * Tu ne peux pas expulser un membre avec un rôle supérieur ou égal au tien.
+				 */
+				HIERARCHY: () => LocalizedString
+				/**
+				 * Je n'ai pas la permission d'expulser ce membre.
+				 */
+				NOT_KICKABLE: () => LocalizedString
+			}
+			/**
+			 * **{member}** a été expulsé du serveur.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		TIMEOUT: {
+			/**
+			 * timeout
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Mettre un membre en sourdine temporairement.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à mettre en sourdine.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				DURATION: {
+					/**
+					 * duree
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La durée en minutes.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison de la mise en sourdine.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			ERRORS: {
+				/**
+				 * Tu ne peux pas te mettre en sourdine toi-même.
+				 */
+				SELF: () => LocalizedString
+				/**
+				 * Je ne peux pas me mettre en sourdine moi-même.
+				 */
+				BOT: () => LocalizedString
+				/**
+				 * Tu ne peux pas mettre le propriétaire en sourdine.
+				 */
+				OWNER: () => LocalizedString
+				/**
+				 * Tu ne peux pas mettre en sourdine un membre avec un rôle supérieur ou égal au tien.
+				 */
+				HIERARCHY: () => LocalizedString
+				/**
+				 * Je n'ai pas la permission de modérer ce membre.
+				 */
+				NOT_MODERATABLE: () => LocalizedString
+			}
+			/**
+			 * **{member}** a été mis en sourdine pour **{duration}** minute{{s}}.
+			 */
+			SUCCESS: (arg: { duration: number, member: string }) => LocalizedString
+		}
+		UNTIMEOUT: {
+			/**
+			 * untimeout
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Retirer la mise en sourdine d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à rétablir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison du retrait de sourdine.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			ERRORS: {
+				/**
+				 * Ce membre n'est pas en sourdine.
+				 */
+				NOT_TIMED_OUT: () => LocalizedString
+				/**
+				 * Je n'ai pas la permission de modérer ce membre.
+				 */
+				NOT_MODERATABLE: () => LocalizedString
+			}
+			/**
+			 * La sourdine de **{member}** a été retirée.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		WARN: {
+			/**
+			 * warn
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Avertir un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à avertir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison de l'avertissement.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * **{member}** a reçu un avertissement. Total actif : **{count}**.
+			 */
+			SUCCESS: (arg: { count: number, member: string }) => LocalizedString
+		}
+		WARNINGS: {
+			/**
+			 * warnings
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Voir ou effacer les avertissements d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre dont voir les avertissements.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				ACTION: {
+					/**
+					 * action
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * L'action à effectuer.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			CHOICES: {
+				/**
+				 * Voir
+				 */
+				VIEW: () => LocalizedString
+				/**
+				 * Effacer
+				 */
+				CLEAR: () => LocalizedString
+			}
+			EMBED: {
+				/**
+				 * Avertissements de {member}
+				 */
+				TITLE: (arg: { member: string }) => LocalizedString
+				/**
+				 * Aucun avertissement actif.
+				 */
+				NO_WARNINGS: () => LocalizedString
+				/**
+				 * #{id} - par <@{moderator}> le {date} : {reason}
+				 */
+				WARNING_ENTRY: (arg: { date: string, id: number, moderator: string, reason: string }) => LocalizedString
+			}
+			/**
+			 * Tous les avertissements de **{member}** ont été effacés ({count} retiré{{s}}).
+			 */
+			CLEARED: (arg: { count: number, member: string }) => LocalizedString
+		}
+		CLEAR: {
+			/**
+			 * clear
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Supprimer des messages en masse.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				COUNT: {
+					/**
+					 * nombre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le nombre de messages à supprimer (1-100).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				USER: {
+					/**
+					 * utilisateur
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Filtrer par utilisateur.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				BOTS_ONLY: {
+					/**
+					 * bots_seulement
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Ne supprimer que les messages des bots.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				CONTAINS: {
+					/**
+					 * contient
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Ne supprimer que les messages contenant ce texte.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			ERRORS: {
+				/**
+				 * Aucun message correspondant trouvé.
+				 */
+				NO_MESSAGES: () => LocalizedString
+			}
+			/**
+			 * **{count}** message{{s}} supprimé{{s}}.
+			 */
+			SUCCESS: (arg: { count: number }) => LocalizedString
+		}
+		SLOWMODE: {
+			/**
+			 * slowmode
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Définir le mode lent d'un salon.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				SECONDS: {
+					/**
+					 * secondes
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le délai en secondes (0 pour désactiver).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				CHANNEL: {
+					/**
+					 * salon
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le salon cible (par défaut le salon actuel).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * Mode lent défini à **{seconds}** seconde{{s}} dans {channel}.
+			 */
+			SUCCESS_SET: (arg: { channel: string, seconds: number }) => LocalizedString
+			/**
+			 * Mode lent désactivé dans {channel}.
+			 */
+			SUCCESS_OFF: (arg: { channel: string }) => LocalizedString
+		}
+		LOCK: {
+			/**
+			 * lock
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Verrouiller un salon.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * salon
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le salon à verrouiller (par défaut le salon actuel).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison du verrouillage.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * Le salon {channel} a été verrouillé.
+			 */
+			SUCCESS: (arg: { channel: string }) => LocalizedString
+		}
+		UNLOCK: {
+			/**
+			 * unlock
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Déverrouiller un salon.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * salon
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le salon à déverrouiller (par défaut le salon actuel).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison du déverrouillage.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * Le salon {channel} a été déverrouillé.
+			 */
+			SUCCESS: (arg: { channel: string }) => LocalizedString
+		}
+		ROLE: {
+			/**
+			 * role
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Ajouter ou retirer un rôle à un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				ACTION: {
+					/**
+					 * action
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * L'action à effectuer.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre ciblé.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				ROLE: {
+					/**
+					 * role
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le rôle à ajouter ou retirer.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			CHOICES: {
+				/**
+				 * Ajouter
+				 */
+				ADD: () => LocalizedString
+				/**
+				 * Retirer
+				 */
+				REMOVE: () => LocalizedString
+			}
+			ERRORS: {
+				/**
+				 * Ce rôle est supérieur ou égal au rôle le plus élevé du bot.
+				 */
+				HIERARCHY: () => LocalizedString
+				/**
+				 * **{member}** possède déjà le rôle **{role}**.
+				 */
+				ALREADY_HAS: (arg: { member: string, role: string }) => LocalizedString
+				/**
+				 * **{member}** ne possède pas le rôle **{role}**.
+				 */
+				DOES_NOT_HAVE: (arg: { member: string, role: string }) => LocalizedString
+			}
+			/**
+			 * Le rôle **{role}** a été ajouté à **{member}**.
+			 */
+			SUCCESS_ADD: (arg: { member: string, role: string }) => LocalizedString
+			/**
+			 * Le rôle **{role}** a été retiré de **{member}**.
+			 */
+			SUCCESS_REMOVE: (arg: { member: string, role: string }) => LocalizedString
+		}
+		ANNOUNCE: {
+			/**
+			 * announce
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Envoyer une annonce dans un salon.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * salon
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le salon où envoyer l'annonce.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				TITLE: {
+					/**
+					 * titre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le titre de l'annonce.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				MESSAGE: {
+					/**
+					 * message
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le contenu de l'annonce.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				COLOR: {
+					/**
+					 * couleur
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La couleur de l'embed (ex: #FF0000).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * L'annonce a été envoyée dans {channel}.
+			 */
+			SUCCESS: (arg: { channel: string }) => LocalizedString
+		}
+		SOFTBAN: {
+			/**
+			 * softban
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Bannir et débannir immédiatement un membre pour supprimer ses messages.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à softban.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison du softban.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				DELETE_MESSAGES: {
+					/**
+					 * supprimer_messages
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Nombre de jours de messages à supprimer (1-7).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * **{member}** a été softbanni du serveur.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		NUKE: {
+			/**
+			 * nuke
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Recréer un salon pour effacer tout son historique.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				CHANNEL: {
+					/**
+					 * salon
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le salon à nuke (par défaut le salon actuel).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * Êtes-vous sûr de vouloir nuke le salon {channel} ? Cette action est irréversible.
+			 */
+			CONFIRM: (arg: { channel: string }) => LocalizedString
+			/**
+			 * Le salon a été nuke avec succès par {user}.
+			 */
+			SUCCESS: (arg: { user: string }) => LocalizedString
+		}
+		NICK: {
+			/**
+			 * nick
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Changer le surnom d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre dont changer le surnom.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				NICKNAME: {
+					/**
+					 * surnom
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le nouveau surnom.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * Le surnom de **{member}** a été changé en **{nickname}**.
+			 */
+			SUCCESS: (arg: { member: string, nickname: string }) => LocalizedString
+			/**
+			 * Le surnom de **{member}** a été réinitialisé.
+			 */
+			RESET: (arg: { member: string }) => LocalizedString
+		}
+		DEAFEN: {
+			/**
+			 * deafen
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Assourdir un membre dans les salons vocaux.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à assourdir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * **{member}** a été assourdi.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		UNDEAFEN: {
+			/**
+			 * undeafen
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Rétablir l'ouïe d'un membre dans les salons vocaux.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à rétablir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * L'ouïe de **{member}** a été rétablie.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		VMUTE: {
+			/**
+			 * vmute
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Rendre muet un membre dans les salons vocaux.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à rendre muet.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * **{member}** a été rendu muet dans les salons vocaux.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		VUNMUTE: {
+			/**
+			 * vunmute
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Rétablir la parole d'un membre dans les salons vocaux.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à rétablir.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				REASON: {
+					/**
+					 * raison
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La raison.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * La parole de **{member}** a été rétablie.
+			 */
+			SUCCESS: (arg: { member: string }) => LocalizedString
+		}
+		MODLOGS: {
+			/**
+			 * modlogs
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Voir l'historique de modération d'un membre.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre dont voir l'historique.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * Historique de modération de {member}
+				 */
+				TITLE: (arg: { member: string }) => LocalizedString
+				/**
+				 * Aucun log de modération trouvé.
+				 */
+				NO_LOGS: () => LocalizedString
+				/**
+				 * `{id}` **{action}** par <@{moderator}> le {date}
+			└ *Raison : {reason}*
+				 */
+				LOG_ENTRY: (arg: { action: string, date: string, id: number, moderator: string, reason: string }) => LocalizedString
 			}
 		}
 	}

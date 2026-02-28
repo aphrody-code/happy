@@ -13,10 +13,11 @@
  *   npx tsx scripts/scrape-wiki.ts --characters-only        # Personnages via FandomPersonalScraper
  */
 
-import { CheerioCrawler, Dataset, Configuration, log, LogLevel } from 'crawlee'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import { fileURLToPath } from 'node:url'
+
+import { CheerioCrawler, Configuration, Dataset, log, LogLevel } from 'crawlee'
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 
@@ -32,15 +33,15 @@ Configuration.getGlobalConfig().set('storageClientOptions', { localDataDirectory
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-interface WikiPage {
+type WikiPage = {
 	name: string
 	url: string
 }
 
-interface WikiPageDetailed extends WikiPage {
+type WikiPageDetailed = {
 	categories: string[]
 	content: string
-}
+} & WikiPage
 
 // ─── 1. Lister TOUTES les pages via Spécial:Toutes_les_pages ────────────────
 //    Parcourt la pagination MediaWiki automatiquement via CheerioCrawler
@@ -89,6 +90,7 @@ async function scrapeAllPages(): Promise<WikiPage[]> {
 	await crawler.run([ALL_PAGES_URL])
 
 	log.info(`Total: ${pages.length} pages récupérées`)
+
 	return pages
 }
 
@@ -144,6 +146,7 @@ async function scrapeDetailed(pages: WikiPage[], limit?: number): Promise<WikiPa
 	await crawler.run(pagesToScrape.map(p => p.url))
 
 	log.info(`${detailedPages.length} pages scrapées avec détails`)
+
 	return detailedPages
 }
 
@@ -184,6 +187,7 @@ async function scrapeCharacters(limit: number = 50) {
 		.exec()
 
 	log.info(`${(characters as any[]).length} personnages récupérés`)
+
 	return characters
 }
 
@@ -194,7 +198,7 @@ async function main() {
 	const charactersOnly = args.includes('--characters-only')
 	const detailedMode = args.includes('--detailed')
 	const limitArg = args.find(a => a.startsWith('--limit='))
-	const limit = limitArg ? parseInt(limitArg.split('=')[1], 10) : undefined
+	const limit = limitArg ? Number.parseInt(limitArg.split('=')[1], 10) : undefined
 
 	log.setLevel(args.includes('--verbose') ? LogLevel.DEBUG : LogLevel.INFO)
 
@@ -212,6 +216,7 @@ async function main() {
 			characters,
 		}, null, 2))
 		log.info(`Sauvegardé dans ${outputPath}`)
+
 		return
 	}
 
@@ -246,7 +251,7 @@ async function main() {
 	}
 }
 
-main().catch(err => {
+main().catch((err) => {
 	log.error('Erreur fatale:', err)
 	process.exit(1)
 })

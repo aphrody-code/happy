@@ -1,5 +1,5 @@
 import { Category } from '@discordx/utilities'
-import { ApplicationCommandOptionType, CommandInteraction, EmbedBuilder, GuildMember } from 'discord.js'
+import { ApplicationCommandOptionType, CommandInteraction, GuildMember } from 'discord.js'
 import { Client } from 'discordx'
 
 import { fairyTailGuildes } from '@/configs'
@@ -44,6 +44,7 @@ export default class GuildeAdminCommand {
 				interaction,
 				localize.COMMANDS.GUILDE_RESET.NOT_IN_GUILD({ member: member.displayName })
 			)
+
 			return
 		}
 
@@ -88,15 +89,17 @@ export default class GuildeAdminCommand {
 				interaction,
 				localize.COMMANDS.GUILDE_RESET_ALL.NO_MEMBERSHIPS()
 			)
+
 			return
 		}
 
-		// Retirer tous les rôles de guilde des membres
+		// Retirer tous les rôles de guilde des membres (avec délai pour éviter le rate limit)
 		for (const membership of allMemberships) {
 			try {
 				const guildMember = await discordGuild.members.fetch(membership.userId)
 				const role = discordGuild.roles.cache.get(membership.roleId)
 				if (role) await guildMember.roles.remove(role)
+				await new Promise(resolve => setTimeout(resolve, 300))
 			} catch { /* le membre ou le rôle peut ne plus exister */ }
 		}
 

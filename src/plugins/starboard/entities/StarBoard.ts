@@ -1,4 +1,4 @@
-import { Entity, PrimaryKey, Property, EntityRepositoryType, IntegerType } from '@mikro-orm/core'
+import { Entity, EntityRepositoryType, IntegerType, PrimaryKey, Property } from '@mikro-orm/core'
 import { EntityRepository } from '@mikro-orm/sqlite'
 
 import { CustomBaseEntity } from '@/entities'
@@ -23,6 +23,7 @@ export class StarBoard extends CustomBaseEntity {
 
 	@Property({ type: IntegerType })
 	minStar: number = 3
+
 }
 
 // ===========================================

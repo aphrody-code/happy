@@ -1,0 +1,3 @@
+# Combats — Gerald Fernandez
+
+ALLIÉ(E)(S) ENNEMI(E)(S) ISSUE ARC Aucun Erza Scarlett Victoire Arc de la Tour du Paradis Aucun Natsu Dragnir, Erza Scarlett Défaite Arc de la Tour du Paradis Erza Scarlett Midnight Victoire Arc Oracion Seis Natsu Dragnir Zero Victoire Arc Oracion Seis Aucun Jera Nekis Défaite (Par intervention d'Ultia Milkovich) Arc du Grand Tournoi de la Magie Erza Scarlett Mini Dragons Victoire Arc Éclipse Aucun Oracion Seis Victoire Arc Tartaros Kagura Mikazuchi Erza Unité de Ninehart Victoire Arc Arbaless Kagura Mikazuchi Ninehart Défaite Arc Arbaless Aucun Ninehart Victoire Arc Arbaless Cobra, Midnight, Richard Buchanan, Racer August Défaite Arc Arbaless Aucun Acnologia Défaite Arc Arbaless

@@ -1,5 +1,5 @@
 import { Category } from '@discordx/utilities'
-import { ColorResolvable, CommandInteraction, EmbedBuilder } from 'discord.js'
+import { CommandInteraction, EmbedBuilder } from 'discord.js'
 import { Client } from 'discordx'
 
 import { fairyTailGuildes } from '@/configs'
@@ -36,11 +36,12 @@ export default class GuildeInfoCommand {
 		}
 
 		const formatGuildes = (guildes: typeof fairyTailGuildes) =>
-			guildes.map(g => {
+			guildes.map((g) => {
 				const count = counts.get(g.id) ?? 0
 				const countText = count === 0
 					? localize.COMMANDS.GUILDE_INFO.EMBED.NO_MEMBERS()
 					: localize.COMMANDS.GUILDE_INFO.EMBED.MEMBER_COUNT({ count })
+
 				return `${g.emoji} **${g.name}** — ${countText}`
 			}).join('\n')
 
@@ -64,7 +65,7 @@ export default class GuildeInfoCommand {
 				{
 					name: localize.COMMANDS.GUILDE_INFO.EMBED.INDEPENDENT_TITLE(),
 					value: formatGuildes(independentGuildes),
-				},
+				}
 			)
 			.setFooter({ text: `Total: ${allMemberships.length} membre${allMemberships.length !== 1 ? 's' : ''}` })
 

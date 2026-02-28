@@ -1,0 +1,15 @@
+# Personnalité — Luxus Draer
+
+Durant son enfance Luxus Draer était un gentil petit garçon, très attaché à son grand père Makarof, et admirait Fairy Tail. Tout a changé le jour de l'excommunication de son père Iwan de Fairy Tail. Luxus commença à penser que sa réputation était due au fait qu'il était le petit-fils de Maître Makarof, et non grâce à ses propres capacités, ce qui l'a conduit à vouloir prouver qu'il était lui-même un grand mage.
+
+Luxus Draer
+
+Luxus Draer est donc devenu vaniteux, obsédé par la puissance et vantard. Il se pensait vraiment le plus puissant Mage de Fairy Tail, et méprisait ceux qu'il pensait faibles, les moquant au passage et n'hésitant pas à les blesser s'ils se mettaient en travers de sa route. Il voulait faire de Fairy Tail une guilde sans personne qu'il jugeait faibles. Luxus Draer donnait l'impression de ne pas donner grand intérêt à ses camarades, et requiert généralement une contrepartie si l'on désire son aide : comme par exemple lors de la guerre contre Phantom Lord, il n'acceptait d'intervenir qu'à condition que Lucy devienne sa petite amie et que Kanna se déshabille devant lui. Même les membres de l'Unité de Raijin n'échappaient à son comportement, comme lorsque Luxus Draer toucha presque Fried avec un de ses éclairs pour l'avoir contredit, et lui avoir suggéré d'abandonner la prise de contrôle de Fairy Tail.
+
+Les seules choses dont Luxus Draer a l'air de s'occuper sont la force et la réputation de Fairy Tail, ce qui a le don de le mettre en colère dès que quelqu'un se moque de sa guilde. Pendant son combat contre Natsu et Gajil, il devint enragé et activa son Pouvoir du Dragon et montra son côté le plus odieux, en se riant de la probable mort imminente de Makarof et acceptant le fait de détruire non seulement Fairy Tail, mais aussi tout Magnoria pour atteindre son but.
+
+Cependant, il semble changer durant son excommunication. Il avait l'air beaucoup plus calme et plus serein et a apparemment appris à apprécier la guilde telle qu'elle était. Il accepta également d'endosser toute la responsabilité des événements de la Bataille de Fairy Tail, afin que l'unité Raijin n'ait pas à quitter la guilde. Même avant son excommunication, Fried disait que Luxus n'avait pas seulement hérité des grands pouvoir de Makarof, mais aussi de son cœur, qui aime ses compagnons, ce qui est montré lorsque, en tentant de lancer la Loi des Fées, les membres de Fairy Tail et les habitants de Magnoria s'en sortent indemnes.
+
+Luxus fond en larme.
+
+Pendant la parade de Fantasia, Makarof, avec la totalité de Fairy Tail, signale à Luxus qu'il veillera toujours sur lui, où qu'il soit. Juste avant son départ de la guilde, Luxus fond en larmes. Il regrette ses actions passées. Alors qu'il était candidat pour la succession de Makarof, ce dernier a déclaré que les intentions de Luxus n'étaient pas justes. Luxus a donné raison à Makarof en disant qu'après être Maître de Fairy Tail, il aurait éliminé les membres les plus faibles pour créer la guilde la plus puissante du pays. Ce qui changea après son excommunication, étant donné que Makarof lui confie sa volonté après sa défaite contre Hades.

@@ -1,12 +1,13 @@
 import { Context, Controller, PlatformContext, Post, UseBefore } from '@tsed/common'
-import { BaseController } from '@/utils/classes'
-import bodyParser from 'body-parser'
 import { injectable } from 'tsyringe'
 import { webhook as TwilioWebhook } from 'twilio'
 import MessagingResponse from 'twilio/lib/twiml/MessagingResponse'
+
+import { BaseController } from '@/utils/classes'
+import { resolveDependency } from '@/utils/functions'
+
 import { twilioConfig } from '../../configs'
 import { Twilio } from '../../services'
-import { resolveDependency } from '@/utils/functions'
 
 @Controller('/twilio')
 @injectable()
@@ -23,7 +24,6 @@ export class TwilioController extends BaseController {
 	@Post('/sms')
 	@UseBefore(TwilioWebhook({ validate: twilioConfig.apiValidateSource }))
 	async status(@Context() { request }: PlatformContext) {
-
 		this.twilio.emit('sms', {
 			messageSid: request.body.MessageSid,
 			smsSid: request.body.SmsSid,
@@ -51,4 +51,5 @@ export class TwilioController extends BaseController {
 
 		return new MessagingResponse()
 	}
+
 }

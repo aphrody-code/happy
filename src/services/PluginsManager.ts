@@ -109,7 +109,9 @@ export class PluginsManager {
 				await fs.rmSync(path.slice(0, -8), { recursive: true, force: true })
 		}
 
-		await storeTranslationsToDisk(localeMapping, true)
+		// Only write translations to disk in development (storeTranslationsToDisk always targets src/)
+		if (process.env.NODE_ENV !== 'production')
+			await storeTranslationsToDisk(localeMapping, true)
 	}
 
 	public isPluginLoad(pluginName: string): boolean {

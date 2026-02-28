@@ -1,11 +1,12 @@
+import { Loaded } from '@mikro-orm/core'
 import dayjs from 'dayjs'
+import { ButtonBuilder, ButtonStyle, EmbedBuilder, MessageReaction, PartialMessageReaction, TextChannel } from 'discord.js'
 import { Client } from 'discordx'
 import { injectable } from 'tsyringe'
-import { Loaded } from '@mikro-orm/core'
-import { ButtonBuilder, ButtonStyle, EmbedBuilder, MessageReaction, PartialMessageReaction, TextChannel } from 'discord.js'
 
 import { Discord, OnCustom } from '@/decorators'
 import { Database } from '@/services'
+
 import { StarBoard, StarBoardMessage } from '../../entities'
 
 @Discord()
@@ -23,7 +24,7 @@ export default class newStarEvent {
 	async newStarHandler(
 		starMessage: Loaded<StarBoardMessage, never>,
 		reaction: MessageReaction | PartialMessageReaction,
-		chanStars: Loaded<StarBoard, never>,
+		chanStars: Loaded<StarBoard, never>
 	) {
 		const starMessageRepo = this.db.get(StarBoardMessage)
 
@@ -65,7 +66,7 @@ export default class newStarEvent {
 		const channel = await guild.channels.fetch(chanStars.channelId) as TextChannel
 
 		const newStarMessageDiscord = await channel.send({
-			content: reaction.emoji.toString() + ' ' + reaction.message.reactions.cache.get(chanStars.emoji)!.count + ' | ' + reaction.message.channel.toString(),
+			content: `${reaction.emoji.toString()} ${reaction.message.reactions.cache.get(chanStars.emoji)!.count} | ${reaction.message.channel.toString()}`,
 			embeds: [embed],
 			components: [{
 				type: 1,
@@ -79,6 +80,7 @@ export default class newStarEvent {
 		newStarMsg.starCount = reaction.message.reactions.cache.get(chanStars.emoji)!.count
 		newStarMsg.starboard = chanStars
 		await this.db.em.persistAndFlush(newStarMsg)
-		this.db.em.clearCache('star_message_' + reaction.message.id)
+		this.db.em.clearCache(`star_message_${reaction.message.id}`)
 	}
+
 }

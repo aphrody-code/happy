@@ -1,0 +1,21 @@
+# Détails supplémentaires — Acnologia
+
+- Il est le premier dragon que Fairy Tail rencontre.[réf. nécessaire]
+- Il ne parle pas aux humains car il les considère comme des insectes bien qu'il ait été humain lui-même.[réf. nécessaire]
+- Son nom signifie "oracle maléfique".[réf. nécessaire]
+- Il est en X792 le seul Dragon connu qui soit toujours en vie à l'exception d'Eileen étant sous forme humaine.[réf. nécessaire]
+- Il recherche un combattant qui représentera pour lui un véritable défi.[réf. nécessaire]
+- Il a le mal des transports comme tous les chasseurs de dragons. En tant que chasseur de dragons le plus puissant, son mal des transports doit être le plus fort également.[réf. nécessaire]
+- Il cherche à éliminer tous les chasseurs de Dragons, ou plus précisément ceux qui possède la Magie des Dragons, de sorte à faire disparaître leur héritage et par extension leur race entière.[réf. nécessaire]
+- Dans Fairy Tail 100 Years Quest, il est dit que les Dragons Divins rivalisent avec Acnologia, voire même sont plus forts que lui. [réf. nécessaire]
+- Selon le manga, il aurait les yeux verts, les vêtements entièrement noirs, ses marques (sur sa peau et ses vêtements) sont bleu clair, les cheveux bleu foncé, un anneau d'or et son collier en dents serait rouge.
+- On ne connait pas son vrai nom, il s'agit du nom d'un dragon du même nom qui protégeait les humains ce qui entre en contraste avec la signification de son nom qui est "oracle maléfique".
+- Il y a 400 ans, avant d'être chasseur de dragons, Acnologia maîtrisait la magie de guérison et était médecin comme Wendy Marvel et Cherrya Brendy.
+- Selon la version anglaise de l'animé, Acnologia se dit être "The Arcane Dragon", laissant croire qu'il aurait été un chasseur de dragons des arcanes avant d'en devenir un.
+- Il est dit que toutes personnes croisant la route d'acnologia ne peuvent survivre.
+- Il est connu pour avoir anéanti un pays entier.
+- C'est l'antagoniste principal et le plus puissant de la série.
+- Il à battu en un instant Guildartz le mage le plus fort de fairy tail et des terres de l'ouest, il à également vaincu en un coup god serera le mage le plus puissant du continent d'isghar.
+- Il apparaît généralement lors des moments importants.
+- D'après ignir il craindrait END, vu qu'il à tenté d'empêcher sa résurrection.
+- Selon Zeleph, la magie de Rakheild serait la plus efficace pour vaincre Acnologia.

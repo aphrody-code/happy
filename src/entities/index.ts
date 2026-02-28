@@ -7,3 +7,11 @@ export * from './Stat'
 export * from './Image'
 export * from './Pastebin'
 export * from './FairyTailGuilde'
+
+export * from './RPGPlayer'
+export * from './RPGItem'
+export * from './RPGQuest'
+export * from './RPGNarrativeState'
+
+export { ModerationLog } from './ModerationLog'
+export { Warning } from './Warning'

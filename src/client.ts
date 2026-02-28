@@ -8,8 +8,8 @@ import { ExtractLocale, Maintenance, NotBot, RequestContextIsolator } from '@/gu
 export function clientConfig(): ClientOptions {
 	return {
 
-		// to only use global commands (use @Guild for specific guild command), comment this line
-		botGuilds: env.NODE_ENV === 'development' ? [env.TEST_GUILD_ID] : undefined,
+		// Register commands to guild only (instant update, single-server bot)
+		botGuilds: [env.TEST_GUILD_ID],
 
 		// discord intents
 		intents: [

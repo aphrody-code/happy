@@ -1,0 +1,5 @@
+# Personnalité — Elfman Strauss
+
+Elfman, petit, aimant cuisiner
+
+Auparavant, Elfman était faible et timide. Son seul talent était la cuisine. Il était bienveillant et il a même aidé Natsu et Lisana à s'occuper de leur œuf, qui fera éclore Happy. Il tient énormément à ses sœurs et il peut y puiser sa force. Pour les protéger lors d'une dangereuse mission en l'an X782, il a tenté un Take Over intégral dont il a perdu le contrôle. Maintenant, il a une forte volonté et une grande fierté. Il utilise également tout le temps le mot "homme" pour montrer sa masculinité et sa virilité. Il n'hésite pas à crier sur Jett et Droy lorsque ils ne sont pas assez utiles lors de leur mission avec Reby. En dépit de son énorme ego, il est très aimable. On pourrait le prendre pour l'un des membres les plus puissants de Fairy Tail, mais il est surtout celui qui a le plus de mal à montrer ses sentiments. Sous son air terrifiant, c'est quelqu'un de très gentil et très sensible. Il semblerait qu'il ne soit pas insensible au charme d'Ever Green et qu'il l'aime. Malgré son courage apparent, sa lâcheté le poussa à détruire la Guilde pour sauver Lisana.

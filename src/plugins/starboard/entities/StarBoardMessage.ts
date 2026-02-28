@@ -1,7 +1,8 @@
-import { Entity, PrimaryKey, Property, EntityRepositoryType, ManyToOne } from '@mikro-orm/core'
+import { Entity, EntityRepositoryType, ManyToOne, PrimaryKey, Property } from '@mikro-orm/core'
 import { EntityRepository } from '@mikro-orm/sqlite'
 
 import { CustomBaseEntity } from '@/entities'
+
 import { StarBoard } from './StarBoard'
 
 // ===========================================
@@ -27,6 +28,7 @@ export class StarBoardMessage extends CustomBaseEntity {
 
 	@ManyToOne()
 	starboard!: StarBoard
+
 }
 
 // ===========================================

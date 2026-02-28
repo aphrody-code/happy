@@ -1,9 +1,9 @@
 {
     "apps": [
         {
-            "name": "My Discord Bot",
-            "script": "npm",
-            "args" : "run build:start"
+            "name": "Fairy Tail FR",
+            "script": "pnpm",
+            "args" : "build:start"
         }
     ]
 }

@@ -1,2 +1,2 @@
-export * from "./StarBoard"
-export * from "./StarBoardMessage"
+export * from './StarBoard'
+export * from './StarBoardMessage'

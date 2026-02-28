@@ -1,43 +1,44 @@
-import EventEmitter from "node:events"
-import { singleton } from "tsyringe"
-import { Twilio as TwilioSDK } from "twilio"
-import { twilioConfig, twilioPhoneNumbers } from "../configs"
+import EventEmitter from 'node:events'
+
+import { singleton } from 'tsyringe'
+import { Twilio as TwilioSDK } from 'twilio'
+
+import { twilioConfig, twilioPhoneNumbers } from '../configs'
 
 @singleton()
 export class Twilio extends EventEmitter {
-    
-    public client: TwilioSDK
 
-    constructor() {
+	public client: TwilioSDK
 
-        super()
-        
-        if (twilioConfig.enabled) {
-            this.client = new TwilioSDK(
-                process.env["TWILIO_ACCOUNT_SID"] as string,
-                process.env["TWILIO_AUTH_TOKEN"]  as string,
-                { 
-                    logLevel: twilioConfig.debug ? "debug" : undefined 
-                }
-            )
-        }
-    }
+	constructor() {
+		super()
 
-    public async sendSMS(from: typeof twilioPhoneNumbers[number], to: string, body: string) {
+		if (twilioConfig.enabled) {
+			this.client = new TwilioSDK(
+				process.env.TWILIO_ACCOUNT_SID as string,
+				process.env.TWILIO_AUTH_TOKEN as string,
+				{
+					logLevel: twilioConfig.debug ? 'debug' : undefined,
+				}
+			)
+		}
+	}
 
-        if (!twilioConfig.enabled || !this.client) return
-        if (!twilioPhoneNumbers.includes(from)) throw new Error(`Invalid source phone number: ${from}`)
+	public async sendSMS(from: typeof twilioPhoneNumbers[number], to: string, body: string) {
+		if (!twilioConfig.enabled || !this.client) return
+		if (!twilioPhoneNumbers.includes(from)) throw new Error(`Invalid source phone number: ${from}`)
 
-        return this.client.messages.create({ from, to, body })
-    }
+		return this.client.messages.create({ from, to, body })
+	}
+
 }
 
-export interface Twilio {
-    on<U extends keyof TwilioPlugin.Events>(
-      event: U, listener: TwilioPlugin.Events[U]
-    ): this
+export type TwilioEvents = {
+	on: <U extends keyof TwilioPlugin.Events>(
+		event: U, listener: TwilioPlugin.Events[U]
+	) => Twilio
 
-    emit<U extends keyof TwilioPlugin.Events>(
-      event: U, ...args: Parameters<TwilioPlugin.Events[U]>
-    ): boolean
+	emit: <U extends keyof TwilioPlugin.Events>(
+		event: U, ...args: Parameters<TwilioPlugin.Events[U]>
+	) => boolean
 }

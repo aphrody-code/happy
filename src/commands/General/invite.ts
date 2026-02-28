@@ -24,7 +24,7 @@ export default class InviteCommand {
 			.setTitle(localize.COMMANDS.INVITE.EMBED.TITLE())
 			.setDescription(localize.COMMANDS.INVITE.EMBED.DESCRIPTION({ link: generalConfig.links.invite }))
 			.setColor(getColor('primary'))
-			.setFooter({ text: 'Powered by DiscBot Team ❤' })
+			.setFooter({ text: 'Aye ! Invite-moi, je suis un vrai mage ! 🐱' })
 
 		interaction.followUp({
 			embeds: [embed],

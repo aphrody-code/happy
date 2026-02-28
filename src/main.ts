@@ -93,8 +93,32 @@ async function reload(client: Client) {
 	logger.log(chalk.whiteBright('Hot reloaded\n'))
 }
 
+/**
+ * Graceful shutdown
+ */
+function setupGracefulShutdown() {
+	const shutdown = async (signal: string) => {
+		console.log(`\n${signal} reçu, arrêt du bot...`)
+		try {
+			const db = await resolveDependency(Database)
+			await db.orm.close()
+		} catch { /* ignoré si la DB n'est pas initialisée */ }
+		try {
+			const client = container.resolve(Client)
+			client.destroy()
+		} catch { /* ignoré si le client n'est pas initialisé */ }
+		process.exit(0)
+	}
+
+	process.on('SIGINT', () => shutdown('SIGINT'))
+	process.on('SIGTERM', () => shutdown('SIGTERM'))
+}
+
 async function init() {
 	const logger = await resolveDependency(Logger)
+
+	// graceful shutdown
+	setupGracefulShutdown()
 
 	// check environment variables
 	checkEnvironmentVariables()

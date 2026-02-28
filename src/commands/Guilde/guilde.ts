@@ -12,7 +12,6 @@ import { Client, SelectMenuComponent } from 'discordx'
 import { fairyTailGuildes } from '@/configs'
 import { Discord, Injectable, Slash } from '@/decorators'
 import { FairyTailGuilde } from '@/entities'
-import { Guard } from '@/guards'
 import { Database } from '@/services'
 import { getColor, resolveGuild } from '@/utils/functions'
 
@@ -20,6 +19,8 @@ import { getColor, resolveGuild } from '@/utils/functions'
 @Injectable()
 @Category('Guilde')
 export default class GuildeCommand {
+
+	private processingUsers = new Set<string>()
 
 	constructor(
 		private db: Database
@@ -84,6 +85,28 @@ export default class GuildeCommand {
 		client: Client,
 		localize: InteractionData['localize']
 	) {
+		const userId = interaction.user.id
+
+		// Verrou anti-race condition : empêcher les double-clics simultanés
+		if (this.processingUsers.has(userId)) {
+			await interaction.reply({ content: '⏳ Veuillez patienter...', ephemeral: true })
+
+			return
+		}
+		this.processingUsers.add(userId)
+
+		try {
+			await this._handleGuildeSelectionInner(interaction, client, localize)
+		} finally {
+			this.processingUsers.delete(userId)
+		}
+	}
+
+	private async _handleGuildeSelectionInner(
+		interaction: StringSelectMenuInteraction,
+		client: Client,
+		localize: InteractionData['localize']
+	) {
 		const guildeId = interaction.values[0]
 		const guildeConfig = fairyTailGuildes.find(g => g.id === guildeId)
 		if (!guildeConfig) return
@@ -103,6 +126,7 @@ export default class GuildeCommand {
 				.setTitle(`❌ ${localize.COMMANDS.GUILDE.ALREADY_IN_GUILD({ guilde: guildeConfig.name })}`)
 
 			await interaction.reply({ embeds: [embed], ephemeral: true })
+
 			return
 		}
 

@@ -1,4 +1,4 @@
-import { Entity, EntityRepositoryType, PrimaryKey, Property } from '@mikro-orm/core'
+import { Entity, EntityRepositoryType, Index, PrimaryKey, Property } from '@mikro-orm/core'
 import { EntityRepository } from '@mikro-orm/sqlite'
 
 // ===========================================
@@ -6,6 +6,7 @@ import { EntityRepository } from '@mikro-orm/sqlite'
 // ===========================================
 
 @Entity({ repository: () => StatRepository })
+@Index({ properties: ['type', 'createdAt'] })
 export class Stat {
 
 	[EntityRepositoryType]?: StatRepository
@@ -14,6 +15,7 @@ export class Stat {
     id: number
 
 	@Property()
+	@Index()
     type!: string
 
 	@Property()
@@ -23,6 +25,7 @@ export class Stat {
     additionalData?: any
 
 	@Property()
+	@Index()
     createdAt: Date = new Date()
 
 }
