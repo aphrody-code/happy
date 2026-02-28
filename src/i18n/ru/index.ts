@@ -65,6 +65,61 @@ const ru = {
 			DESCRIPTION: 'Тук-тук!',
 			MESSAGE: '{member} Что нужно? Было потрачено {time} милисекунд на генерацию ответа. {heartbeat}',
 		},
+		GUILDE: {
+			DESCRIPTION: 'Выбери свою гильдию Fairy Tail!',
+			EMBED: {
+				TITLE: 'Выбери свою Гильдию',
+				DESCRIPTION: 'Выбери гильдию из меню ниже, чтобы присоединиться. Ты можешь состоять только в одной гильдии.',
+				LEGAL_LABEL: 'Легальные Гильдии',
+				DARK_LABEL: 'Тёмные и Независимые Гильдии',
+			},
+			ALREADY_IN_GUILD: 'Ты уже состоишь в **{guilde}**!',
+			SUCCESS: {
+				TITLE: 'Добро пожаловать в {guilde}!',
+				DESCRIPTION: 'Ты теперь член **{guilde}**! Роль присвоена.',
+			},
+			CHANGED: {
+				TITLE: 'Гильдия изменена!',
+				DESCRIPTION: 'Ты покинул **{oldGuilde}** и присоединился к **{newGuilde}**!',
+			},
+			ERROR: 'Произошла ошибка при назначении гильдии.',
+		},
+		GUILDE_INFO: {
+			DESCRIPTION: 'Посмотреть количество членов каждой гильдии.',
+			EMBED: {
+				TITLE: 'Статистика Гильдий',
+				NO_MEMBERS: 'Пока нет членов',
+				MEMBER_COUNT: '{count} член{{ов}}',
+				LEGAL_TITLE: 'Легальные Гильдии',
+				DARK_TITLE: 'Тёмные Гильдии',
+				INDEPENDENT_TITLE: 'Независимые Гильдии',
+			},
+		},
+		GUILDE_RESET: {
+			DESCRIPTION: 'Удалить участника из его гильдии.',
+			OPTIONS: {
+				MEMBER: {
+					NAME: 'member',
+					DESCRIPTION: 'Участник для удаления из гильдии.',
+				},
+			},
+			SUCCESS: '**{member}** удалён из **{guilde}**.',
+			NOT_IN_GUILD: '**{member}** не состоит ни в одной гильдии.',
+		},
+		GUILDE_RESET_ALL: {
+			DESCRIPTION: 'Сбросить все гильдии на сервере.',
+			SUCCESS: 'Все гильдии сброшены ({count} удалено).',
+			NO_MEMBERSHIPS: 'Нет членств в гильдиях для сброса.',
+		},
+		SETUP: {
+			DESCRIPTION: 'Настроить все каналы и категории сервера.',
+			EMBED: {
+				TITLE: 'Настройка сервера',
+				PROGRESS: 'Создание каналов и категорий, пожалуйста подождите...',
+				DONE_TITLE: 'Настройка завершена!',
+				DONE_DESCRIPTION: 'Создано **{categories}** категорий и **{channels}** каналов ({skipped} пропущено).',
+			},
+		},
 	},
 } satisfies Translation
 

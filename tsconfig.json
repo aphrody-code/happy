@@ -15,7 +15,7 @@
 		"allowSyntheticDefaultImports": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"skipLibCheck": false,
+		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 
 		"baseUrl": ".",
@@ -61,7 +61,7 @@
 	},
 
 	"include": ["src", "**/*.ts", "src/**/*.json"],
-	"exclude": ["build", "node_modules", "tests", "mikro-orm.config.ts", "package.json"],
+	"exclude": ["build", "node_modules", "tests", "mikro-orm.config.ts", "package.json", "scripts"],
 	"paths": ["node_modules/*", "src/utils/types/*", "src/plugins/*/utils/types/*"],
 
 	"ts-node": {

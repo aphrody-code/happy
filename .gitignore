@@ -19,4 +19,4 @@ logs/
 *.log
 
 # other
-tests/
+tests/.storage/

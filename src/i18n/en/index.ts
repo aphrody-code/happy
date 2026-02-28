@@ -1,5 +1,5 @@
 /* eslint-disable */
-import type { BaseTranslation } from '../i18n-types'
+import type { Translation } from '../i18n-types'
 
 const en = {
 	GUARDS: {
@@ -32,13 +32,13 @@ const en = {
 				},
 			},
 			EMBED: {
-				DESCRIPTION: 'Prefix changed to `{prefix:string}`.',
+				DESCRIPTION: 'Prefix changed to `{prefix}`.',
 			},
 		},
 		MAINTENANCE: {
 			DESCRIPTION: 'Set the maintenance mode of the bot.',
 			EMBED: {
-				DESCRIPTION: 'Maintenance mode set to `{state:string}`.',
+				DESCRIPTION: 'Maintenance mode set to `{state}`.',
 			},
 		},
 		STATS: {
@@ -54,18 +54,73 @@ const en = {
 			DESCRIPTION: 'Get global help about the bot and its commands',
 			EMBED: {
 				TITLE: 'Help panel',
-				CATEGORY_TITLE: '{category:string} Commands',
+				CATEGORY_TITLE: '{category} Commands',
 			},
 			SELECT_MENU: {
 				TITLE: 'Select a category',
-				CATEGORY_DESCRIPTION: '{category:string} commands',
+				CATEGORY_DESCRIPTION: '{category} commands',
 			},
 		},
 		PING: {
 			DESCRIPTION: 'Pong!',
-			MESSAGE: '{member:string} Pong! The message round-trip took {time:number}ms.{heartbeat:string}',
+			MESSAGE: '{member} Pong! The message round-trip took {time}ms.{heartbeat}',
+		},
+		GUILDE: {
+			DESCRIPTION: 'Choose your Fairy Tail guild!',
+			EMBED: {
+				TITLE: 'Choose your Guild',
+				DESCRIPTION: 'Select a guild from the menus below to join it. You can only belong to one guild at a time.',
+				LEGAL_LABEL: 'Legal Guilds',
+				DARK_LABEL: 'Dark & Independent Guilds',
+			},
+			ALREADY_IN_GUILD: 'You are already a member of **{guilde}**!',
+			SUCCESS: {
+				TITLE: 'Welcome to {guilde}!',
+				DESCRIPTION: 'You are now a member of **{guilde}**! The role has been assigned.',
+			},
+			CHANGED: {
+				TITLE: 'Guild changed!',
+				DESCRIPTION: 'You left **{oldGuilde}** and joined **{newGuilde}**!',
+			},
+			ERROR: 'An error occurred while assigning the guild.',
+		},
+		GUILDE_INFO: {
+			DESCRIPTION: 'View the member count of each guild.',
+			EMBED: {
+				TITLE: 'Guild Statistics',
+				NO_MEMBERS: 'No members yet',
+				MEMBER_COUNT: '{count} member{{s}}',
+				LEGAL_TITLE: 'Legal Guilds',
+				DARK_TITLE: 'Dark Guilds',
+				INDEPENDENT_TITLE: 'Independent Guilds',
+			},
+		},
+		GUILDE_RESET: {
+			DESCRIPTION: 'Remove a member from their guild.',
+			OPTIONS: {
+				MEMBER: {
+					NAME: 'member',
+					DESCRIPTION: 'The member to remove from their guild.',
+				},
+			},
+			SUCCESS: '**{member}** has been removed from **{guilde}**.',
+			NOT_IN_GUILD: '**{member}** is not in any guild.',
+		},
+		GUILDE_RESET_ALL: {
+			DESCRIPTION: 'Reset all guild memberships on this server.',
+			SUCCESS: 'All guild memberships have been reset ({count} removed).',
+			NO_MEMBERSHIPS: 'There are no guild memberships to reset.',
+		},
+		SETUP: {
+			DESCRIPTION: 'Set up all server channels and categories.',
+			EMBED: {
+				TITLE: 'Server Setup',
+				PROGRESS: 'Setting up channels and categories, please wait...',
+				DONE_TITLE: 'Setup Complete!',
+				DONE_DESCRIPTION: 'Created **{categories}** categories and **{channels}** channels ({skipped} skipped).',
+			},
 		},
 	},
-} satisfies BaseTranslation
+} satisfies Translation
 
 export default en

@@ -3,7 +3,7 @@
 import type { BaseTranslation as BaseTranslationType, LocalizedString, RequiredParams } from 'typesafe-i18n'
 
 export type BaseTranslation = BaseTranslationType
-export type BaseLocale = 'en'
+export type BaseLocale = 'fr'
 
 export type Locales =
 	| 'en'
@@ -18,76 +18,76 @@ export type Translations = RootTranslation
 type RootTranslation = {
 	GUARDS: {
 		/**
-		 * T​h​i​s​ ​c​o​m​m​a​n​d​ ​i​s​ ​c​u​r​r​e​n​t​l​y​ ​d​i​s​a​b​l​e​d​.
+		 * C​e​t​t​e​ ​c​o​m​m​a​n​d​e​ ​e​s​t​ ​d​é​s​a​c​t​i​v​é​e​.
 		 */
 		DISABLED_COMMAND: string
 		/**
-		 * T​h​i​s​ ​b​o​t​ ​i​s​ ​c​u​r​r​e​n​t​l​y​ ​i​n​ ​m​a​i​n​t​e​n​a​n​c​e​ ​m​o​d​e​.
+		 * C​e​ ​b​o​t​ ​e​s​t​ ​e​n​ ​m​o​d​e​ ​m​a​i​n​t​e​n​a​n​c​e​.
 		 */
 		MAINTENANCE: string
 		/**
-		 * T​h​i​s​ ​c​o​m​m​a​n​d​ ​c​a​n​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​i​n​ ​a​ ​s​e​r​v​e​r​.
+		 * C​e​t​t​e​ ​c​o​m​m​a​n​d​e​ ​n​e​ ​p​e​u​t​ ​ê​t​r​e​ ​u​t​i​l​i​s​é​e​ ​q​u​'​e​n​ ​s​e​r​v​e​u​r​.
 		 */
 		GUILD_ONLY: string
 		/**
-		 * T​h​i​s​ ​c​o​m​m​a​n​d​ ​c​a​n​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​i​n​ ​a​ ​N​S​F​W​ ​c​h​a​n​n​e​l​.
+		 * C​e​t​t​e​ ​c​o​m​m​a​n​d​e​ ​n​e​ ​p​e​u​t​ ​ê​t​r​e​ ​u​t​i​l​i​s​é​e​ ​q​u​e​ ​d​a​n​s​ ​u​n​ ​s​a​l​o​n​ ​N​S​F​W​.
 		 */
 		NSFW: string
 	}
 	ERRORS: {
 		/**
-		 * A​n​ ​u​n​k​n​o​w​n​ ​e​r​r​o​r​ ​o​c​c​u​r​r​e​d​.
+		 * U​n​e​ ​e​r​r​e​u​r​ ​e​s​t​ ​s​u​r​v​e​n​u​e​.
 		 */
 		UNKNOWN: string
 	}
 	SHARED: {
 		/**
-		 * N​o​ ​d​e​s​c​r​i​p​t​i​o​n​ ​p​r​o​v​i​d​e​d​.
+		 * A​u​c​u​n​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​u​r​n​i​e​.
 		 */
 		NO_COMMAND_DESCRIPTION: string
 	}
 	COMMANDS: {
 		INVITE: {
 			/**
-			 * I​n​v​i​t​e​ ​t​h​e​ ​b​o​t​ ​t​o​ ​y​o​u​r​ ​s​e​r​v​e​r​!
+			 * I​n​v​i​t​e​z​ ​l​e​ ​b​o​t​ ​s​u​r​ ​v​o​t​r​e​ ​s​e​r​v​e​u​r​!
 			 */
 			DESCRIPTION: string
 			EMBED: {
 				/**
-				 * I​n​v​i​t​e​ ​m​e​ ​o​n​ ​y​o​u​r​ ​s​e​r​v​e​r​!
+				 * I​n​v​i​t​e​ ​m​o​i​ ​s​u​r​ ​t​o​n​ ​s​e​r​v​e​u​r​!
 				 */
 				TITLE: string
 				/**
-				 * [​C​l​i​c​k​ ​h​e​r​e​]​(​{​l​i​n​k​}​)​ ​t​o​ ​i​n​v​i​t​e​ ​m​e​!
-				 * @param {unknown} link
+				 * [​C​l​i​q​u​e​ ​i​c​i​]​(​{​l​i​n​k​}​)​ ​p​o​u​r​ ​m​'​i​n​v​i​t​e​r​!
+				 * @param {string} link
 				 */
 				DESCRIPTION: RequiredParams<'link'>
 			}
 		}
 		PREFIX: {
 			/**
-			 * p​r​e​f​i​x
+			 * p​r​e​f​i​x​e
 			 */
 			NAME: string
 			/**
-			 * C​h​a​n​g​e​ ​t​h​e​ ​p​r​e​f​i​x​ ​o​f​ ​t​h​e​ ​b​o​t​.
+			 * C​h​a​n​g​e​ ​l​e​ ​p​r​é​f​i​x​ ​d​u​ ​b​o​t​.
 			 */
 			DESCRIPTION: string
 			OPTIONS: {
 				PREFIX: {
 					/**
-					 * n​e​w​_​p​r​e​f​i​x
+					 * n​o​u​v​e​a​u​_​p​r​e​f​i​x
 					 */
 					NAME: string
 					/**
-					 * T​h​e​ ​n​e​w​ ​p​r​e​f​i​x​ ​o​f​ ​t​h​e​ ​b​o​t​.
+					 * L​e​ ​n​o​u​v​e​a​u​ ​p​r​é​f​i​x​ ​d​u​ ​b​o​t​.
 					 */
 					DESCRIPTION: string
 				}
 			}
 			EMBED: {
 				/**
-				 * P​r​e​f​i​x​ ​c​h​a​n​g​e​d​ ​t​o​ ​`​{​p​r​e​f​i​x​}​`​.
+				 * P​r​e​f​i​x​ ​c​h​a​n​g​é​ ​e​n​ ​`​{​p​r​e​f​i​x​}​`​.
 				 * @param {string} prefix
 				 */
 				DESCRIPTION: RequiredParams<'prefix'>
@@ -95,12 +95,12 @@ type RootTranslation = {
 		}
 		MAINTENANCE: {
 			/**
-			 * S​e​t​ ​t​h​e​ ​m​a​i​n​t​e​n​a​n​c​e​ ​m​o​d​e​ ​o​f​ ​t​h​e​ ​b​o​t​.
+			 * M​e​t​ ​l​e​ ​m​o​d​e​ ​m​a​i​n​t​e​n​a​n​c​e​ ​d​u​ ​b​o​t​.
 			 */
 			DESCRIPTION: string
 			EMBED: {
 				/**
-				 * M​a​i​n​t​e​n​a​n​c​e​ ​m​o​d​e​ ​s​e​t​ ​t​o​ ​`​{​s​t​a​t​e​}​`​.
+				 * L​e​ ​m​o​d​e​ ​m​a​i​n​t​e​n​a​n​c​e​ ​a​ ​é​t​é​ ​d​é​f​i​n​i​e​ ​à​ ​`​{​s​t​a​t​e​}​`​.
 				 * @param {string} state
 				 */
 				DESCRIPTION: RequiredParams<'state'>
@@ -108,51 +108,51 @@ type RootTranslation = {
 		}
 		STATS: {
 			/**
-			 * G​e​t​ ​s​o​m​e​ ​s​t​a​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​b​o​t​.
+			 * O​b​t​i​e​n​s​ ​d​e​s​ ​s​t​a​t​i​s​t​i​q​u​e​s​ ​s​u​r​ ​l​e​ ​b​o​t​.
 			 */
 			DESCRIPTION: string
 			HEADERS: {
 				/**
-				 * C​o​m​m​a​n​d​s
+				 * C​o​m​m​a​n​d​e​s
 				 */
 				COMMANDS: string
 				/**
-				 * G​u​i​l​d
+				 * S​e​r​v​e​u​r​s
 				 */
 				GUILDS: string
 				/**
-				 * A​c​t​i​v​e​ ​U​s​e​r​s
+				 * U​t​i​l​i​s​a​t​e​u​r​s​ ​a​c​t​i​f​s
 				 */
 				ACTIVE_USERS: string
 				/**
-				 * U​s​e​r​s
+				 * U​t​i​l​i​s​a​t​e​u​r​s
 				 */
 				USERS: string
 			}
 		}
 		HELP: {
 			/**
-			 * G​e​t​ ​g​l​o​b​a​l​ ​h​e​l​p​ ​a​b​o​u​t​ ​t​h​e​ ​b​o​t​ ​a​n​d​ ​i​t​s​ ​c​o​m​m​a​n​d​s
+			 * O​b​t​e​n​e​z​ ​d​e​ ​l​'​a​i​d​e​ ​g​l​o​b​a​l​e​ ​s​u​r​ ​l​e​ ​b​o​t​ ​e​t​ ​s​e​s​ ​c​o​m​m​a​n​d​e​s
 			 */
 			DESCRIPTION: string
 			EMBED: {
 				/**
-				 * H​e​l​p​ ​p​a​n​e​l
+				 * P​a​n​n​e​l​ ​d​'​a​i​d​e
 				 */
 				TITLE: string
 				/**
-				 * {​c​a​t​e​g​o​r​y​}​ ​C​o​m​m​a​n​d​s
+				 * C​o​m​m​a​n​d​e​s​ ​d​e​ ​{​c​a​t​e​g​o​r​y​}
 				 * @param {string} category
 				 */
 				CATEGORY_TITLE: RequiredParams<'category'>
 			}
 			SELECT_MENU: {
 				/**
-				 * S​e​l​e​c​t​ ​a​ ​c​a​t​e​g​o​r​y
+				 * S​é​l​e​c​t​i​o​n​n​e​z​ ​u​n​e​ ​c​a​t​é​g​o​r​i​e
 				 */
 				TITLE: string
 				/**
-				 * {​c​a​t​e​g​o​r​y​}​ ​c​o​m​m​a​n​d​s
+				 * C​o​m​m​a​n​d​e​s​ ​d​e​ ​{​c​a​t​e​g​o​r​y​}
 				 * @param {string} category
 				 */
 				CATEGORY_DESCRIPTION: RequiredParams<'category'>
@@ -164,12 +164,173 @@ type RootTranslation = {
 			 */
 			DESCRIPTION: string
 			/**
-			 * {​m​e​m​b​e​r​}​ ​P​o​n​g​!​ ​T​h​e​ ​m​e​s​s​a​g​e​ ​r​o​u​n​d​-​t​r​i​p​ ​t​o​o​k​ ​{​t​i​m​e​}​m​s​.​{​h​e​a​r​t​b​e​a​t​}
+			 * {​m​e​m​b​e​r​}​ ​P​o​n​g​!​ ​L​e​ ​t​e​m​p​s​ ​d​e​ ​r​é​p​o​n​s​e​ ​é​t​a​i​t​ ​{​t​i​m​e​}​m​s​.​{​h​e​a​r​t​b​e​a​t​}
 			 * @param {string} heartbeat
 			 * @param {string} member
 			 * @param {number} time
 			 */
 			MESSAGE: RequiredParams<'heartbeat' | 'member' | 'time'>
+		}
+		GUILDE: {
+			/**
+			 * C​h​o​i​s​i​s​ ​t​a​ ​g​u​i​l​d​e​ ​F​a​i​r​y​ ​T​a​i​l​ ​!
+			 */
+			DESCRIPTION: string
+			EMBED: {
+				/**
+				 * C​h​o​i​s​i​s​ ​t​a​ ​G​u​i​l​d​e
+				 */
+				TITLE: string
+				/**
+				 * S​é​l​e​c​t​i​o​n​n​e​ ​u​n​e​ ​g​u​i​l​d​e​ ​d​a​n​s​ ​l​e​s​ ​m​e​n​u​s​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​l​a​ ​r​e​j​o​i​n​d​r​e​.​ ​T​u​ ​n​e​ ​p​e​u​x​ ​a​p​p​a​r​t​e​n​i​r​ ​q​u​'​à​ ​u​n​e​ ​s​e​u​l​e​ ​g​u​i​l​d​e​ ​à​ ​l​a​ ​f​o​i​s​.
+				 */
+				DESCRIPTION: string
+				/**
+				 * G​u​i​l​d​e​s​ ​L​é​g​a​l​e​s
+				 */
+				LEGAL_LABEL: string
+				/**
+				 * G​u​i​l​d​e​s​ ​N​o​i​r​e​s​ ​&​ ​I​n​d​é​p​e​n​d​a​n​t​e​s
+				 */
+				DARK_LABEL: string
+			}
+			/**
+			 * T​u​ ​e​s​ ​d​é​j​à​ ​m​e​m​b​r​e​ ​d​e​ ​*​*​{​g​u​i​l​d​e​}​*​*​ ​!
+			 * @param {string} guilde
+			 */
+			ALREADY_IN_GUILD: RequiredParams<'guilde'>
+			SUCCESS: {
+				/**
+				 * B​i​e​n​v​e​n​u​e​ ​c​h​e​z​ ​{​g​u​i​l​d​e​}​ ​!
+				 * @param {string} guilde
+				 */
+				TITLE: RequiredParams<'guilde'>
+				/**
+				 * T​u​ ​e​s​ ​m​a​i​n​t​e​n​a​n​t​ ​m​e​m​b​r​e​ ​d​e​ ​*​*​{​g​u​i​l​d​e​}​*​*​ ​!​ ​L​e​ ​r​ô​l​e​ ​a​ ​é​t​é​ ​a​t​t​r​i​b​u​é​.
+				 * @param {string} guilde
+				 */
+				DESCRIPTION: RequiredParams<'guilde'>
+			}
+			CHANGED: {
+				/**
+				 * G​u​i​l​d​e​ ​c​h​a​n​g​é​e​ ​!
+				 */
+				TITLE: string
+				/**
+				 * T​u​ ​a​s​ ​q​u​i​t​t​é​ ​*​*​{​o​l​d​G​u​i​l​d​e​}​*​*​ ​e​t​ ​r​e​j​o​i​n​t​ ​*​*​{​n​e​w​G​u​i​l​d​e​}​*​*​ ​!
+				 * @param {string} newGuilde
+				 * @param {string} oldGuilde
+				 */
+				DESCRIPTION: RequiredParams<'newGuilde' | 'oldGuilde'>
+			}
+			/**
+			 * U​n​e​ ​e​r​r​e​u​r​ ​e​s​t​ ​s​u​r​v​e​n​u​e​ ​l​o​r​s​ ​d​e​ ​l​'​a​t​t​r​i​b​u​t​i​o​n​ ​d​e​ ​l​a​ ​g​u​i​l​d​e​.
+			 */
+			ERROR: string
+		}
+		GUILDE_INFO: {
+			/**
+			 * V​o​i​r​ ​l​e​ ​n​o​m​b​r​e​ ​d​e​ ​m​e​m​b​r​e​s​ ​d​e​ ​c​h​a​q​u​e​ ​g​u​i​l​d​e​.
+			 */
+			DESCRIPTION: string
+			EMBED: {
+				/**
+				 * S​t​a​t​i​s​t​i​q​u​e​s​ ​d​e​s​ ​G​u​i​l​d​e​s
+				 */
+				TITLE: string
+				/**
+				 * A​u​c​u​n​ ​m​e​m​b​r​e
+				 */
+				NO_MEMBERS: string
+				/**
+				 * {​c​o​u​n​t​}​ ​m​e​m​b​r​e​{​{​s​}​}
+				 * @param {number} count
+				 */
+				MEMBER_COUNT: RequiredParams<'count'>
+				/**
+				 * G​u​i​l​d​e​s​ ​L​é​g​a​l​e​s
+				 */
+				LEGAL_TITLE: string
+				/**
+				 * G​u​i​l​d​e​s​ ​N​o​i​r​e​s
+				 */
+				DARK_TITLE: string
+				/**
+				 * G​u​i​l​d​e​s​ ​I​n​d​é​p​e​n​d​a​n​t​e​s
+				 */
+				INDEPENDENT_TITLE: string
+			}
+		}
+		GUILDE_RESET: {
+			/**
+			 * R​e​t​i​r​e​r​ ​u​n​ ​m​e​m​b​r​e​ ​d​e​ ​s​a​ ​g​u​i​l​d​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * m​e​m​b​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​m​e​m​b​r​e​ ​à​ ​r​e​t​i​r​e​r​ ​d​e​ ​s​a​ ​g​u​i​l​d​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​a​ ​é​t​é​ ​r​e​t​i​r​é​(​e​)​ ​d​e​ ​*​*​{​g​u​i​l​d​e​}​*​*​.
+			 * @param {string} guilde
+			 * @param {string} member
+			 */
+			SUCCESS: RequiredParams<'guilde' | 'member'>
+			/**
+			 * *​*​{​m​e​m​b​e​r​}​*​*​ ​n​'​e​s​t​ ​d​a​n​s​ ​a​u​c​u​n​e​ ​g​u​i​l​d​e​.
+			 * @param {string} member
+			 */
+			NOT_IN_GUILD: RequiredParams<'member'>
+		}
+		GUILDE_RESET_ALL: {
+			/**
+			 * R​é​i​n​i​t​i​a​l​i​s​e​r​ ​t​o​u​t​e​s​ ​l​e​s​ ​g​u​i​l​d​e​s​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 */
+			DESCRIPTION: string
+			/**
+			 * T​o​u​t​e​s​ ​l​e​s​ ​g​u​i​l​d​e​s​ ​o​n​t​ ​é​t​é​ ​r​é​i​n​i​t​i​a​l​i​s​é​e​s​ ​(​{​c​o​u​n​t​}​ ​s​u​p​p​r​i​m​é​e​{​{​s​}​}​)​.
+			 * @param {number} count
+			 */
+			SUCCESS: RequiredParams<'count'>
+			/**
+			 * I​l​ ​n​'​y​ ​a​ ​a​u​c​u​n​e​ ​a​d​h​é​s​i​o​n​ ​d​e​ ​g​u​i​l​d​e​ ​à​ ​r​é​i​n​i​t​i​a​l​i​s​e​r​.
+			 */
+			NO_MEMBERSHIPS: string
+		}
+		SETUP: {
+			/**
+			 * C​o​n​f​i​g​u​r​e​r​ ​t​o​u​s​ ​l​e​s​ ​s​a​l​o​n​s​ ​e​t​ ​c​a​t​é​g​o​r​i​e​s​ ​d​u​ ​s​e​r​v​e​u​r​.
+			 */
+			DESCRIPTION: string
+			EMBED: {
+				/**
+				 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​u​ ​s​e​r​v​e​u​r
+				 */
+				TITLE: string
+				/**
+				 * C​r​é​a​t​i​o​n​ ​d​e​s​ ​s​a​l​o​n​s​ ​e​t​ ​c​a​t​é​g​o​r​i​e​s​ ​e​n​ ​c​o​u​r​s​,​ ​v​e​u​i​l​l​e​z​ ​p​a​t​i​e​n​t​e​r​.​.​.
+				 */
+				PROGRESS: string
+				/**
+				 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​t​e​r​m​i​n​é​e​ ​!
+				 */
+				DONE_TITLE: string
+				/**
+				 * *​*​{​c​a​t​e​g​o​r​i​e​s​}​*​*​ ​c​a​t​é​g​o​r​i​e​s​ ​e​t​ ​*​*​{​c​h​a​n​n​e​l​s​}​*​*​ ​s​a​l​o​n​s​ ​c​r​é​é​s​ ​(​{​s​k​i​p​p​e​d​}​ ​i​g​n​o​r​é​s​)​.
+				 * @param {number} categories
+				 * @param {number} channels
+				 * @param {number} skipped
+				 */
+				DONE_DESCRIPTION: RequiredParams<'categories' | 'channels' | 'skipped'>
+			}
 		}
 	}
 }
@@ -177,137 +338,137 @@ type RootTranslation = {
 export type TranslationFunctions = {
 	GUARDS: {
 		/**
-		 * This command is currently disabled.
+		 * Cette commande est désactivée.
 		 */
 		DISABLED_COMMAND: () => LocalizedString
 		/**
-		 * This bot is currently in maintenance mode.
+		 * Ce bot est en mode maintenance.
 		 */
 		MAINTENANCE: () => LocalizedString
 		/**
-		 * This command can only be used in a server.
+		 * Cette commande ne peut être utilisée qu'en serveur.
 		 */
 		GUILD_ONLY: () => LocalizedString
 		/**
-		 * This command can only be used in a NSFW channel.
+		 * Cette commande ne peut être utilisée que dans un salon NSFW.
 		 */
 		NSFW: () => LocalizedString
 	}
 	ERRORS: {
 		/**
-		 * An unknown error occurred.
+		 * Une erreur est survenue.
 		 */
 		UNKNOWN: () => LocalizedString
 	}
 	SHARED: {
 		/**
-		 * No description provided.
+		 * Aucune description fournie.
 		 */
 		NO_COMMAND_DESCRIPTION: () => LocalizedString
 	}
 	COMMANDS: {
 		INVITE: {
 			/**
-			 * Invite the bot to your server!
+			 * Invitez le bot sur votre serveur!
 			 */
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
 				/**
-				 * Invite me on your server!
+				 * Invite moi sur ton serveur!
 				 */
 				TITLE: () => LocalizedString
 				/**
-				 * [Click here]({link}) to invite me!
+				 * [Clique ici]({link}) pour m'inviter!
 				 */
-				DESCRIPTION: (arg: { link: unknown }) => LocalizedString
+				DESCRIPTION: (arg: { link: string }) => LocalizedString
 			}
 		}
 		PREFIX: {
 			/**
-			 * prefix
+			 * prefixe
 			 */
 			NAME: () => LocalizedString
 			/**
-			 * Change the prefix of the bot.
+			 * Change le préfix du bot.
 			 */
 			DESCRIPTION: () => LocalizedString
 			OPTIONS: {
 				PREFIX: {
 					/**
-					 * new_prefix
+					 * nouveau_prefix
 					 */
 					NAME: () => LocalizedString
 					/**
-					 * The new prefix of the bot.
+					 * Le nouveau préfix du bot.
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
 			}
 			EMBED: {
 				/**
-				 * Prefix changed to `{prefix}`.
+				 * Prefix changé en `{prefix}`.
 				 */
 				DESCRIPTION: (arg: { prefix: string }) => LocalizedString
 			}
 		}
 		MAINTENANCE: {
 			/**
-			 * Set the maintenance mode of the bot.
+			 * Met le mode maintenance du bot.
 			 */
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
 				/**
-				 * Maintenance mode set to `{state}`.
+				 * Le mode maintenance a été définie à `{state}`.
 				 */
 				DESCRIPTION: (arg: { state: string }) => LocalizedString
 			}
 		}
 		STATS: {
 			/**
-			 * Get some stats about the bot.
+			 * Obtiens des statistiques sur le bot.
 			 */
 			DESCRIPTION: () => LocalizedString
 			HEADERS: {
 				/**
-				 * Commands
+				 * Commandes
 				 */
 				COMMANDS: () => LocalizedString
 				/**
-				 * Guild
+				 * Serveurs
 				 */
 				GUILDS: () => LocalizedString
 				/**
-				 * Active Users
+				 * Utilisateurs actifs
 				 */
 				ACTIVE_USERS: () => LocalizedString
 				/**
-				 * Users
+				 * Utilisateurs
 				 */
 				USERS: () => LocalizedString
 			}
 		}
 		HELP: {
 			/**
-			 * Get global help about the bot and its commands
+			 * Obtenez de l'aide globale sur le bot et ses commandes
 			 */
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
 				/**
-				 * Help panel
+				 * Pannel d'aide
 				 */
 				TITLE: () => LocalizedString
 				/**
-				 * {category} Commands
+				 * Commandes de {category}
 				 */
 				CATEGORY_TITLE: (arg: { category: string }) => LocalizedString
 			}
 			SELECT_MENU: {
 				/**
-				 * Select a category
+				 * Sélectionnez une catégorie
 				 */
 				TITLE: () => LocalizedString
 				/**
-				 * {category} commands
+				 * Commandes de {category}
 				 */
 				CATEGORY_DESCRIPTION: (arg: { category: string }) => LocalizedString
 			}
@@ -318,9 +479,157 @@ export type TranslationFunctions = {
 			 */
 			DESCRIPTION: () => LocalizedString
 			/**
-			 * {member} Pong! The message round-trip took {time}ms.{heartbeat}
+			 * {member} Pong! Le temps de réponse était {time}ms.{heartbeat}
 			 */
 			MESSAGE: (arg: { heartbeat: string, member: string, time: number }) => LocalizedString
+		}
+		GUILDE: {
+			/**
+			 * Choisis ta guilde Fairy Tail !
+			 */
+			DESCRIPTION: () => LocalizedString
+			EMBED: {
+				/**
+				 * Choisis ta Guilde
+				 */
+				TITLE: () => LocalizedString
+				/**
+				 * Sélectionne une guilde dans les menus ci-dessous pour la rejoindre. Tu ne peux appartenir qu'à une seule guilde à la fois.
+				 */
+				DESCRIPTION: () => LocalizedString
+				/**
+				 * Guildes Légales
+				 */
+				LEGAL_LABEL: () => LocalizedString
+				/**
+				 * Guildes Noires & Indépendantes
+				 */
+				DARK_LABEL: () => LocalizedString
+			}
+			/**
+			 * Tu es déjà membre de **{guilde}** !
+			 */
+			ALREADY_IN_GUILD: (arg: { guilde: string }) => LocalizedString
+			SUCCESS: {
+				/**
+				 * Bienvenue chez {guilde} !
+				 */
+				TITLE: (arg: { guilde: string }) => LocalizedString
+				/**
+				 * Tu es maintenant membre de **{guilde}** ! Le rôle a été attribué.
+				 */
+				DESCRIPTION: (arg: { guilde: string }) => LocalizedString
+			}
+			CHANGED: {
+				/**
+				 * Guilde changée !
+				 */
+				TITLE: () => LocalizedString
+				/**
+				 * Tu as quitté **{oldGuilde}** et rejoint **{newGuilde}** !
+				 */
+				DESCRIPTION: (arg: { newGuilde: string, oldGuilde: string }) => LocalizedString
+			}
+			/**
+			 * Une erreur est survenue lors de l'attribution de la guilde.
+			 */
+			ERROR: () => LocalizedString
+		}
+		GUILDE_INFO: {
+			/**
+			 * Voir le nombre de membres de chaque guilde.
+			 */
+			DESCRIPTION: () => LocalizedString
+			EMBED: {
+				/**
+				 * Statistiques des Guildes
+				 */
+				TITLE: () => LocalizedString
+				/**
+				 * Aucun membre
+				 */
+				NO_MEMBERS: () => LocalizedString
+				/**
+				 * {count} membre{{s}}
+				 */
+				MEMBER_COUNT: (arg: { count: number }) => LocalizedString
+				/**
+				 * Guildes Légales
+				 */
+				LEGAL_TITLE: () => LocalizedString
+				/**
+				 * Guildes Noires
+				 */
+				DARK_TITLE: () => LocalizedString
+				/**
+				 * Guildes Indépendantes
+				 */
+				INDEPENDENT_TITLE: () => LocalizedString
+			}
+		}
+		GUILDE_RESET: {
+			/**
+			 * Retirer un membre de sa guilde.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				MEMBER: {
+					/**
+					 * membre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le membre à retirer de sa guilde.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			/**
+			 * **{member}** a été retiré(e) de **{guilde}**.
+			 */
+			SUCCESS: (arg: { guilde: string, member: string }) => LocalizedString
+			/**
+			 * **{member}** n'est dans aucune guilde.
+			 */
+			NOT_IN_GUILD: (arg: { member: string }) => LocalizedString
+		}
+		GUILDE_RESET_ALL: {
+			/**
+			 * Réinitialiser toutes les guildes du serveur.
+			 */
+			DESCRIPTION: () => LocalizedString
+			/**
+			 * Toutes les guildes ont été réinitialisées ({count} supprimée{{s}}).
+			 */
+			SUCCESS: (arg: { count: number }) => LocalizedString
+			/**
+			 * Il n'y a aucune adhésion de guilde à réinitialiser.
+			 */
+			NO_MEMBERSHIPS: () => LocalizedString
+		}
+		SETUP: {
+			/**
+			 * Configurer tous les salons et catégories du serveur.
+			 */
+			DESCRIPTION: () => LocalizedString
+			EMBED: {
+				/**
+				 * Configuration du serveur
+				 */
+				TITLE: () => LocalizedString
+				/**
+				 * Création des salons et catégories en cours, veuillez patienter...
+				 */
+				PROGRESS: () => LocalizedString
+				/**
+				 * Configuration terminée !
+				 */
+				DONE_TITLE: () => LocalizedString
+				/**
+				 * **{categories}** catégories et **{channels}** salons créés ({skipped} ignorés).
+				 */
+				DONE_DESCRIPTION: (arg: { categories: number, channels: number, skipped: number }) => LocalizedString
+			}
 		}
 	}
 }

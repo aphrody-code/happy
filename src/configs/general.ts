@@ -2,42 +2,43 @@ import { env } from '@/env'
 
 export const generalConfig: GeneralConfigType = {
 
-	name: 'tscord', // the name of your bot
-	description: '', // the description of your bot
-	defaultLocale: 'en', // default language of the bot, must be a valid locale
+	name: 'Fairy Tail FR', // le nom du bot
+	description: 'Bot officiel de la communauté Fairy Tail française', // la description du bot
+	defaultLocale: 'fr', // langue par défaut du bot, doit être une locale valide
 	ownerId: env.BOT_OWNER_ID,
-	timezone: 'Europe/Paris', // default TimeZone to well format and localize dates (logs, stats, etc)
+	timezone: 'Europe/Paris', // fuseau horaire par défaut pour le formatage des dates (logs, stats, etc)
 
-	simpleCommandsPrefix: '!', // default prefix for simple command messages (old way to do commands on discord)
-	automaticDeferring: true, // enable or not the automatic deferring of the replies of the bot on the command interactions
+	simpleCommandsPrefix: '!', // préfixe par défaut pour les commandes simples (ancien système de commandes Discord)
+	automaticDeferring: true, // activer ou non le defer automatique des réponses du bot sur les interactions
 
-	// useful links
+	// liens utiles
 	links: {
-		invite: 'https://www.change_invite_link_here.com',
-		supportServer: 'https://discord.com/your_invitation_link',
+		invite: `https://discord.com/oauth2/authorize?client_id=1477087076032970844&permissions=8&scope=bot%20applications.commands`,
+		supportServer: 'https://discord.gg/fairytailfr',
 		gitRemoteRepo: 'https://github.com/barthofu/tscord',
 	},
 
-	automaticUploadImagesToImgur: false, // enable or not the automatic assets upload
+	automaticUploadImagesToImgur: false, // activer ou non l'upload automatique des images
 
-	devs: [], // discord IDs of the devs that are working on the bot (you don't have to put the owner's id here)
+	devs: [], // IDs Discord des développeurs travaillant sur le bot (pas besoin de mettre l'ID du propriétaire ici)
 
-	// define the bot activities (phrases under its name). Types can be: PLAYING, LISTENING, WATCHING, STREAMING
+	// définir les activités du bot (phrases sous son nom). Types possibles : PLAYING, LISTENING, WATCHING, STREAMING
 	activities: [
 		{
-			text: 'discord.js v14 with tscord',
-			type: 'PLAYING',
+			text: 'Fairy Tail FR ✨',
+			type: 'WATCHING',
 		},
 		{
-			text: 'some knowledge',
-			type: 'STREAMING',
+			text: 'la guilde Fairy Tail',
+			type: 'LISTENING',
 		},
 	],
 
 }
 
-// global colors
+// couleurs globales
 export const colorsConfig = {
 
 	primary: '#2F3136',
+	guildeDefault: '#E8672A',
 }
