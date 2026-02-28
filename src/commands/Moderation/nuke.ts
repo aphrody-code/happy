@@ -47,16 +47,16 @@ export default class NukeCommand {
 		const targetChannel = channel ?? (interaction.channel as TextChannel)
 
 		if (!targetChannel.isTextBased() || targetChannel.isThread())
-			return interaction.reply({ content: 'I can only nuke text channels.', ephemeral: true })
+			return interaction.reply({ content: localize.COMMANDS.NUKE.TEXT_ONLY(), ephemeral: true })
 
 		const confirmButton = new ButtonBuilder()
 			.setCustomId('confirm-nuke')
-			.setLabel(localize.COMMANDS.WARNINGS.CHOICES.CLEAR())
+			.setLabel(localize.COMMANDS.NUKE.CONFIRM_BUTTON())
 			.setStyle(ButtonStyle.Danger)
 
 		const cancelButton = new ButtonBuilder()
 			.setCustomId('cancel-nuke')
-			.setLabel('Cancel')
+			.setLabel(localize.COMMANDS.NUKE.CANCEL_BUTTON())
 			.setStyle(ButtonStyle.Secondary)
 
 		const row = new ActionRowBuilder<ButtonBuilder>().addComponents(confirmButton, cancelButton)
@@ -98,7 +98,7 @@ export default class NukeCommand {
 				log.additionalData = { channelName: targetChannel.name }
 				await this.db.em.persistAndFlush(log)
 			} else {
-				await i.update({ content: 'Nuke cancelled.', components: [] })
+				await i.update({ content: localize.COMMANDS.NUKE.CANCELLED(), components: [] })
 			}
 		})
 	}

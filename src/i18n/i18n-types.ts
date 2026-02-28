@@ -1375,6 +1375,22 @@ type RootTranslation = {
 			 */
 			CONFIRM: RequiredParams<'channel'>
 			/**
+			 * C​o​n​f​i​r​m​e​r
+			 */
+			CONFIRM_BUTTON: string
+			/**
+			 * A​n​n​u​l​e​r
+			 */
+			CANCEL_BUTTON: string
+			/**
+			 * N​u​k​e​ ​a​n​n​u​l​é​.
+			 */
+			CANCELLED: string
+			/**
+			 * J​e​ ​n​e​ ​p​e​u​x​ ​n​u​k​e​ ​q​u​e​ ​l​e​s​ ​s​a​l​o​n​s​ ​t​e​x​t​u​e​l​s​.
+			 */
+			TEXT_ONLY: string
+			/**
 			 * L​e​ ​s​a​l​o​n​ ​a​ ​é​t​é​ ​n​u​k​e​ ​a​v​e​c​ ​s​u​c​c​è​s​ ​p​a​r​ ​{​u​s​e​r​}​.
 			 * @param {string} user
 			 */
@@ -1422,6 +1438,10 @@ type RootTranslation = {
 			 * @param {string} member
 			 */
 			RESET: RequiredParams<'member'>
+			/**
+			 * J​e​ ​n​'​a​i​ ​p​a​s​ ​l​a​ ​p​e​r​m​i​s​s​i​o​n​ ​d​e​ ​m​o​d​i​f​i​e​r​ ​l​e​ ​s​u​r​n​o​m​ ​d​e​ ​c​e​ ​m​e​m​b​r​e​.
+			 */
+			NO_PERMISSION: string
 		}
 		DEAFEN: {
 			/**
@@ -1459,6 +1479,10 @@ type RootTranslation = {
 			 * @param {string} member
 			 */
 			SUCCESS: RequiredParams<'member'>
+			/**
+			 * C​e​ ​m​e​m​b​r​e​ ​n​'​e​s​t​ ​p​a​s​ ​d​a​n​s​ ​u​n​ ​s​a​l​o​n​ ​v​o​c​a​l​.
+			 */
+			NOT_IN_VOICE: string
 		}
 		UNDEAFEN: {
 			/**
@@ -1533,6 +1557,10 @@ type RootTranslation = {
 			 * @param {string} member
 			 */
 			SUCCESS: RequiredParams<'member'>
+			/**
+			 * C​e​ ​m​e​m​b​r​e​ ​n​'​e​s​t​ ​p​a​s​ ​d​a​n​s​ ​u​n​ ​s​a​l​o​n​ ​v​o​c​a​l​.
+			 */
+			NOT_IN_VOICE: string
 		}
 		VUNMUTE: {
 			/**
@@ -2987,6 +3015,22 @@ export type TranslationFunctions = {
 			 */
 			CONFIRM: (arg: { channel: string }) => LocalizedString
 			/**
+			 * Confirmer
+			 */
+			CONFIRM_BUTTON: () => LocalizedString
+			/**
+			 * Annuler
+			 */
+			CANCEL_BUTTON: () => LocalizedString
+			/**
+			 * Nuke annulé.
+			 */
+			CANCELLED: () => LocalizedString
+			/**
+			 * Je ne peux nuke que les salons textuels.
+			 */
+			TEXT_ONLY: () => LocalizedString
+			/**
 			 * Le salon a été nuke avec succès par {user}.
 			 */
 			SUCCESS: (arg: { user: string }) => LocalizedString
@@ -3030,6 +3074,10 @@ export type TranslationFunctions = {
 			 * Le surnom de **{member}** a été réinitialisé.
 			 */
 			RESET: (arg: { member: string }) => LocalizedString
+			/**
+			 * Je n'ai pas la permission de modifier le surnom de ce membre.
+			 */
+			NO_PERMISSION: () => LocalizedString
 		}
 		DEAFEN: {
 			/**
@@ -3066,6 +3114,10 @@ export type TranslationFunctions = {
 			 * **{member}** a été assourdi.
 			 */
 			SUCCESS: (arg: { member: string }) => LocalizedString
+			/**
+			 * Ce membre n'est pas dans un salon vocal.
+			 */
+			NOT_IN_VOICE: () => LocalizedString
 		}
 		UNDEAFEN: {
 			/**
@@ -3138,6 +3190,10 @@ export type TranslationFunctions = {
 			 * **{member}** a été rendu muet dans les salons vocaux.
 			 */
 			SUCCESS: (arg: { member: string }) => LocalizedString
+			/**
+			 * Ce membre n'est pas dans un salon vocal.
+			 */
+			NOT_IN_VOICE: () => LocalizedString
 		}
 		VUNMUTE: {
 			/**

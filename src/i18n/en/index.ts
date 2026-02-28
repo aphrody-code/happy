@@ -514,6 +514,10 @@ const en = {
 				},
 			},
 			CONFIRM: 'Are you sure you want to nuke the channel {channel}? This action is irreversible.',
+			CONFIRM_BUTTON: 'Confirm',
+			CANCEL_BUTTON: 'Cancel',
+			CANCELLED: 'Nuke cancelled.',
+			TEXT_ONLY: 'I can only nuke text channels.',
 			SUCCESS: 'The channel has been successfully nuked by {user}.',
 		},
 		NICK: {
@@ -531,6 +535,7 @@ const en = {
 			},
 			SUCCESS: '**{member}\'s** nickname has been changed to **{nickname}**.',
 			RESET: '**{member}\'s** nickname has been reset.',
+			NO_PERMISSION: 'I do not have permission to change this member\'s nickname.',
 		},
 		DEAFEN: {
 			NAME: 'deafen',
@@ -546,6 +551,7 @@ const en = {
 				},
 			},
 			SUCCESS: '**{member}** has been deafened.',
+			NOT_IN_VOICE: 'This member is not in a voice channel.',
 		},
 		UNDEAFEN: {
 			NAME: 'undeafen',
@@ -576,6 +582,7 @@ const en = {
 				},
 			},
 			SUCCESS: '**{member}** has been muted in voice channels.',
+			NOT_IN_VOICE: 'This member is not in a voice channel.',
 		},
 		VUNMUTE: {
 			NAME: 'vunmute',

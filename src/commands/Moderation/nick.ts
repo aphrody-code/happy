@@ -66,7 +66,7 @@ export default class NickCommand {
 				)
 			}
 		} catch (error) {
-			simpleErrorEmbed(interaction, 'I do not have permission to change this member\'s nickname.')
+			simpleErrorEmbed(interaction, localize.COMMANDS.NICK.NO_PERMISSION())
 		}
 	}
 

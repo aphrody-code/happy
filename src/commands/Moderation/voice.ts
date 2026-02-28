@@ -44,7 +44,7 @@ export default class VoiceModerationCommand {
 		if (!guild) return
 
 		if (!member.voice.channel)
-			return simpleErrorEmbed(interaction, 'This member is not in a voice channel.')
+			return simpleErrorEmbed(interaction, localize.COMMANDS.VMUTE.NOT_IN_VOICE())
 
 		await member.voice.setMute(true, reason ?? undefined)
 
@@ -129,7 +129,7 @@ export default class VoiceModerationCommand {
 		if (!guild) return
 
 		if (!member.voice.channel)
-			return simpleErrorEmbed(interaction, 'This member is not in a voice channel.')
+			return simpleErrorEmbed(interaction, localize.COMMANDS.DEAFEN.NOT_IN_VOICE())
 
 		await member.voice.setDeaf(true, reason ?? undefined)
 

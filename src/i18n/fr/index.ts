@@ -514,6 +514,10 @@ const fr = {
 				},
 			},
 			CONFIRM: 'Êtes-vous sûr de vouloir nuke le salon {channel:string} ? Cette action est irréversible.',
+			CONFIRM_BUTTON: 'Confirmer',
+			CANCEL_BUTTON: 'Annuler',
+			CANCELLED: 'Nuke annulé.',
+			TEXT_ONLY: 'Je ne peux nuke que les salons textuels.',
 			SUCCESS: 'Le salon a été nuke avec succès par {user:string}.',
 		},
 		NICK: {
@@ -531,6 +535,7 @@ const fr = {
 			},
 			SUCCESS: 'Le surnom de **{member:string}** a été changé en **{nickname:string}**.',
 			RESET: 'Le surnom de **{member:string}** a été réinitialisé.',
+			NO_PERMISSION: 'Je n\'ai pas la permission de modifier le surnom de ce membre.',
 		},
 		DEAFEN: {
 			NAME: 'deafen',
@@ -546,6 +551,7 @@ const fr = {
 				},
 			},
 			SUCCESS: '**{member:string}** a été assourdi.',
+			NOT_IN_VOICE: 'Ce membre n\'est pas dans un salon vocal.',
 		},
 		UNDEAFEN: {
 			NAME: 'undeafen',
@@ -576,6 +582,7 @@ const fr = {
 				},
 			},
 			SUCCESS: '**{member:string}** a été rendu muet dans les salons vocaux.',
+			NOT_IN_VOICE: 'Ce membre n\'est pas dans un salon vocal.',
 		},
 		VUNMUTE: {
 			NAME: 'vunmute',
