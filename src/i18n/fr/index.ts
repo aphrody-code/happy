@@ -614,6 +614,99 @@ const fr = {
 				LOG_ENTRY: '`{id:number}` **{action:string}** par <@{moderator:string}> le {date:string}\n└ *Raison : {reason:string}*',
 			},
 		},
+		POLL: {
+			NAME: 'sondage',
+			DESCRIPTION: 'Créer un sondage pour le serveur.',
+			OPTIONS: {
+				TITLE: {
+					NAME: 'titre',
+					DESCRIPTION: 'Le titre du sondage.',
+				},
+				OPTIONS: {
+					NAME: 'options',
+					DESCRIPTION: 'Les options séparées par un point-virgule (ex: Natsu;Grey;Lucy).',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'Une description optionnelle.',
+				},
+			},
+			EMBED: {
+				TITLE: '📊 {title:string}',
+				FOOTER: 'Créé par {user:string} • {total:number} vote{{s}}',
+				RESULTS_TITLE: 'Résultats : {title:string}',
+				VOTED: 'Tu as voté pour **{option:string}** !',
+				NO_VOTES: 'Aucun vote pour le moment.',
+			},
+			SELECT_MENU: {
+				PLACEHOLDER: 'Choisis une option...',
+			},
+			BUTTONS: {
+				RESULTS: 'Voir les résultats',
+				CLOSE: 'Fermer le sondage',
+			},
+			ERRORS: {
+				MIN_OPTIONS: 'Il faut au moins 2 options !',
+				MAX_OPTIONS: 'Tu ne peux pas mettre plus de 25 options.',
+				CREATION: 'Une erreur est survenue lors de la création du sondage.',
+				NOT_FOUND: 'Sondage non trouvé.',
+				CLOSED: 'Ce sondage est terminé !',
+				OPTION_NOT_FOUND: 'Option non trouvée !',
+				ALREADY_VOTED: 'Tu as déjà voté pour cette option !',
+				PERMISSION: 'Seul le créateur du sondage ou un administrateur peut le fermer !',
+				MAX_VOTES_REACHED: 'Tu as déjà atteint le nombre maximum de votes ({max:number}) !',
+			},
+			SUCCESS: {
+				VOTE: 'Vote enregistré !',
+				VOTE_REMOVED: 'Vote retiré !',
+			},
+		},
+		ANIME: {
+			NAME: 'anime',
+			DESCRIPTION: 'Regarder un épisode de Fairy Tail',
+			OPTIONS: {
+				EPISODE: {
+					NAME: 'episode',
+					DESCRIPTION: 'Numéro de l\'épisode',
+				},
+				SOURCE: {
+					NAME: 'source',
+					DESCRIPTION: 'Source vidéo (lecteur)',
+				},
+			},
+			EMBED: {
+				TITLE: '📺 Fairy Tail - Épisode {episode:number}',
+				DESCRIPTION: 'Clique sur le lien ci-dessous pour regarder l\'épisode sur **{source:string}** :\n\n[▶️ Lancer la vidéo]({link:string})',
+			},
+			ERRORS: {
+				NOT_FOUND: 'L\'épisode {episode:number} n\'existe pas. Le dernier épisode disponible est le {total:number}.',
+				LINK_NOT_FOUND: 'Le lien pour l\'épisode {episode:number} sur la source {source:string} n\'a pas été trouvé.',
+			}
+		},
+		FRAME: {
+			NAME: 'frame',
+			DESCRIPTION: 'Obtenir une image aléatoire d\'un épisode de Fairy Tail',
+			OPTIONS: {
+				SERIE: {
+					NAME: 'serie',
+					DESCRIPTION: 'La série Fairy Tail',
+				},
+				EPISODE: {
+					NAME: 'episode',
+					DESCRIPTION: 'Numéro de l\'épisode (optionnel)',
+				},
+			},
+			EMBED: {
+				TITLE: '{show:string} - Épisode {episode:number}',
+			},
+			BUTTONS: {
+				SEE_MORE: 'Voir plus d\'images',
+			},
+			ERRORS: {
+				NOT_FOUND: 'Aucune image ou épisode trouvé pour cette sélection.',
+				FETCH: 'Une erreur est survenue lors de la récupération de l\'image. Réessaie plus tard.',
+			},
+		},
 	},
 } satisfies BaseTranslation
 

@@ -148,7 +148,7 @@ const MODERATION_ROLES = [
 	{ name: '👑 Maître de Guilde', color: '#FFD700', hoist: true, position: 'top', reason: 'Propriétaire/Admin principal du serveur' },
 	{ name: '⚖️ Conseil des Mages', color: '#E74C3C', hoist: true, position: 'high', reason: 'Modérateurs du serveur' },
 	{ name: '🛡️ Chevalier Runique', color: '#3498DB', hoist: true, position: 'mid', reason: 'Modérateurs juniors / helpers' },
-	{ name: '⭐ Mage de Rang S', color: '#F1C40F', hoist: true, position: 'mid', reason: 'Membres VIP / contributeurs importants' },
+	{ name: '⭐ Mage de Rang S', color: '#F1C40F', hoist: true, position: 'mid', reason: 'Modérateurs / élite de la guilde — peuvent siéger au Conseil des Mages' },
 	{ name: '🤖 Bot', color: '#7289DA', hoist: true, position: 'high', reason: 'Rôle pour les bots du serveur' },
 ]
 

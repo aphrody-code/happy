@@ -1,4 +1,5 @@
 import 'dotenv/config'
+
 import {
 	ChannelType,
 	Client,
@@ -14,11 +15,13 @@ const GUILD_ID = process.env.TEST_GUILD_ID!
 
 function findChannel(channels: Map<string, GuildChannel>, name: string): TextChannel | null {
 	const ch = [...channels.values()].find(c => c.name.includes(name) && c.type === ChannelType.GuildText)
+
 	return (ch as TextChannel) ?? null
 }
 
 function mention(channels: Map<string, GuildChannel>, name: string): string {
 	const ch = [...channels.values()].find(c => c.name.includes(name))
+
 	return ch ? `<#${ch.id}>` : `\`#${name}\``
 }
 
@@ -37,6 +40,7 @@ client.once('ready', async () => {
 		const bienvenue = findChannel(channels, 'bienvenue')
 		if (!bienvenue) {
 			console.log('❌ #bienvenue introuvable')
+
 			return
 		}
 
@@ -152,7 +156,7 @@ client.once('ready', async () => {
 				+ '**2.** Pas de spam. Sois pas comme Natsu et Grey en pleine baston.\n'
 				+ `**3.** Les spoilers c\'est dans ${m('spoilers')}, nulle part ailleurs.\n`
 				+ '**4.** Pas de pub pour d\'autres serveurs sans autorisation.\n\n'
-				+ `Le règlement complet est dans ${m('règlement')}.`
+				+ `Le règlement complet est dans ${m('règles')}.`
 			)
 
 		const embedPremiersPas = new EmbedBuilder()

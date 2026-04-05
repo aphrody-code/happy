@@ -56,7 +56,7 @@ client.once('ready', async () => {
 					)
 					.setColor(0xE8672A)
 					.setThumbnail('https://i.pinimg.com/originals/a1/bd/f1/a1bdf1d65acd999c00c627b11998cd3b.gif')
-					
+
 				await textChannel.send({ embeds: [embed] })
 				updatedCount++
 			}

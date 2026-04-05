@@ -1,4 +1,5 @@
 import 'dotenv/config'
+
 import {
 	ChannelType,
 	Client,
@@ -40,7 +41,7 @@ client.once('ready', async () => {
 				if (!hasHappyFooter) continue
 
 				// Reconstruire les embeds sans footer
-				const newEmbeds = msg.embeds.map(e => {
+				const newEmbeds = msg.embeds.map((e) => {
 					const eb = new EmbedBuilder()
 					if (e.title) eb.setTitle(e.title)
 					if (e.description) eb.setDescription(e.description)
@@ -48,6 +49,7 @@ client.once('ready', async () => {
 					if (e.image?.url) eb.setImage(e.image.url)
 					if (e.thumbnail?.url) eb.setThumbnail(e.thumbnail.url)
 					if (e.fields.length > 0) eb.addFields(e.fields)
+
 					// PAS de footer
 					return eb
 				})

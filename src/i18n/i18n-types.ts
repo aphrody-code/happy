@@ -1642,6 +1642,257 @@ type RootTranslation = {
 				LOG_ENTRY: RequiredParams<'action' | 'date' | 'id' | 'moderator' | 'reason'>
 			}
 		}
+		POLL: {
+			/**
+			 * s​o​n​d​a​g​e
+			 */
+			NAME: string
+			/**
+			 * C​r​é​e​r​ ​u​n​ ​s​o​n​d​a​g​e​ ​p​o​u​r​ ​l​e​ ​s​e​r​v​e​u​r​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				TITLE: {
+					/**
+					 * t​i​t​r​e
+					 */
+					NAME: string
+					/**
+					 * L​e​ ​t​i​t​r​e​ ​d​u​ ​s​o​n​d​a​g​e​.
+					 */
+					DESCRIPTION: string
+				}
+				OPTIONS: {
+					/**
+					 * o​p​t​i​o​n​s
+					 */
+					NAME: string
+					/**
+					 * L​e​s​ ​o​p​t​i​o​n​s​ ​s​é​p​a​r​é​e​s​ ​p​a​r​ ​u​n​ ​p​o​i​n​t​-​v​i​r​g​u​l​e​ ​(​e​x​:​ ​N​a​t​s​u​;​G​r​e​y​;​L​u​c​y​)​.
+					 */
+					DESCRIPTION: string
+				}
+				DESCRIPTION: {
+					/**
+					 * d​e​s​c​r​i​p​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * U​n​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​p​t​i​o​n​n​e​l​l​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * �​�​ ​{​t​i​t​l​e​}
+				 * @param {string} title
+				 */
+				TITLE: RequiredParams<'title'>
+				/**
+				 * C​r​é​é​ ​p​a​r​ ​{​u​s​e​r​}​ ​•​ ​{​t​o​t​a​l​}​ ​v​o​t​e​{​{​s​}​}
+				 * @param {number} total
+				 * @param {string} user
+				 */
+				FOOTER: RequiredParams<'total' | 'user'>
+				/**
+				 * R​é​s​u​l​t​a​t​s​ ​:​ ​{​t​i​t​l​e​}
+				 * @param {string} title
+				 */
+				RESULTS_TITLE: RequiredParams<'title'>
+				/**
+				 * T​u​ ​a​s​ ​v​o​t​é​ ​p​o​u​r​ ​*​*​{​o​p​t​i​o​n​}​*​*​ ​!
+				 * @param {string} option
+				 */
+				VOTED: RequiredParams<'option'>
+				/**
+				 * A​u​c​u​n​ ​v​o​t​e​ ​p​o​u​r​ ​l​e​ ​m​o​m​e​n​t​.
+				 */
+				NO_VOTES: string
+			}
+			SELECT_MENU: {
+				/**
+				 * C​h​o​i​s​i​s​ ​u​n​e​ ​o​p​t​i​o​n​.​.​.
+				 */
+				PLACEHOLDER: string
+			}
+			BUTTONS: {
+				/**
+				 * V​o​i​r​ ​l​e​s​ ​r​é​s​u​l​t​a​t​s
+				 */
+				RESULTS: string
+				/**
+				 * F​e​r​m​e​r​ ​l​e​ ​s​o​n​d​a​g​e
+				 */
+				CLOSE: string
+			}
+			ERRORS: {
+				/**
+				 * I​l​ ​f​a​u​t​ ​a​u​ ​m​o​i​n​s​ ​2​ ​o​p​t​i​o​n​s​ ​!
+				 */
+				MIN_OPTIONS: string
+				/**
+				 * T​u​ ​n​e​ ​p​e​u​x​ ​p​a​s​ ​m​e​t​t​r​e​ ​p​l​u​s​ ​d​e​ ​2​5​ ​o​p​t​i​o​n​s​.
+				 */
+				MAX_OPTIONS: string
+				/**
+				 * U​n​e​ ​e​r​r​e​u​r​ ​e​s​t​ ​s​u​r​v​e​n​u​e​ ​l​o​r​s​ ​d​e​ ​l​a​ ​c​r​é​a​t​i​o​n​ ​d​u​ ​s​o​n​d​a​g​e​.
+				 */
+				CREATION: string
+				/**
+				 * S​o​n​d​a​g​e​ ​n​o​n​ ​t​r​o​u​v​é​.
+				 */
+				NOT_FOUND: string
+				/**
+				 * C​e​ ​s​o​n​d​a​g​e​ ​e​s​t​ ​t​e​r​m​i​n​é​ ​!
+				 */
+				CLOSED: string
+				/**
+				 * O​p​t​i​o​n​ ​n​o​n​ ​t​r​o​u​v​é​e​ ​!
+				 */
+				OPTION_NOT_FOUND: string
+				/**
+				 * T​u​ ​a​s​ ​d​é​j​à​ ​v​o​t​é​ ​p​o​u​r​ ​c​e​t​t​e​ ​o​p​t​i​o​n​ ​!
+				 */
+				ALREADY_VOTED: string
+				/**
+				 * S​e​u​l​ ​l​e​ ​c​r​é​a​t​e​u​r​ ​d​u​ ​s​o​n​d​a​g​e​ ​o​u​ ​u​n​ ​a​d​m​i​n​i​s​t​r​a​t​e​u​r​ ​p​e​u​t​ ​l​e​ ​f​e​r​m​e​r​ ​!
+				 */
+				PERMISSION: string
+				/**
+				 * T​u​ ​a​s​ ​d​é​j​à​ ​a​t​t​e​i​n​t​ ​l​e​ ​n​o​m​b​r​e​ ​m​a​x​i​m​u​m​ ​d​e​ ​v​o​t​e​s​ ​(​{​m​a​x​}​)​ ​!
+				 * @param {number} max
+				 */
+				MAX_VOTES_REACHED: RequiredParams<'max'>
+			}
+			SUCCESS: {
+				/**
+				 * V​o​t​e​ ​e​n​r​e​g​i​s​t​r​é​ ​!
+				 */
+				VOTE: string
+				/**
+				 * V​o​t​e​ ​r​e​t​i​r​é​ ​!
+				 */
+				VOTE_REMOVED: string
+			}
+		}
+		ANIME: {
+			/**
+			 * a​n​i​m​e
+			 */
+			NAME: string
+			/**
+			 * R​e​g​a​r​d​e​r​ ​u​n​ ​é​p​i​s​o​d​e​ ​d​e​ ​F​a​i​r​y​ ​T​a​i​l
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				EPISODE: {
+					/**
+					 * e​p​i​s​o​d​e
+					 */
+					NAME: string
+					/**
+					 * N​u​m​é​r​o​ ​d​e​ ​l​'​é​p​i​s​o​d​e
+					 */
+					DESCRIPTION: string
+				}
+				SOURCE: {
+					/**
+					 * s​o​u​r​c​e
+					 */
+					NAME: string
+					/**
+					 * S​o​u​r​c​e​ ​v​i​d​é​o​ ​(​l​e​c​t​e​u​r​)
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * �​�​ ​F​a​i​r​y​ ​T​a​i​l​ ​-​ ​É​p​i​s​o​d​e​ ​{​e​p​i​s​o​d​e​}
+				 * @param {number} episode
+				 */
+				TITLE: RequiredParams<'episode'>
+				/**
+				 * C​l​i​q​u​e​ ​s​u​r​ ​l​e​ ​l​i​e​n​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​r​e​g​a​r​d​e​r​ ​l​'​é​p​i​s​o​d​e​ ​s​u​r​ ​*​*​{​s​o​u​r​c​e​}​*​*​ ​:​
+			​
+			​[​▶​️​ ​L​a​n​c​e​r​ ​l​a​ ​v​i​d​é​o​]​(​{​l​i​n​k​}​)
+				 * @param {string} link
+				 * @param {string} source
+				 */
+				DESCRIPTION: RequiredParams<'link' | 'source'>
+			}
+			ERRORS: {
+				/**
+				 * L​'​é​p​i​s​o​d​e​ ​{​e​p​i​s​o​d​e​}​ ​n​'​e​x​i​s​t​e​ ​p​a​s​.​ ​L​e​ ​d​e​r​n​i​e​r​ ​é​p​i​s​o​d​e​ ​d​i​s​p​o​n​i​b​l​e​ ​e​s​t​ ​l​e​ ​{​t​o​t​a​l​}​.
+				 * @param {number} episode
+				 * @param {number} total
+				 */
+				NOT_FOUND: RequiredParams<'episode' | 'total'>
+				/**
+				 * L​e​ ​l​i​e​n​ ​p​o​u​r​ ​l​'​é​p​i​s​o​d​e​ ​{​e​p​i​s​o​d​e​}​ ​s​u​r​ ​l​a​ ​s​o​u​r​c​e​ ​{​s​o​u​r​c​e​}​ ​n​'​a​ ​p​a​s​ ​é​t​é​ ​t​r​o​u​v​é​.
+				 * @param {number} episode
+				 * @param {string} source
+				 */
+				LINK_NOT_FOUND: RequiredParams<'episode' | 'source'>
+			}
+		}
+		FRAME: {
+			/**
+			 * f​r​a​m​e
+			 */
+			NAME: string
+			/**
+			 * O​b​t​e​n​i​r​ ​u​n​e​ ​i​m​a​g​e​ ​a​l​é​a​t​o​i​r​e​ ​d​'​u​n​ ​é​p​i​s​o​d​e​ ​d​e​ ​F​a​i​r​y​ ​T​a​i​l
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				SERIE: {
+					/**
+					 * s​e​r​i​e
+					 */
+					NAME: string
+					/**
+					 * L​a​ ​s​é​r​i​e​ ​F​a​i​r​y​ ​T​a​i​l
+					 */
+					DESCRIPTION: string
+				}
+				EPISODE: {
+					/**
+					 * e​p​i​s​o​d​e
+					 */
+					NAME: string
+					/**
+					 * N​u​m​é​r​o​ ​d​e​ ​l​'​é​p​i​s​o​d​e​ ​(​o​p​t​i​o​n​n​e​l​)
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * {​s​h​o​w​}​ ​-​ ​É​p​i​s​o​d​e​ ​{​e​p​i​s​o​d​e​}
+				 * @param {number} episode
+				 * @param {string} show
+				 */
+				TITLE: RequiredParams<'episode' | 'show'>
+			}
+			BUTTONS: {
+				/**
+				 * V​o​i​r​ ​p​l​u​s​ ​d​'​i​m​a​g​e​s
+				 */
+				SEE_MORE: string
+			}
+			ERRORS: {
+				/**
+				 * A​u​c​u​n​e​ ​i​m​a​g​e​ ​o​u​ ​é​p​i​s​o​d​e​ ​t​r​o​u​v​é​ ​p​o​u​r​ ​c​e​t​t​e​ ​s​é​l​e​c​t​i​o​n​.
+				 */
+				NOT_FOUND: string
+				/**
+				 * U​n​e​ ​e​r​r​e​u​r​ ​e​s​t​ ​s​u​r​v​e​n​u​e​ ​l​o​r​s​ ​d​e​ ​l​a​ ​r​é​c​u​p​é​r​a​t​i​o​n​ ​d​e​ ​l​'​i​m​a​g​e​.​ ​R​é​e​s​s​a​i​e​ ​p​l​u​s​ ​t​a​r​d​.
+				 */
+				FETCH: string
+			}
+		}
 	}
 }
 
@@ -3266,6 +3517,242 @@ export type TranslationFunctions = {
 			└ *Raison : {reason}*
 				 */
 				LOG_ENTRY: (arg: { action: string, date: string, id: number, moderator: string, reason: string }) => LocalizedString
+			}
+		}
+		POLL: {
+			/**
+			 * sondage
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Créer un sondage pour le serveur.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				TITLE: {
+					/**
+					 * titre
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Le titre du sondage.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				OPTIONS: {
+					/**
+					 * options
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Les options séparées par un point-virgule (ex: Natsu;Grey;Lucy).
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				DESCRIPTION: {
+					/**
+					 * description
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Une description optionnelle.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * 📊 {title}
+				 */
+				TITLE: (arg: { title: string }) => LocalizedString
+				/**
+				 * Créé par {user} • {total} vote{{s}}
+				 */
+				FOOTER: (arg: { total: number, user: string }) => LocalizedString
+				/**
+				 * Résultats : {title}
+				 */
+				RESULTS_TITLE: (arg: { title: string }) => LocalizedString
+				/**
+				 * Tu as voté pour **{option}** !
+				 */
+				VOTED: (arg: { option: string }) => LocalizedString
+				/**
+				 * Aucun vote pour le moment.
+				 */
+				NO_VOTES: () => LocalizedString
+			}
+			SELECT_MENU: {
+				/**
+				 * Choisis une option...
+				 */
+				PLACEHOLDER: () => LocalizedString
+			}
+			BUTTONS: {
+				/**
+				 * Voir les résultats
+				 */
+				RESULTS: () => LocalizedString
+				/**
+				 * Fermer le sondage
+				 */
+				CLOSE: () => LocalizedString
+			}
+			ERRORS: {
+				/**
+				 * Il faut au moins 2 options !
+				 */
+				MIN_OPTIONS: () => LocalizedString
+				/**
+				 * Tu ne peux pas mettre plus de 25 options.
+				 */
+				MAX_OPTIONS: () => LocalizedString
+				/**
+				 * Une erreur est survenue lors de la création du sondage.
+				 */
+				CREATION: () => LocalizedString
+				/**
+				 * Sondage non trouvé.
+				 */
+				NOT_FOUND: () => LocalizedString
+				/**
+				 * Ce sondage est terminé !
+				 */
+				CLOSED: () => LocalizedString
+				/**
+				 * Option non trouvée !
+				 */
+				OPTION_NOT_FOUND: () => LocalizedString
+				/**
+				 * Tu as déjà voté pour cette option !
+				 */
+				ALREADY_VOTED: () => LocalizedString
+				/**
+				 * Seul le créateur du sondage ou un administrateur peut le fermer !
+				 */
+				PERMISSION: () => LocalizedString
+				/**
+				 * Tu as déjà atteint le nombre maximum de votes ({max}) !
+				 */
+				MAX_VOTES_REACHED: (arg: { max: number }) => LocalizedString
+			}
+			SUCCESS: {
+				/**
+				 * Vote enregistré !
+				 */
+				VOTE: () => LocalizedString
+				/**
+				 * Vote retiré !
+				 */
+				VOTE_REMOVED: () => LocalizedString
+			}
+		}
+		ANIME: {
+			/**
+			 * anime
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Regarder un épisode de Fairy Tail
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				EPISODE: {
+					/**
+					 * episode
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Numéro de l'épisode
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				SOURCE: {
+					/**
+					 * source
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Source vidéo (lecteur)
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * 📺 Fairy Tail - Épisode {episode}
+				 */
+				TITLE: (arg: { episode: number }) => LocalizedString
+				/**
+				 * Clique sur le lien ci-dessous pour regarder l'épisode sur **{source}** :
+		
+			[▶️ Lancer la vidéo]({link})
+				 */
+				DESCRIPTION: (arg: { link: string, source: string }) => LocalizedString
+			}
+			ERRORS: {
+				/**
+				 * L'épisode {episode} n'existe pas. Le dernier épisode disponible est le {total}.
+				 */
+				NOT_FOUND: (arg: { episode: number, total: number }) => LocalizedString
+				/**
+				 * Le lien pour l'épisode {episode} sur la source {source} n'a pas été trouvé.
+				 */
+				LINK_NOT_FOUND: (arg: { episode: number, source: string }) => LocalizedString
+			}
+		}
+		FRAME: {
+			/**
+			 * frame
+			 */
+			NAME: () => LocalizedString
+			/**
+			 * Obtenir une image aléatoire d'un épisode de Fairy Tail
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				SERIE: {
+					/**
+					 * serie
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * La série Fairy Tail
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				EPISODE: {
+					/**
+					 * episode
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Numéro de l'épisode (optionnel)
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * {show} - Épisode {episode}
+				 */
+				TITLE: (arg: { episode: number, show: string }) => LocalizedString
+			}
+			BUTTONS: {
+				/**
+				 * Voir plus d'images
+				 */
+				SEE_MORE: () => LocalizedString
+			}
+			ERRORS: {
+				/**
+				 * Aucune image ou épisode trouvé pour cette sélection.
+				 */
+				NOT_FOUND: () => LocalizedString
+				/**
+				 * Une erreur est survenue lors de la récupération de l'image. Réessaie plus tard.
+				 */
+				FETCH: () => LocalizedString
 			}
 		}
 	}

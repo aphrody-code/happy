@@ -4,4 +4,5 @@ export const apiConfig: APIConfigType = {
 
 	enabled: true, // is the API server enabled or not
 	port: env.API_PORT || 4000, // the port on which the API server should be exposed
+	baseUrl: env.API_BASE_URL || `http://localhost:${env.API_PORT || 4000}`,
 }

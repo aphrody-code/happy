@@ -1,4 +1,5 @@
 import 'dotenv/config'
+
 import {
 	ChannelType,
 	Client,
@@ -19,7 +20,11 @@ client.once('ready', async () => {
 			c => c?.name.includes('bienvenue') && c.type === ChannelType.GuildText
 		) as TextChannel | undefined
 
-		if (!bienvenue) { console.log('❌ #bienvenue introuvable'); return }
+		if (!bienvenue) {
+			console.log('❌ #bienvenue introuvable')
+
+			return
+		}
 
 		const msgs: Message[] = []
 		const batch = await bienvenue.messages.fetch({ limit: 20 })
@@ -31,7 +36,7 @@ client.once('ready', async () => {
 			for (const embed of msg.embeds) {
 				if (embed.description?.includes('Happy 🐟')) {
 					const newDesc = embed.description.replace('— Happy 🐟', '').trim()
-					const newEmbeds = msg.embeds.map(e => {
+					const newEmbeds = msg.embeds.map((e) => {
 						const eb = new EmbedBuilder()
 						if (e.title) eb.setTitle(e.title)
 						if (e.description) {
@@ -43,6 +48,7 @@ client.once('ready', async () => {
 						if (e.image?.url) eb.setImage(e.image.url)
 						if (e.thumbnail?.url) eb.setThumbnail(e.thumbnail.url)
 						if (e.fields.length > 0) eb.addFields(e.fields)
+
 						return eb
 					})
 					await msg.edit({ embeds: newEmbeds })

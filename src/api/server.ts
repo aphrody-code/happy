@@ -7,6 +7,7 @@ import bodyParser from 'body-parser'
 
 import * as controllers from '@/api/controllers'
 import { Log } from '@/api/middlewares'
+import { playerRouter } from '@/api/player'
 import { Service } from '@/decorators'
 import { env } from '@/env'
 import { Database, PluginsManager, Store } from '@/services'
@@ -28,6 +29,7 @@ export class Server {
 
 	$beforeRoutesInit() {
 		this.app
+			.use(playerRouter)
 			.use(bodyParser.json())
 			.use(bodyParser.urlencoded({ extended: true }))
 			.use(Log)

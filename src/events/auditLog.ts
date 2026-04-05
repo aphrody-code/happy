@@ -1,11 +1,12 @@
 import { ChannelType, EmbedBuilder, TextChannel } from 'discord.js'
 import { ArgsOf, Client } from 'discordx'
 
+import { CHANNEL_NAMES } from '@/configs'
 import { Discord, Injectable, On } from '@/decorators'
 
 function findLogChannel(guild: import('discord.js').Guild): TextChannel | undefined {
 	return guild.channels.cache.find(
-		c => c.type === ChannelType.GuildText && (c.name === 'logs' || c.name === 'mod-logs' || c.name === 'audit-log')
+		c => c.type === ChannelType.GuildText && c.name === CHANNEL_NAMES.LOGS
 	) as TextChannel | undefined
 }
 
@@ -26,9 +27,9 @@ export default class AuditLogEvent {
 			.setColor(0xE74C3C)
 			.setTitle('Message supprimé')
 			.setDescription(
-				`**Auteur :** ${message.author?.toString() ?? 'Inconnu'}\n` +
-				`**Salon :** ${message.channel.toString()}\n` +
-				`**Contenu :**\n${message.content?.substring(0, 1024) || '*Aucun contenu textuel*'}`
+				`**Auteur :** ${message.author?.toString() ?? 'Inconnu'}\n`
+				+ `**Salon :** ${message.channel.toString()}\n`
+				+ `**Contenu :**\n${message.content?.substring(0, 1024) || '*Aucun contenu textuel*'}`
 			)
 			.setTimestamp()
 
@@ -57,9 +58,9 @@ export default class AuditLogEvent {
 			.setColor(0xF39C12)
 			.setTitle('Message modifié')
 			.setDescription(
-				`**Auteur :** ${newMessage.author?.toString() ?? 'Inconnu'}\n` +
-				`**Salon :** ${newMessage.channel.toString()}\n` +
-				`[Aller au message](${newMessage.url})`
+				`**Auteur :** ${newMessage.author?.toString() ?? 'Inconnu'}\n`
+				+ `**Salon :** ${newMessage.channel.toString()}\n`
+				+ `[Aller au message](${newMessage.url})`
 			)
 			.addFields(
 				{ name: 'Avant', value: oldMessage.content?.substring(0, 1024) || '*Vide*' },
@@ -82,8 +83,8 @@ export default class AuditLogEvent {
 			.setColor(0xE74C3C)
 			.setTitle('Membre banni')
 			.setDescription(
-				`**Utilisateur :** ${ban.user.tag} (${ban.user.id})\n` +
-				`**Raison :** ${ban.reason ?? 'Aucune raison spécifiée'}`
+				`**Utilisateur :** ${ban.user.tag} (${ban.user.id})\n`
+				+ `**Raison :** ${ban.reason ?? 'Aucune raison spécifiée'}`
 			)
 			.setThumbnail(ban.user.displayAvatarURL({ size: 128 }))
 			.setTimestamp()
@@ -167,8 +168,8 @@ export default class AuditLogEvent {
 			.setColor(0x3498DB)
 			.setTitle('Rôles modifiés')
 			.setDescription(
-				`**Membre :** ${newMember.toString()}\n` +
-				parts.join('\n')
+				`**Membre :** ${newMember.toString()}\n${
+				parts.join('\n')}`
 			)
 			.setTimestamp()
 

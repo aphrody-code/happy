@@ -73,7 +73,7 @@ export default class StatsCommand {
 			interaction,
 			embeds.map(embed => ({
 				embeds: [embed],
-			})),
+			}))
 		).send()
 	}
 

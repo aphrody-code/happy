@@ -614,6 +614,99 @@ const en = {
 				LOG_ENTRY: '`{id}` **{action}** by <@{moderator}> on {date}\n└ *Reason: {reason}*',
 			},
 		},
+		POLL: {
+			NAME: 'poll',
+			DESCRIPTION: 'Create a poll for the server.',
+			OPTIONS: {
+				TITLE: {
+					NAME: 'title',
+					DESCRIPTION: 'The poll title.',
+				},
+				OPTIONS: {
+					NAME: 'options',
+					DESCRIPTION: 'Options separated by a semicolon (e.g.: Natsu;Grey;Lucy).',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'An optional description.',
+				},
+			},
+			EMBED: {
+				TITLE: '📊 {title}',
+				FOOTER: 'Created by {user} • {total} vote{{s}}',
+				RESULTS_TITLE: 'Results: {title}',
+				VOTED: 'You voted for **{option}**!',
+				NO_VOTES: 'No votes yet.',
+			},
+			SELECT_MENU: {
+				PLACEHOLDER: 'Choose an option...',
+			},
+			BUTTONS: {
+				RESULTS: 'View results',
+				CLOSE: 'Close poll',
+			},
+			ERRORS: {
+				MIN_OPTIONS: 'You need at least 2 options!',
+				MAX_OPTIONS: 'You cannot have more than 25 options.',
+				CREATION: 'An error occurred during poll creation.',
+				NOT_FOUND: 'Poll not found.',
+				CLOSED: 'This poll is finished!',
+				OPTION_NOT_FOUND: 'Option not found!',
+				ALREADY_VOTED: 'You already voted for this option!',
+				PERMISSION: 'Only the poll creator or an administrator can close it!',
+				MAX_VOTES_REACHED: 'You have already reached the maximum number of votes ({max})!',
+			},
+			SUCCESS: {
+				VOTE: 'Vote recorded!',
+				VOTE_REMOVED: 'Vote removed!',
+			},
+		},
+		ANIME: {
+			NAME: 'anime',
+			DESCRIPTION: 'Watch a Fairy Tail episode',
+			OPTIONS: {
+				EPISODE: {
+					NAME: 'episode',
+					DESCRIPTION: 'Episode number',
+				},
+				SOURCE: {
+					NAME: 'source',
+					DESCRIPTION: 'Video source (player)',
+				},
+			},
+			EMBED: {
+				TITLE: '📺 Fairy Tail - Episode {episode}',
+				DESCRIPTION: 'Click the link below to watch the episode on **{source}**:\n\n[▶️ Watch video]({link})',
+			},
+			ERRORS: {
+				NOT_FOUND: 'Episode {episode} does not exist. The latest available episode is {total}.',
+				LINK_NOT_FOUND: 'The link for episode {episode} on {source} was not found.',
+			}
+		},
+		FRAME: {
+			NAME: 'frame',
+			DESCRIPTION: 'Get a random image from a Fairy Tail episode',
+			OPTIONS: {
+				SERIE: {
+					NAME: 'series',
+					DESCRIPTION: 'The Fairy Tail series',
+				},
+				EPISODE: {
+					NAME: 'episode',
+					DESCRIPTION: 'Episode number (optional)',
+				},
+			},
+			EMBED: {
+				TITLE: '{show} - Episode {episode}',
+			},
+			BUTTONS: {
+				SEE_MORE: 'See more images',
+			},
+			ERRORS: {
+				NOT_FOUND: 'No image or episode found for this selection.',
+				FETCH: 'An error occurred while fetching the image. Please try again later.',
+			},
+		},
 	},
 } satisfies Translation
 

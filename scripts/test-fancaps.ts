@@ -1,4 +1,4 @@
-import { Fancaps, FAIRY_TAIL_SHOWS } from '../src/libs/fancaps'
+import { FAIRY_TAIL_SHOWS, Fancaps } from '../src/libs/fancaps'
 
 async function main() {
 	const fc = new Fancaps(300)

@@ -5,15 +5,15 @@ import {
 	ChannelType,
 	CommandInteraction,
 	EmbedBuilder,
+	GuildMember,
 	Role,
 	StringSelectMenuBuilder,
-	StringSelectMenuInteraction,
 	TextChannel,
 } from 'discord.js'
-import { Client, SelectMenuComponent } from 'discordx'
+import { Client } from 'discordx'
 
-import { Discord, Injectable, Slash, SlashOption } from '@/decorators'
-import { Guard, UserPermissions } from '@/guards'
+import { Discord, Guard, Injectable, On, Slash, SlashOption } from '@/decorators'
+import { UserPermissions } from '@/guards'
 
 @Discord()
 @Injectable()
@@ -24,9 +24,7 @@ export default class AutoRoleCommand {
 		name: 'autorole',
 		description: 'Créer un message d\'auto-attribution de rôles.',
 	})
-	@Guard(
-		UserPermissions(['ManageRoles'])
-	)
+	@Guard(UserPermissions(['ManageRoles']))
 	async autorole(
 		@SlashOption({
 			name: 'titre',
@@ -92,21 +90,36 @@ export default class AutoRoleCommand {
 
 		const targetChannel = channel ?? interaction.channel
 		if (!targetChannel || targetChannel.type !== ChannelType.GuildText) {
-			return interaction.followUp({ content: 'Salon invalide.', ephemeral: true })
+			return await interaction.followUp({ content: 'Salon textuel invalide.', ephemeral: true })
 		}
+
+		// Vérifier la hiérarchie : le bot doit pouvoir attribuer ces rôles
+		const botMember = interaction.guild?.members.me
+		if (botMember) {
+			const tooHigh = roles.filter(r => r.position >= botMember.roles.highest.position)
+			if (tooHigh.length > 0) {
+				return await interaction.followUp({
+					content: `Je ne peux pas attribuer les rôles suivants (trop hauts dans la hiérarchie) : ${tooHigh.map(r => r.toString()).join(', ')}`,
+					ephemeral: true,
+				})
+			}
+		}
+
+		// ID unique basé sur le timestamp pour éviter les conflits
+		const uniqueId = `autorole-${Date.now()}`
 
 		const embed = new EmbedBuilder()
 			.setColor(0xE8672A)
 			.setTitle(title)
 			.setDescription(
-				(description ?? 'Sélectionnez vos rôles dans le menu ci-dessous.') +
-				'\n\n' +
-				roles.map(r => `${r.toString()}`).join(' • ')
+				`${description ?? 'Sélectionnez vos rôles dans le menu ci-dessous.'
+				}\n\n${
+				roles.map(r => r.toString()).join(' • ')}`
 			)
 
 		const menu = new StringSelectMenuBuilder()
-			.setCustomId('autorole-select')
-			.setPlaceholder('Choisir un rôle...')
+			.setCustomId(uniqueId)
+			.setPlaceholder('Choisir un ou plusieurs rôles...')
 			.setMinValues(0)
 			.setMaxValues(roles.length)
 			.addOptions(roles.map(r => ({
@@ -121,47 +134,63 @@ export default class AutoRoleCommand {
 			components: [row],
 		})
 
-		interaction.followUp({
+		await interaction.followUp({
 			content: `Message d'auto-rôle envoyé dans ${targetChannel.toString()}.`,
 			ephemeral: true,
 		})
 	}
 
-	@SelectMenuComponent({ id: 'autorole-select' })
-	async handleAutoRole(interaction: StringSelectMenuInteraction, client: Client) {
+	// Handler générique pour tous les menus autorole-*
+	@On('interactionCreate')
+	async handleAutoRoleInteraction(
+		[interaction]: [any],
+		client: Client
+	) {
+		if (!interaction.isStringSelectMenu()) return
+		if (!interaction.customId.startsWith('autorole-')) return
+
 		const guild = interaction.guild
 		if (!guild) return
 
-		const member = await guild.members.fetch(interaction.user.id)
-		const selectedRoleIds = interaction.values
+		const member = await guild.members.fetch(interaction.user.id) as GuildMember
+		const selectedRoleIds: string[] = interaction.values
 
 		// Récupérer tous les rôles disponibles dans ce menu
 		const menuOptions = interaction.component.options
-		const allRoleIds = menuOptions.map(o => o.value)
+		const allRoleIds = menuOptions.map((o: any) => o.value)
 
 		const added: string[] = []
 		const removed: string[] = []
+		const errors: string[] = []
 
 		for (const roleId of allRoleIds) {
 			const role = guild.roles.cache.get(roleId)
-			if (!role) continue
+			if (!role) {
+				errors.push(roleId)
+				continue
+			}
 
-			if (selectedRoleIds.includes(roleId)) {
-				if (!member.roles.cache.has(roleId)) {
-					await member.roles.add(role).catch(() => {})
-					added.push(role.name)
+			try {
+				if (selectedRoleIds.includes(roleId)) {
+					if (!member.roles.cache.has(roleId)) {
+						await member.roles.add(role)
+						added.push(role.name)
+					}
+				} else {
+					if (member.roles.cache.has(roleId)) {
+						await member.roles.remove(role)
+						removed.push(role.name)
+					}
 				}
-			} else {
-				if (member.roles.cache.has(roleId)) {
-					await member.roles.remove(role).catch(() => {})
-					removed.push(role.name)
-				}
+			} catch {
+				errors.push(role.name)
 			}
 		}
 
 		const parts: string[] = []
 		if (added.length > 0) parts.push(`**+** ${added.join(', ')}`)
 		if (removed.length > 0) parts.push(`**-** ${removed.join(', ')}`)
+		if (errors.length > 0) parts.push(`Erreur : ${errors.join(', ')}`)
 
 		await interaction.reply({
 			content: parts.length > 0

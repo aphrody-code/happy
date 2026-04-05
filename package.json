@@ -98,7 +98,6 @@
     "@types/pidusage": "~2.0.5",
     "@types/semver": "^7.5.8",
     "@types/swagger-ui-express": "~4.1.7",
-    "crawlee": "^3.16.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "fandomscraper": "^1.1.0",
     "ncp": "~2.0.0",

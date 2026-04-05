@@ -1,4 +1,5 @@
 import 'dotenv/config'
+
 import {
 	ChannelType,
 	Client,
@@ -45,7 +46,7 @@ client.once('ready', async () => {
 								: 'Bienvenue dans ce salon de la guilde.'
 						)
 						.setColor(0xE8672A)
-						
+
 					// Garder le thumbnail si présent
 					if (embed.thumbnail?.url) {
 						newEmbed.setThumbnail(embed.thumbnail.url)

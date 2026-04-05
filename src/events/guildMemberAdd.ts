@@ -1,9 +1,11 @@
 import { AttachmentBuilder, ChannelType, TextChannel } from 'discord.js'
 import { ArgsOf, Client } from 'discordx'
 
+import { CHANNEL_NAMES } from '@/configs'
 import { Discord, Injectable, On } from '@/decorators'
-import { generateWelcomeCard } from '../libs/card'
 import { Logger } from '@/services'
+
+import { generateWelcomeCard } from '../libs/card'
 
 @Discord()
 @Injectable()
@@ -21,7 +23,7 @@ export default class GuildMemberAddEvent {
 		// Chercher un salon de bienvenue
 		const guild = member.guild
 		const welcomeChannel = guild.channels.cache.find(
-			c => c.type === ChannelType.GuildText && c.name.includes('bienvenue')
+			c => c.type === ChannelType.GuildText && c.name === CHANNEL_NAMES.WELCOME
 		) as TextChannel | undefined
 
 		if (!welcomeChannel) return
@@ -43,4 +45,5 @@ export default class GuildMemberAddEvent {
 			this.logger.log(`Erreur welcome card pour ${member.user.tag}: ${err}`, 'error')
 		}
 	}
+
 }

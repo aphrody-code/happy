@@ -90,4 +90,5 @@ type APIConfigType = {
 
 	enabled: boolean
 	port: number
+	baseUrl: string
 }

@@ -19,6 +19,7 @@ export const env = cleanEnv(process.env, {
 
 	API_PORT: num({ default: undefined }),
 	API_ADMIN_TOKEN: str({ default: undefined }),
+	API_BASE_URL: str({ default: undefined }),
 
 	IMGUR_CLIENT_ID: str({ default: undefined }),
 

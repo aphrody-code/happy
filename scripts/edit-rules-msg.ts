@@ -1,4 +1,5 @@
 import 'dotenv/config'
+
 import { ChannelType, Client, GatewayIntentBits, TextChannel } from 'discord.js'
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] })
